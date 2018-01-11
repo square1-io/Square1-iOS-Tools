@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D941EC2820078C4900AD5AED /* Square1_iOS_Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1_iOS_Tools.framework */; };
-		D941EC2D20078C4900AD5AED /* Square1_iOS_ToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC2C20078C4900AD5AED /* Square1_iOS_ToolsTests.swift */; };
-		D941EC2F20078C4900AD5AED /* Square1_iOS_Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = D941EC2120078C4800AD5AED /* Square1_iOS_Tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1Tools.framework */; };
+		D941EC2F20078C4900AD5AED /* Square1Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = D941EC2120078C4800AD5AED /* Square1Tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D941EC3B20078EC600AD5AED /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3920078EC600AD5AED /* Stack.swift */; };
+		D941EC3C20078EC600AD5AED /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3A20078EC600AD5AED /* Queue.swift */; };
+		D941EC4020078ECD00AD5AED /* String+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3E20078ECD00AD5AED /* String+Square1.swift */; };
+		D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3F20078ECD00AD5AED /* Date+Square1.swift */; };
+		D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */; };
+		D941EC4620078ED800AD5AED /* SQ1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4320078ED800AD5AED /* SQ1App.swift */; };
+		D941EC4720078ED800AD5AED /* SQ1Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4420078ED800AD5AED /* SQ1Log.swift */; };
+		D941EC5020078F3500AD5AED /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4A20078F0500AD5AED /* DateTests.swift */; };
+		D941EC5120078F3900AD5AED /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4B20078F0600AD5AED /* QueueTests.swift */; };
+		D941EC5220078F3C00AD5AED /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4920078F0500AD5AED /* StringTests.swift */; };
+		D941EC5320078F3F00AD5AED /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4820078F0500AD5AED /* StackTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +33,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D941EC1E20078C4800AD5AED /* Square1_iOS_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Square1_iOS_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D941EC2120078C4800AD5AED /* Square1_iOS_Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square1_iOS_Tools.h; sourceTree = "<group>"; };
+		D941EC1E20078C4800AD5AED /* Square1Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Square1Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D941EC2120078C4800AD5AED /* Square1Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square1Tools.h; sourceTree = "<group>"; };
 		D941EC2220078C4800AD5AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D941EC2720078C4900AD5AED /* Square1-iOS-ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Square1-iOS-ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D941EC2C20078C4900AD5AED /* Square1_iOS_ToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square1_iOS_ToolsTests.swift; sourceTree = "<group>"; };
+		D941EC2720078C4900AD5AED /* Square1ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Square1ToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D941EC2E20078C4900AD5AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D941EC3920078EC600AD5AED /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		D941EC3A20078EC600AD5AED /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		D941EC3E20078ECD00AD5AED /* String+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Square1.swift"; sourceTree = "<group>"; };
+		D941EC3F20078ECD00AD5AED /* Date+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Square1.swift"; sourceTree = "<group>"; };
+		D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1AsyncOperation.swift; sourceTree = "<group>"; };
+		D941EC4320078ED800AD5AED /* SQ1App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1App.swift; sourceTree = "<group>"; };
+		D941EC4420078ED800AD5AED /* SQ1Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1Log.swift; sourceTree = "<group>"; };
+		D941EC4820078F0500AD5AED /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
+		D941EC4920078F0500AD5AED /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		D941EC4A20078F0500AD5AED /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		D941EC4B20078F0600AD5AED /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D941EC2820078C4900AD5AED /* Square1_iOS_Tools.framework in Frameworks */,
+				D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +73,8 @@
 		D941EC1420078C4800AD5AED = {
 			isa = PBXGroup;
 			children = (
-				D941EC2020078C4800AD5AED /* Square1-iOS-Tools */,
-				D941EC2B20078C4900AD5AED /* Square1-iOS-ToolsTests */,
+				D941EC2020078C4800AD5AED /* Source */,
+				D941EC2B20078C4900AD5AED /* Tests */,
 				D941EC1F20078C4800AD5AED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,28 +82,54 @@
 		D941EC1F20078C4800AD5AED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D941EC1E20078C4800AD5AED /* Square1_iOS_Tools.framework */,
-				D941EC2720078C4900AD5AED /* Square1-iOS-ToolsTests.xctest */,
+				D941EC1E20078C4800AD5AED /* Square1Tools.framework */,
+				D941EC2720078C4900AD5AED /* Square1ToolsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D941EC2020078C4800AD5AED /* Square1-iOS-Tools */ = {
+		D941EC2020078C4800AD5AED /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D941EC2120078C4800AD5AED /* Square1_iOS_Tools.h */,
+				D941EC4320078ED800AD5AED /* SQ1App.swift */,
+				D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */,
+				D941EC4420078ED800AD5AED /* SQ1Log.swift */,
+				D941EC3D20078ECD00AD5AED /* Extensions */,
+				D941EC3820078EC600AD5AED /* Data Structures */,
+				D941EC2120078C4800AD5AED /* Square1Tools.h */,
 				D941EC2220078C4800AD5AED /* Info.plist */,
 			);
-			path = "Square1-iOS-Tools";
+			path = Source;
 			sourceTree = "<group>";
 		};
-		D941EC2B20078C4900AD5AED /* Square1-iOS-ToolsTests */ = {
+		D941EC2B20078C4900AD5AED /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D941EC2C20078C4900AD5AED /* Square1_iOS_ToolsTests.swift */,
+				D941EC4A20078F0500AD5AED /* DateTests.swift */,
+				D941EC4B20078F0600AD5AED /* QueueTests.swift */,
+				D941EC4820078F0500AD5AED /* StackTests.swift */,
+				D941EC4920078F0500AD5AED /* StringTests.swift */,
 				D941EC2E20078C4900AD5AED /* Info.plist */,
 			);
-			path = "Square1-iOS-ToolsTests";
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D941EC3820078EC600AD5AED /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				D941EC3920078EC600AD5AED /* Stack.swift */,
+				D941EC3A20078EC600AD5AED /* Queue.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		D941EC3D20078ECD00AD5AED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D941EC3E20078ECD00AD5AED /* String+Square1.swift */,
+				D941EC3F20078ECD00AD5AED /* Date+Square1.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,16 +139,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D941EC2F20078C4900AD5AED /* Square1_iOS_Tools.h in Headers */,
+				D941EC2F20078C4900AD5AED /* Square1Tools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D941EC1D20078C4800AD5AED /* Square1-iOS-Tools */ = {
+		D941EC1D20078C4800AD5AED /* Square1Tools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D941EC3220078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1-iOS-Tools" */;
+			buildConfigurationList = D941EC3220078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1Tools" */;
 			buildPhases = (
 				D941EC1920078C4800AD5AED /* Sources */,
 				D941EC1A20078C4800AD5AED /* Frameworks */,
@@ -113,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = "Square1-iOS-Tools";
+			name = Square1Tools;
 			productName = "Square1-iOS-Tools";
-			productReference = D941EC1E20078C4800AD5AED /* Square1_iOS_Tools.framework */;
+			productReference = D941EC1E20078C4800AD5AED /* Square1Tools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D941EC2620078C4900AD5AED /* Square1-iOS-ToolsTests */ = {
+		D941EC2620078C4900AD5AED /* Square1ToolsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D941EC3520078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1-iOS-ToolsTests" */;
+			buildConfigurationList = D941EC3520078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1ToolsTests" */;
 			buildPhases = (
 				D941EC2320078C4900AD5AED /* Sources */,
 				D941EC2420078C4900AD5AED /* Frameworks */,
@@ -131,9 +177,9 @@
 			dependencies = (
 				D941EC2A20078C4900AD5AED /* PBXTargetDependency */,
 			);
-			name = "Square1-iOS-ToolsTests";
+			name = Square1ToolsTests;
 			productName = "Square1-iOS-ToolsTests";
-			productReference = D941EC2720078C4900AD5AED /* Square1-iOS-ToolsTests.xctest */;
+			productReference = D941EC2720078C4900AD5AED /* Square1ToolsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D941EC1820078C4800AD5AED /* Build configuration list for PBXProject "Square1-iOS-Tools" */;
+			buildConfigurationList = D941EC1820078C4800AD5AED /* Build configuration list for PBXProject "Square1Tools" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,8 +214,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D941EC1D20078C4800AD5AED /* Square1-iOS-Tools */,
-				D941EC2620078C4900AD5AED /* Square1-iOS-ToolsTests */,
+				D941EC1D20078C4800AD5AED /* Square1Tools */,
+				D941EC2620078C4900AD5AED /* Square1ToolsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
+				D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */,
+				D941EC3B20078EC600AD5AED /* Stack.swift in Sources */,
+				D941EC4720078ED800AD5AED /* SQ1Log.swift in Sources */,
+				D941EC4620078ED800AD5AED /* SQ1App.swift in Sources */,
+				D941EC3C20078EC600AD5AED /* Queue.swift in Sources */,
+				D941EC4020078ECD00AD5AED /* String+Square1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D941EC2D20078C4900AD5AED /* Square1_iOS_ToolsTests.swift in Sources */,
+				D941EC5320078F3F00AD5AED /* StackTests.swift in Sources */,
+				D941EC5020078F3500AD5AED /* DateTests.swift in Sources */,
+				D941EC5220078F3C00AD5AED /* StringTests.swift in Sources */,
+				D941EC5120078F3900AD5AED /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +268,7 @@
 /* Begin PBXTargetDependency section */
 		D941EC2A20078C4900AD5AED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D941EC1D20078C4800AD5AED /* Square1-iOS-Tools */;
+			target = D941EC1D20078C4800AD5AED /* Square1Tools */;
 			targetProxy = D941EC2920078C4900AD5AED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -341,7 +397,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Square1-iOS-Tools/Info.plist";
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -363,7 +419,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Square1-iOS-Tools/Info.plist";
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -378,11 +434,12 @@
 		D941EC3620078C4900AD5AED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2X2SE3LG2B;
-				INFOPLIST_FILE = "Square1-iOS-ToolsTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.square1.Square1-iOS-ToolsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.square1.ios.tools.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,11 +449,12 @@
 		D941EC3720078C4900AD5AED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2X2SE3LG2B;
-				INFOPLIST_FILE = "Square1-iOS-ToolsTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.square1.Square1-iOS-ToolsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.square1.ios.tools.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,7 +464,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D941EC1820078C4800AD5AED /* Build configuration list for PBXProject "Square1-iOS-Tools" */ = {
+		D941EC1820078C4800AD5AED /* Build configuration list for PBXProject "Square1Tools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D941EC3020078C4900AD5AED /* Debug */,
@@ -415,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D941EC3220078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1-iOS-Tools" */ = {
+		D941EC3220078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1Tools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D941EC3320078C4900AD5AED /* Debug */,
@@ -424,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D941EC3520078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1-iOS-ToolsTests" */ = {
+		D941EC3520078C4900AD5AED /* Build configuration list for PBXNativeTarget "Square1ToolsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D941EC3620078C4900AD5AED /* Debug */,

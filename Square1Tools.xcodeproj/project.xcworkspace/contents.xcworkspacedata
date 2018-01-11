@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Square1-iOS-Tools.xcodeproj">
+      location = "self:/Users/Wedge/Proyectos/square1/Square1-iOS-Tools/Square1Tools.xcodeproj">
    </FileRef>
 </Workspace>
