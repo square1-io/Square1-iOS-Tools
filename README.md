@@ -17,14 +17,19 @@ A handy collection of helpers, types and hacks used on our Swift projects.
 
 ### Cocoapods
 
+If you're already using Cocoapods in your project, just skip to step 3
 1. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
 2. Create a [Podfile](https://guides.cocoapods.org/using/using-cocoapods.html) for your project
-3. Add this pod to your Podfile
+3. Make sure you use 
+```swift
+use_frameworks!
+```
+4. Add this pod to your Podfile
 ```swift
 pod 'Square1Tools'
 ```
-4. Run ```pod install```
-5. Use this import on every file you want to use the pod
+5. Run ```pod install```
+6. Use this import on every file you want to use the pod
 ```swift
 import Square1Tools
 ```
