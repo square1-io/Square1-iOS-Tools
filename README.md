@@ -1,5 +1,10 @@
 # Square1 Tools
 
+<p align="center">
+<img src="https://img.shields.io/cocoapods/v/Square1Tools.svg" alt="Cocoapods"/>
+<img src="https://img.shields.io/badge/platform-ios-red.svg" alt="Platform"/>
+</p>
+
 A handy collection of helpers, types and hacks used on our Swift projects.
 
 ### Prerequisites
