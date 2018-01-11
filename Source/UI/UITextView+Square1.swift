@@ -18,23 +18,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import XCTest
-@testable import Square1Tools
+import UIKit
 
-class DateTests: XCTestCase {
-  func testDateCreation() {
-    let dateString = "2017-02-12 01:17:29"
-    let timeZone = TimeZone(identifier: "GMT")!
-    let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
+extension UITextView {
+  
+  var maxLines: Int {
+    get {
+      return textContainer.maximumNumberOfLines
+    }
     
-    XCTAssertNotNil(date)
-    XCTAssertEqual(date!.day, 12)
-    XCTAssertEqual(date!.month, 2)
-    XCTAssertEqual(date!.year, 2017)
-    XCTAssertEqual(date!.hours, 1)
-    XCTAssertEqual(date!.minutes, 17)
-    XCTAssertEqual(date!.seconds, 29)
-    
-    XCTAssertEqual(date!.hours(in: timeZone), 1)
+    set {
+      textContainer.maximumNumberOfLines = newValue
+    }
   }
+
+  var numberOfLines: Int {
+    guard let font = font else { return 0 }
+    return Int(round((contentSize.height - textContainerInset.top - textContainerInset.bottom) / font.lineHeight));
+  }
+
 }

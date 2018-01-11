@@ -20,6 +20,20 @@
 		D941EC5120078F3900AD5AED /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4B20078F0600AD5AED /* QueueTests.swift */; };
 		D941EC5220078F3C00AD5AED /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4920078F0500AD5AED /* StringTests.swift */; };
 		D941EC5320078F3F00AD5AED /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4820078F0500AD5AED /* StackTests.swift */; };
+		D941EC632007968400AD5AED /* SQ1ReplaceRootControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */; };
+		D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC562007968300AD5AED /* UITableViewCell+Square1.swift */; };
+		D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC572007968300AD5AED /* UIColor+Square1.swift */; };
+		D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC582007968300AD5AED /* UITextView+Square1.swift */; };
+		D941EC672007968400AD5AED /* UIDevice+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC592007968300AD5AED /* UIDevice+Square1.swift */; };
+		D941EC682007968400AD5AED /* UITableView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5A2007968300AD5AED /* UITableView+Square1.swift */; };
+		D941EC692007968400AD5AED /* UITextField+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5B2007968300AD5AED /* UITextField+Square1.swift */; };
+		D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5C2007968300AD5AED /* UIView+Square1.swift */; };
+		D941EC6B2007968400AD5AED /* SQ1MailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5D2007968300AD5AED /* SQ1MailSender.swift */; };
+		D941EC6C2007968400AD5AED /* UIFont+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5E2007968300AD5AED /* UIFont+Square1.swift */; };
+		D941EC6D2007968400AD5AED /* UIImage+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5F2007968400AD5AED /* UIImage+Square1.swift */; };
+		D941EC6E2007968400AD5AED /* UIApplication+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC602007968400AD5AED /* UIApplication+Square1.swift */; };
+		D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC612007968400AD5AED /* UINavigationController+Square1.swift */; };
+		D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC622007968400AD5AED /* UIViewController+Square1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		D941EC4920078F0500AD5AED /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		D941EC4A20078F0500AD5AED /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		D941EC4B20078F0600AD5AED /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
+		D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1ReplaceRootControllerSegue.swift; sourceTree = "<group>"; };
+		D941EC562007968300AD5AED /* UITableViewCell+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Square1.swift"; sourceTree = "<group>"; };
+		D941EC572007968300AD5AED /* UIColor+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Square1.swift"; sourceTree = "<group>"; };
+		D941EC582007968300AD5AED /* UITextView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Square1.swift"; sourceTree = "<group>"; };
+		D941EC592007968300AD5AED /* UIDevice+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Square1.swift"; sourceTree = "<group>"; };
+		D941EC5A2007968300AD5AED /* UITableView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Square1.swift"; sourceTree = "<group>"; };
+		D941EC5B2007968300AD5AED /* UITextField+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Square1.swift"; sourceTree = "<group>"; };
+		D941EC5C2007968300AD5AED /* UIView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Square1.swift"; sourceTree = "<group>"; };
+		D941EC5D2007968300AD5AED /* SQ1MailSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1MailSender.swift; sourceTree = "<group>"; };
+		D941EC5E2007968300AD5AED /* UIFont+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Square1.swift"; sourceTree = "<group>"; };
+		D941EC5F2007968400AD5AED /* UIImage+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Square1.swift"; sourceTree = "<group>"; };
+		D941EC602007968400AD5AED /* UIApplication+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Square1.swift"; sourceTree = "<group>"; };
+		D941EC612007968400AD5AED /* UINavigationController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Square1.swift"; sourceTree = "<group>"; };
+		D941EC622007968400AD5AED /* UIViewController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Square1.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +124,7 @@
 				D941EC4420078ED800AD5AED /* SQ1Log.swift */,
 				D941EC3D20078ECD00AD5AED /* Extensions */,
 				D941EC3820078EC600AD5AED /* Data Structures */,
+				D941EC542007966100AD5AED /* UI */,
 				D941EC2120078C4800AD5AED /* Square1Tools.h */,
 				D941EC2220078C4800AD5AED /* Info.plist */,
 			);
@@ -130,6 +159,27 @@
 				D941EC3F20078ECD00AD5AED /* Date+Square1.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D941EC542007966100AD5AED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D941EC5D2007968300AD5AED /* SQ1MailSender.swift */,
+				D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */,
+				D941EC602007968400AD5AED /* UIApplication+Square1.swift */,
+				D941EC572007968300AD5AED /* UIColor+Square1.swift */,
+				D941EC592007968300AD5AED /* UIDevice+Square1.swift */,
+				D941EC5E2007968300AD5AED /* UIFont+Square1.swift */,
+				D941EC5F2007968400AD5AED /* UIImage+Square1.swift */,
+				D941EC612007968400AD5AED /* UINavigationController+Square1.swift */,
+				D941EC5A2007968300AD5AED /* UITableView+Square1.swift */,
+				D941EC562007968300AD5AED /* UITableViewCell+Square1.swift */,
+				D941EC5B2007968300AD5AED /* UITextField+Square1.swift */,
+				D941EC582007968300AD5AED /* UITextView+Square1.swift */,
+				D941EC5C2007968300AD5AED /* UIView+Square1.swift */,
+				D941EC622007968400AD5AED /* UIViewController+Square1.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +292,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D941EC672007968400AD5AED /* UIDevice+Square1.swift in Sources */,
+				D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */,
+				D941EC6C2007968400AD5AED /* UIFont+Square1.swift in Sources */,
+				D941EC632007968400AD5AED /* SQ1ReplaceRootControllerSegue.swift in Sources */,
+				D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */,
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
+				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
 				D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */,
+				D941EC6B2007968400AD5AED /* SQ1MailSender.swift in Sources */,
+				D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */,
 				D941EC3B20078EC600AD5AED /* Stack.swift in Sources */,
+				D941EC692007968400AD5AED /* UITextField+Square1.swift in Sources */,
+				D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */,
 				D941EC4720078ED800AD5AED /* SQ1Log.swift in Sources */,
+				D941EC682007968400AD5AED /* UITableView+Square1.swift in Sources */,
+				D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */,
+				D941EC6E2007968400AD5AED /* UIApplication+Square1.swift in Sources */,
+				D941EC6D2007968400AD5AED /* UIImage+Square1.swift in Sources */,
 				D941EC4620078ED800AD5AED /* SQ1App.swift in Sources */,
 				D941EC3C20078EC600AD5AED /* Queue.swift in Sources */,
 				D941EC4020078ECD00AD5AED /* String+Square1.swift in Sources */,
@@ -323,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -377,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -399,7 +463,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.square1.ios.tools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -421,7 +485,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.square1.ios.tools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

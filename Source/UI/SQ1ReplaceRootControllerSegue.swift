@@ -18,23 +18,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import XCTest
-@testable import Square1Tools
+import UIKit
 
-class DateTests: XCTestCase {
-  func testDateCreation() {
-    let dateString = "2017-02-12 01:17:29"
-    let timeZone = TimeZone(identifier: "GMT")!
-    let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
+class SQ1ReplaceRootControllerSegue: UIStoryboardSegue {
+  override func perform() {
+    let duration = 0.3
+    guard let window = UIApplication.shared.delegate?.window else { return }
+
+    window?.insertSubview(destination.view, belowSubview: source.view)
     
-    XCTAssertNotNil(date)
-    XCTAssertEqual(date!.day, 12)
-    XCTAssertEqual(date!.month, 2)
-    XCTAssertEqual(date!.year, 2017)
-    XCTAssertEqual(date!.hours, 1)
-    XCTAssertEqual(date!.minutes, 17)
-    XCTAssertEqual(date!.seconds, 29)
-    
-    XCTAssertEqual(date!.hours(in: timeZone), 1)
+    UIView.animate(withDuration: duration, animations: {
+      self.source.view.alpha = 0.0
+    }) { _ in
+      window?.bringSubview(toFront: self.destination.view)
+      window?.rootViewController = self.destination
+    }
   }
 }

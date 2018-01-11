@@ -18,23 +18,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import XCTest
-@testable import Square1Tools
+import UIKit
 
-class DateTests: XCTestCase {
-  func testDateCreation() {
-    let dateString = "2017-02-12 01:17:29"
-    let timeZone = TimeZone(identifier: "GMT")!
-    let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
+extension UIApplication {
+  
+  var statusBarColor: UIColor? {
+    get {
+      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return nil }
+      return statusBarView.backgroundColor
+    }
     
-    XCTAssertNotNil(date)
-    XCTAssertEqual(date!.day, 12)
-    XCTAssertEqual(date!.month, 2)
-    XCTAssertEqual(date!.year, 2017)
-    XCTAssertEqual(date!.hours, 1)
-    XCTAssertEqual(date!.minutes, 17)
-    XCTAssertEqual(date!.seconds, 29)
-    
-    XCTAssertEqual(date!.hours(in: timeZone), 1)
+    set {
+      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return }
+      statusBarView.backgroundColor = newValue
+    }
   }
+  
+  func open(url: URL) {
+    guard canOpenURL(url) else { return }
+    if #available(iOS 10.0, *) {
+      open(url, options: [:], completionHandler: nil)
+    } else {
+      openURL(url)
+    }
+  }
+  
 }

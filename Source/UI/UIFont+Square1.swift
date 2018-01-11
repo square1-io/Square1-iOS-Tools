@@ -18,23 +18,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import XCTest
-@testable import Square1Tools
+import UIKit
 
-class DateTests: XCTestCase {
-  func testDateCreation() {
-    let dateString = "2017-02-12 01:17:29"
-    let timeZone = TimeZone(identifier: "GMT")!
-    let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
-    
-    XCTAssertNotNil(date)
-    XCTAssertEqual(date!.day, 12)
-    XCTAssertEqual(date!.month, 2)
-    XCTAssertEqual(date!.year, 2017)
-    XCTAssertEqual(date!.hours, 1)
-    XCTAssertEqual(date!.minutes, 17)
-    XCTAssertEqual(date!.seconds, 29)
-    
-    XCTAssertEqual(date!.hours(in: timeZone), 1)
+extension UIFont {
+  
+  var bold: UIFont {
+    guard let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold) else { return self }
+    guard let boldFont = boldFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+    return boldFont
   }
+  
+  var italic: UIFont {
+    guard let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic) else { return self }
+    guard let italicFont = italicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+    return italicFont
+  }
+  
+  var boldItalic: UIFont {
+    guard let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitBold, .traitBold]) else { return self }
+    guard let boldItalicFont = boldItalicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+    return boldItalicFont
+  }
+  
 }
