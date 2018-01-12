@@ -39,9 +39,14 @@ import Square1Tools
 1. Download the source project
 2. Hit ```Cmd + U``` to run the tests.
 
+## How to use
+
+Check the [documentation page](docs/index.html).
+
 ## Contributing
 
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Make sure you comment modified and new code and use [Jazzy](https://github.com/realm/jazzy) to generate new documentation before making a pul request.
 
 ## Authors
 
@@ -53,4 +58,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 
 ## Acknowledgments
 
-To all the great Swift community aout there.
+To all the great Swift community out there.
