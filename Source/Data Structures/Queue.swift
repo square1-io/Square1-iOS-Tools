@@ -18,27 +18,46 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-struct Queue<T> {
+
+/// Queue data structure (FIFO).
+/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue
+public struct Queue<T> {
+  
+  /// Array storing queue elements.
   private var elements: [T] = []
   
-  var empty: Bool {
+  /// Is queue is empty or not?
+  public var isEmpty: Bool {
     return elements.isEmpty
   }
   
-  var count: Int {
+  /// Number of elements in the queue.
+  public var count: Int {
     return elements.count
   }
   
-  mutating func enqueue(_ element: T) {
+  
+  /// Enqueues a new element at the end of the queue.
+  ///
+  /// - Parameter element: the element to enter the queue
+  public mutating func enqueue(_ element: T) {
     elements.append(element)
   }
   
-  mutating func dequeue() -> T? {
-    guard !elements.isEmpty else { return nil }
+  
+  /// Dequeues the first element at the beginning of the queue.
+  ///
+  /// - Returns: first element of the queue or nil if is empty
+  public mutating func dequeue() -> T? {
+    guard !isEmpty else { return nil }
     return elements.removeFirst()
   }
   
-  func front() -> T? {
+  
+  /// Gets first element of the queue without dequeuing it.
+  ///
+  /// - Returns: first element of the queue or nil if is empty
+  public func front() -> T? {
     return elements.first
   }
 }

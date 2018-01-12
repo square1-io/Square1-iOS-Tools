@@ -18,41 +18,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import UIKit
+
+/// Helpers for UIApplication.
+public extension UIApplication {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
+  /// Simple variable to change Status Bar color.
+  public var statusBarColor: UIColor? {
+    get {
+      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return nil }
+      return statusBarView.backgroundColor
+    }
+    
+    set {
+      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return }
+      statusBarView.backgroundColor = newValue
+    }
   }
   
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
+  /// Opens passed URL object.
   ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
+  /// - Parameter url: URL to be opened on the App.
+  public func open(url: URL) {
+    guard canOpenURL(url) else { return }
+    if #available(iOS 10.0, *) {
+      open(url, options: [:], completionHandler: nil)
+    } else {
+      openURL(url)
+    }
   }
   
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
-  }
 }

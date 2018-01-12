@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Square1Tools  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Square1Tools  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Square1Tools Docs</a> (94% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Square1Tools Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Square1Tools  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SQ1App.html">SQ1App</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SQ1AsyncOperation.html">SQ1AsyncOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SQ1MailSender.html">SQ1MailSender</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SQ1ReplaceRootControllerSegue.html">SQ1ReplaceRootControllerSegue</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/DateStatics.html">DateStatics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableViewCell.html">UITableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextView.html">UITextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:12Square1Tools6SQ1LogyxyXK_S2SSitlF">SQ1Log(_:_:_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Queue.html">Queue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Stack.html">Stack</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='square1-tools' class='heading'>Square1 Tools</h1>
+
+<p align="center">
+<img src="https://img.shields.io/cocoapods/v/Square1Tools.svg" alt="Cocoapods"/>
+<img src="https://img.shields.io/badge/platform-ios-red.svg" alt="Platform"/>
+</p>
+
+<p>A handy collection of helpers, types and hacks used on our Swift projects.</p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>iOS 9.0+</li>
+<li>XCode 9+</li>
+<li>Swift 4+</li>
+</ul>
+<h2 id='installing' class='heading'>Installing</h2>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
+
+<p>If you&rsquo;re already using Cocoapods in your project, just skip to step 3</p>
+
+<ol>
+<li>Install <a href="https://guides.cocoapods.org/using/getting-started.html">Cocoapods</a></li>
+<li>Create a <a href="https://guides.cocoapods.org/using/using-cocoapods.html">Podfile</a> for your project</li>
+<li>Make sure you use 
+<code>swift
+use_frameworks!
+</code></li>
+<li>Add this pod to your Podfile
+<code>swift
+pod &#39;Square1Tools&#39;
+</code></li>
+<li>Run <code>pod install</code></li>
+<li>Use this import on every file you want to use the pod
+<code>swift
+import Square1Tools
+</code></li>
+</ol>
+<h2 id='running-the-tests' class='heading'>Running the tests</h2>
+
+<ol>
+<li>Download the source project</li>
+<li>Hit <code>Cmd + U</code> to run the tests.</li>
+</ol>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
+<h2 id='authors' class='heading'>Authors</h2>
+
+<ul>
+<li><a href="https://github.com/WedgeSparda">Roberto Pastor</a></li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE</a> file for details</p>
+<h2 id='acknowledgments' class='heading'>Acknowledgments</h2>
+
+<p>To all the great Swift community aout there.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

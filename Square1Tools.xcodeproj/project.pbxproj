@@ -119,12 +119,9 @@
 		D941EC2020078C4800AD5AED /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D941EC4320078ED800AD5AED /* SQ1App.swift */,
-				D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */,
-				D941EC4420078ED800AD5AED /* SQ1Log.swift */,
+				D944F0AC2008BC83001FF5ED /* Helpers */,
 				D941EC3D20078ECD00AD5AED /* Extensions */,
 				D941EC3820078EC600AD5AED /* Data Structures */,
-				D941EC542007966100AD5AED /* UI */,
 				D941EC2120078C4800AD5AED /* Square1Tools.h */,
 				D941EC2220078C4800AD5AED /* Info.plist */,
 			);
@@ -157,15 +154,6 @@
 			children = (
 				D941EC3E20078ECD00AD5AED /* String+Square1.swift */,
 				D941EC3F20078ECD00AD5AED /* Date+Square1.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D941EC542007966100AD5AED /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				D941EC5D2007968300AD5AED /* SQ1MailSender.swift */,
-				D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */,
 				D941EC602007968400AD5AED /* UIApplication+Square1.swift */,
 				D941EC572007968300AD5AED /* UIColor+Square1.swift */,
 				D941EC592007968300AD5AED /* UIDevice+Square1.swift */,
@@ -179,7 +167,19 @@
 				D941EC5C2007968300AD5AED /* UIView+Square1.swift */,
 				D941EC622007968400AD5AED /* UIViewController+Square1.swift */,
 			);
-			path = UI;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D944F0AC2008BC83001FF5ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D941EC4320078ED800AD5AED /* SQ1App.swift */,
+				D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */,
+				D941EC4420078ED800AD5AED /* SQ1Log.swift */,
+				D941EC5D2007968300AD5AED /* SQ1MailSender.swift */,
+				D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

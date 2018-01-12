@@ -18,41 +18,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
-  
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
-  }
-  
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
-  }
-  
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
+import UIKit
+
+/// Helpers for UINavigationController.
+public extension UINavigationController {
+    
+  /// Removes the 1pt shadow image below navigation bar.
+  public func removeNavigationBarSeparator() {
+    guard let color = navigationBar.barTintColor else { return }
+    let image = UIImage(color: color)
+
+    navigationBar.shadowImage = image
   }
 }

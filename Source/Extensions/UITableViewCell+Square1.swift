@@ -18,41 +18,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import UIKit
+
+/// Helpers for UITableViewCell.
+public extension UITableViewCell {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
+  /// UITableView for current cell or nil if is not attached to any.
+  public var tableView: UITableView? {
+    var view = self.superview
+    while (view != nil && view!.isKind(of: UITableView.self) == false) {
+      view = view!.superview
+    }
+    return view as? UITableView
   }
   
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
-  }
-  
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
-  }
 }

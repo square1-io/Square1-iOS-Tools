@@ -20,40 +20,55 @@
 
 import Foundation
 
-extension String {
+
+/// A collection of helpers for String type.
+public extension String {
   
+  /// Localized version of the current string, if available. If not, uses the same string.
   public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
   
+  /// Trimmed copy of the current string.
   public var trimmed: String {
     return self.trimmingCharacters(in: .whitespacesAndNewlines)
   }
   
+  /// Trimms the current string.
   public mutating func trim() {
     self = self.trimmed
   }
   
+  /// Attributed copy of the current string.
   public var attributed: NSAttributedString {
     return NSAttributedString(string: self)
   }
   
+  /// URL query encoded copy of the current string.
   public var encodedForURLQuery: String? {
     return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
   }
   
+  /// Basic match of the current string with email regular expression.
   public var isValidEmail: Bool {
     let pattern = "^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
     let emailPredicate = NSPredicate(format: "SELF MATCHES %@", pattern)
     return emailPredicate.evaluate(with: self)
   }
   
+  /// Basic match of the current string with HTTP URL regular expression.
   public var isValidURL: Bool {
     let pattern = "((?:http|https)://)?(?:www\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
     let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
     return predicate.evaluate(with: self)
   }
   
+  /// Date object based on the current string, if it represents a Date.
+  ///
+  /// - Parameters:
+  ///   - format: Expected format for the date string.
+  ///   - timeZone: Time zone to be used on the format. By default is the current one.
+  /// - Returns: A Date object based on the current string or nil if something went wrong.
   public func date(withFormat format: String, timeZone: TimeZone = TimeZone.current) -> Date? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
@@ -61,7 +76,8 @@ extension String {
     return dateFormatter.date(from: self)
   }
   
-  public var htmlToPlainText: NSAttributedString? {
+  /// HTML Attributed string based on the current HTML raw string or nil if something went wrong.
+  public var htmlToAttributed: NSAttributedString? {
     guard let encodedData = self.data(using: String.Encoding.utf8) else { return nil }
     
     let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [.documentType: NSAttributedString.DocumentType.html,

@@ -18,41 +18,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
-  
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
-  }
-  
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
-  }
-  
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
-  }
+import Foundation
+
+
+/// Helper log method for more accurate console prints.
+///
+/// Print will only happen on DEBUG.
+///
+/// Inspired by https://github.com/JungleCandy/LoggingPrint/blob/master/LoggingPrint.swift
+/// - Parameters:
+///   - object: Object to be printed. Can be an expression.
+///   - file: Name of the file calling this function. By default, the source file without .swift extension.
+///   - function: Name of the function calling this function. By default, same name as function where this is called.
+///   - line: Line number where this function is called. By default, line number within the file where the call is made.
+public func SQ1Log<T> (_ object: @autoclosure () -> T,
+                       _ file: String = #file,
+                       _ function: String = #function,
+                       _ line: Int = #line) {
+  #if DEBUG
+    let value = object()
+    let fileURL = URL(string: file)?.lastPathComponent ?? "Unknown file"
+    let queue = Thread.isMainThread ? "UI" : "BG"
+    
+    print("(\(queue)) \(fileURL) \(function) [\(line)]: " + String(reflecting: value))
+  #endif
 }

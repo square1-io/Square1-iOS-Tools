@@ -18,41 +18,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import UIKit
+
+/// Helpers for UITextView.
+public extension UITextView {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
+  /// Max number of lines in UITextView.
+  public var maxLines: Int {
+    get {
+      return textContainer.maximumNumberOfLines
+    }
+    
+    set {
+      textContainer.maximumNumberOfLines = newValue
+    }
   }
-  
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
+
+  /// Number of lines in current UITextView.
+  public var numberOfLines: Int {
+    guard let font = font else { return 0 }
+    return Int(round((contentSize.height - textContainerInset.top - textContainerInset.bottom) / font.lineHeight));
   }
-  
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
-  }
-  
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
-  }
+
 }

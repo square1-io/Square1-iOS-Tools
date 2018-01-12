@@ -18,41 +18,55 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
-  
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
+import Foundation
+
+
+/// Base async `Operation` subclass.
+///
+/// Inspired by https://gist.github.com/Sorix/57bc3295dc001434fe08acbb053ed2bc
+public class SQ1AsyncOperation: Operation {
+
+  enum State: String {
+    case ready = "Ready"
+    case executing = "Executing"
+    case finished = "Finished"
+    fileprivate var keyPath: String {
+      return "is" + self.rawValue
+    }
   }
   
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
+  private var state = State.ready {
+    willSet {
+      willChangeValue(forKey: state.keyPath)
+      willChangeValue(forKey: newValue.keyPath)
+    }
+    didSet {
+      didChangeValue(forKey: state.keyPath)
+      didChangeValue(forKey: oldValue.keyPath)
+    }
   }
   
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
+  public override var isAsynchronous: Bool { return true }
+  public override var isExecuting: Bool { return state == .executing }
+  
+  public override func start() {
+    if isCancelled {
+      state = .finished
+    } else {
+      state = .ready
+      main()
+    }
   }
   
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
+  public override func main() {
+    if isCancelled {
+      state = .finished
+    } else {
+      state = .executing
+    }
   }
   
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
+  public func finish() {
+    state = .finished
   }
 }

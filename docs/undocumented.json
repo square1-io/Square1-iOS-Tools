@@ -1,0 +1,54 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/Date+Square1.swift",
+      "line": null,
+      "symbol": "DateStatics",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UITableView+Square1.swift",
+      "line": 145,
+      "symbol": "UITableView.executeWhenReachingEnd(threshold:target:selector:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/SQ1AsyncOperation.swift",
+      "line": 49,
+      "symbol": "SQ1AsyncOperation.isAsynchronous",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/SQ1AsyncOperation.swift",
+      "line": 50,
+      "symbol": "SQ1AsyncOperation.isExecuting",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/SQ1AsyncOperation.swift",
+      "line": 52,
+      "symbol": "SQ1AsyncOperation.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/SQ1AsyncOperation.swift",
+      "line": 61,
+      "symbol": "SQ1AsyncOperation.main()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/SQ1AsyncOperation.swift",
+      "line": 69,
+      "symbol": "SQ1AsyncOperation.finish()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Wedge/Proyectos/square1/Square1Tools"
+}

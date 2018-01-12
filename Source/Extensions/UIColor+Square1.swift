@@ -18,41 +18,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import UIKit
+
+/// Helpers for UIColor.
+public extension UIColor {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
-  }
-  
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
+  /// Convenience init to create UIColor with RGB separated Int values (between 0 and 255).
   ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
+  /// - Parameters:
+  ///   - red: Red value.
+  ///   - green: Green value.
+  ///   - blue: Blue value.
+  convenience init(red: Int, green: Int, blue: Int) {
+    assert(red >= 0 && red <= 255, "Invalid red component")
+    assert(green >= 0 && green <= 255, "Invalid green component")
+    assert(blue >= 0 && blue <= 255, "Invalid blue component")
+    
+    self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
   }
   
-  /// Pops the top element of the stack.
+  /// Convenience init to create UIColor with RGB joint Int value.
   ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
+  /// - Parameter rgb: RGB Int value.
+  convenience init(rgb: Int) {
+    self.init(
+      red: (rgb >> 16) & 0xFF,
+      green: (rgb >> 8) & 0xFF,
+      blue: rgb & 0xFF
+    )
   }
   
-  /// Gets top element of the stack without popping it.
+  /// Convenience init to create UIColor with Hex Code string.
   ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
+  /// - Parameter hex: Hex code for desired UIColor.
+  convenience init(hex: String) {
+    var hexNum: UInt32 = 0
+    Scanner(string: hex).scanHexInt32(&hexNum)
+    self.init(rgb: Int(hexNum))
   }
 }

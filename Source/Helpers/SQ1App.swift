@@ -18,41 +18,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import Foundation
+
+/// Helper class to retrieve info from app's main bundle .plist file.
+public class SQ1App {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
-  
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
+  /// Current version of the app, retrieved from the main bundle .plist file.
+  public static var version: String? {
+    return infoValue(forKey: "CFBundleShortVersionString")
   }
   
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
+  /// Current build number of the app, retrieved from the main bundle .plist file.
+  public static var buildNumber: String? {
+    return infoValue(forKey: "CFBundleVersion")
   }
   
-  /// Pushes a new element into the stack.
+  /// App name, retrieved from, retrieved from the main bundle .plist file.
+  public static var name: String? {
+    return infoValue(forKey: "CFBundleName")
+  }
+  
+  /// Gets value from main bundle .plist file.
   ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
+  /// - Parameter key: key name for desired value.
+  /// - Returns: the desired value or nil if it doesn't exist.
+  private static func infoValue(forKey key:String) -> String? {
+    return Bundle.main.infoDictionary?[key] as? String
   }
   
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
-  }
 }

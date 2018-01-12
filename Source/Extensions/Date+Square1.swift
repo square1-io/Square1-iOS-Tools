@@ -20,48 +20,68 @@
 
 import Foundation
 
-extension Date {
+
+/// Helpers for Date.
+public extension Date {
   
+  /// Day of the Date.
   public var day: Int {
     return component(.day)
   }
   
+  /// Month of the Date.
   public var month: Int {
     return component(.month)
   }
   
+  /// Year of the Date.
   public var year: Int {
     return component(.year)
   }
   
+  /// Hour of the Date.
   public var hours: Int {
     return component(.hour)
   }
   
+  /// Minutes of the Date.
   public var minutes: Int {
     return component(.minute)
   }
   
+  /// Seconds of the Date.
   public var seconds: Int {
     return component(.second)
   }
   
+  /// Date component for passed key.
+  ///
+  /// - Parameter component: Key for desired Date component.
+  /// - Returns: Int representation of the component.
   public func component(_ component: Calendar.Component) -> Int{
     return Calendar.current.component(component, from: self)
   }
   
+  /// Local version of the Date.
   public var local: Date? {
     let timeZone = TimeZone.current
     let seconds = timeZone.secondsFromGMT(for: self)
     return Date(timeInterval: TimeInterval(seconds), since: self)
   }
   
+  /// GMT version of the Date.
   public var GMT: Date? {
     let timeZone = TimeZone.current
     let seconds = -timeZone.secondsFromGMT(for: self)
     return Date(timeInterval: TimeInterval(seconds), since: self)
   }
   
+  /// New Date adding a `units` amount to `component` of Date.
+  ///
+  /// - Parameters:
+  ///   - units: Number to units to add.
+  ///   - component: Date component to add units to.
+  /// - Returns: New Date adding units or nil if something went wrong.
   public func add(_ units: Int, to component: Calendar.Component) -> Date? {
     let calendar = Calendar.current
     let components = calendar.dateComponents([component], from: self)
@@ -92,18 +112,30 @@ extension Date {
     return calendar.date(byAdding: components, to: self)
   }
   
-  public func hours(in timeZone: TimeZone) -> Int {
+  
+  /// Hour component of the Date on passed time zone.
+  ///
+  /// - Parameter timeZone: Time zone to use.
+  /// - Returns: Hour component after applying the passed time zone.
+  public func hours(inTimeZone timeZone: TimeZone) -> Int {
     var calendar = Calendar.current
     calendar.timeZone = timeZone
     return calendar.component(.hour, from: self)
   }
   
-  public func stringWith(format: String) -> String {
+  
+  /// String representation of the Date.
+  ///
+  /// - Parameter format: String representation of the desired output format.
+  /// - Returns: Date's string representation
+  public func string(withFormat format: String) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
     return dateFormatter.string(from: self)
   }
   
+  
+  /// Helper to check if 12h format is enabled.
   public var is12hFormatEnabled: Bool {
     let formatter = DateFormatter()
     formatter.locale = Locale.current
@@ -119,16 +151,27 @@ extension Date {
 }
 
 private typealias DateStatics = Date
-extension DateStatics {
 
+
+/// Static helpers for Date.
+public extension DateStatics {
+
+  /// Components for simple date (day, month and year).
   public static var dateComponents: Set<Calendar.Component> {
     return [.day, .month, .year]
   }
 
+  /// Components for simple time (hours, minutes and seconds).
   public static var timeComponents: Set<Calendar.Component> {
     return [.hour, .minute, .second]
   }
 
+  /// New Date created mixing date and time components from two different Date objects.
+  ///
+  /// - Parameters:
+  ///   - date: Date who will provide the date components.
+  ///   - time: Date who will provide the time components.
+  /// - Returns: New mixed Date
   public static func with(date: Date, time: Date) -> Date? {
     let calendar = Calendar.current
 
@@ -146,6 +189,13 @@ extension DateStatics {
     return calendar.date(from: newComponents)
   }
 
+  /// New Date with string representation, provided format and time zone.
+  ///
+  /// - Parameters:
+  ///   - string: String representation of the date.
+  ///   - format: Expected format for the string representation.
+  ///   - timeZone: Time zone for the Date. By default is the current one.
+  /// - Returns: New Date based on string representation
   public static func with(string: String, format: String, timeZone: TimeZone = TimeZone.current) -> Date? {
     let dateFormat = DateFormatter()
     dateFormat.dateFormat = format

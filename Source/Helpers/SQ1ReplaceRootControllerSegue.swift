@@ -18,41 +18,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/// Stack data structure (LIFO).
-/// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack
-public struct Stack<T> {
+import UIKit
+
+/// A Segue subclass prepared for root UIViewController replacement.
+public class SQ1ReplaceRootControllerSegue: UIStoryboardSegue {
   
-  /// Array storing stack elements.
-  private var elements: [T] = []
   
-  /// Is stack empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
-  }
-  
-  /// Number of elements in the stack.
-  public var count: Int {
-    return elements.count
-  }
-  
-  /// Pushes a new element into the stack.
-  ///
-  /// - Parameter element: the element to enter the stack
-  public mutating func push(_ element: T) {
-    elements.append(element)
-  }
-  
-  /// Pops the top element of the stack.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public mutating func pop() -> T? {
-    return elements.popLast()
-  }
-  
-  /// Gets top element of the stack without popping it.
-  ///
-  /// - Returns: top element in the stack of nil if is empty
-  public func top() -> T? {
-    return elements.last
+  /// Performs a quick fadeout animation before root UIViewController replacement.
+  public override func perform() {
+    
+    let duration = 0.3
+    guard let window = UIApplication.shared.delegate?.window else { return }
+
+    window?.insertSubview(destination.view, belowSubview: source.view)
+
+    UIView.animate(withDuration: duration, animations: {
+      self.source.view.alpha = 0.0
+    }) { _ in
+      window?.bringSubview(toFront: self.destination.view)
+      window?.rootViewController = self.destination
+    }
   }
 }
