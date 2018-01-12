@@ -41,7 +41,7 @@ import Square1Tools
 
 ## How to use
 
-Check the [documentation page](docs/index.html).
+Check the [documentation page](http://htmlpreview.github.io/?https://github.com/square1-io/Square1-iOS-Tools/blob/development/docs/index.html).
 
 ## Contributing
 
