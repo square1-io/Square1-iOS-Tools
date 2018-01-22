@@ -34,6 +34,7 @@
 		D941EC6E2007968400AD5AED /* UIApplication+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC602007968400AD5AED /* UIApplication+Square1.swift */; };
 		D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC612007968400AD5AED /* UINavigationController+Square1.swift */; };
 		D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC622007968400AD5AED /* UIViewController+Square1.swift */; };
+		D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1128C2010FC180066A06C /* Bool+Square1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D941EC602007968400AD5AED /* UIApplication+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Square1.swift"; sourceTree = "<group>"; };
 		D941EC612007968400AD5AED /* UINavigationController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Square1.swift"; sourceTree = "<group>"; };
 		D941EC622007968400AD5AED /* UIViewController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Square1.swift"; sourceTree = "<group>"; };
+		D9C1128C2010FC180066A06C /* Bool+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Square1.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D941EC3E20078ECD00AD5AED /* String+Square1.swift */,
+				D9C1128C2010FC180066A06C /* Bool+Square1.swift */,
 				D941EC3F20078ECD00AD5AED /* Date+Square1.swift */,
 				D941EC602007968400AD5AED /* UIApplication+Square1.swift */,
 				D941EC572007968300AD5AED /* UIColor+Square1.swift */,
@@ -298,6 +301,7 @@
 				D941EC632007968400AD5AED /* SQ1ReplaceRootControllerSegue.swift in Sources */,
 				D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */,
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
+				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
 				D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */,
 				D941EC6B2007968400AD5AED /* SQ1MailSender.swift in Sources */,

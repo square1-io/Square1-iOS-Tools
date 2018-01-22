@@ -26,12 +26,12 @@ class StackTests: XCTestCase {
   var stack = Stack<Int>()
   
   func testEmpty() {
-    XCTAssertTrue(stack.empty)
+    XCTAssertTrue(stack.isEmpty)
   }
   
   func testNotEmpty() {
     stack.push(5)
-    XCTAssertFalse(stack.empty)
+    XCTAssertFalse(stack.isEmpty)
   }
   
   func testEmptyMultiple() {
@@ -43,7 +43,7 @@ class StackTests: XCTestCase {
     let _ = stack.pop()
     let _ = stack.pop()
     
-    XCTAssertTrue(stack.empty)
+    XCTAssertTrue(stack.isEmpty)
   }
   
   func testCountZero() {

@@ -25,12 +25,12 @@ class QueueTests: XCTestCase {
   var queue = Queue<Int>()
   
   func testEmpty() {
-    XCTAssertTrue(queue.empty)
+    XCTAssertTrue(queue.isEmpty)
   }
   
   func testNotEmpty() {
     queue.enqueue(1)
-    XCTAssertFalse(queue.empty)
+    XCTAssertFalse(queue.isEmpty)
   }
   
   func testEmptyMultiple() {
@@ -42,7 +42,7 @@ class QueueTests: XCTestCase {
     let _ = queue.dequeue()
     let _ = queue.dequeue()
     
-    XCTAssertTrue(queue.empty)
+    XCTAssertTrue(queue.isEmpty)
   }
   
   func testCountZero() {

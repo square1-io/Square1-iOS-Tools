@@ -90,5 +90,44 @@ public extension String {
       return nil
     }
   }
-
+  
+  public func replace(pattern: String, with replacement: String, options: NSRegularExpression.Options) -> String {
+    do {
+      let regex = try NSRegularExpression(pattern: pattern, options: options)
+      return regex.stringByReplacingMatches(in: self, options: [], range: self.nsrange, withTemplate: replacement)
+    } catch {
+      return self
+    }
+  }
+  
+  
+  /// A `NSRange` for all the length of the current string.
+  public var nsrange: NSRange {
+    return NSRange(location: 0, length: utf16.count)
+  }
+  
+  /// Returns a subtring for the given `NSRange`.
+  ///
+  /// - Parameter nsrange: `NSRange` to use.
+  /// - Returns: substring or nil if `NSRange` can't be converted to `Range`.
+  public func substring(with nsrange: NSRange) -> String? {
+    guard let range = Range(nsrange, in: self) else { return nil }
+    return String(self[range])
+  }
+  
+  
+  /// Returns an array of matches for the given `NSRegularExpression` patterns.
+  ///
+  /// - Parameters:
+  ///   - pattern: The pattenr to use on `NSRegularExpression`.
+  ///   - options: Options for creating the `NSRegularExpression`. By default is [].
+  /// - Returns: Array of `NSTextCheckingResult` with the matches or nil if something went wrong
+  public func regexpMatchesWith(pattern: String, options: NSRegularExpression.Options = []) -> [NSTextCheckingResult]? {
+    do {
+      let regexp = try NSRegularExpression(pattern: pattern, options: options)
+      return regexp.matches(in: self, options: [], range: self.nsrange)
+    } catch {
+      return nil
+    }
+  }
 }

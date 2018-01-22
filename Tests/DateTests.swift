@@ -35,6 +35,6 @@ class DateTests: XCTestCase {
     XCTAssertEqual(date!.minutes, 17)
     XCTAssertEqual(date!.seconds, 29)
     
-    XCTAssertEqual(date!.hours(in: timeZone), 1)
+    XCTAssertEqual(date!.hours(inTimeZone: timeZone), 1)
   }
 }

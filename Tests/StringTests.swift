@@ -69,4 +69,28 @@ class StringTests: XCTestCase {
     let date = string.date(withFormat: "dd/MM/yyyy")
     XCTAssertNil(date)
   }
+  
+  func testNSRange() {
+    let string = "This is a text"
+    XCTAssertEqual(string.nsrange.length, 14)
+    XCTAssertEqual(string.nsrange.location, 0)
+  }
+  
+  func testNSRangedSubstring() {
+    let string = "This is a text"
+    let nsrange = NSRange(location: 10, length: 4)
+    XCTAssertEqual(string.substring(with: nsrange), "text")
+  }
+  
+  func testRegexpReplacing() {
+    var string = "This is a text with numbers 123456789"
+    string = string.replace(pattern: "\\d", with: "", options: [])
+    XCTAssertEqual(string, "This is a text with numbers ")
+  }
+  
+  func testRegexpMatchesArray() {
+    let string = "Hello 1 this 2 is 3 a test 4"
+    let pattern = "\\d"
+    XCTAssertEqual(string.regexpMatchesWith(pattern: pattern)?.count, 4)
+  }
 }
