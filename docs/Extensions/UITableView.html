@@ -14,7 +14,7 @@
     <a title="UITableView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Square1Tools Docs</a> (94% documented)</p>
+        <p><a href="../index.html">Square1Tools Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -48,6 +48,9 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
@@ -58,6 +61,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIColor.html">UIColor</a>
@@ -98,7 +104,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:12Square1Tools6SQ1LogyxyXK_S2SSitlF">SQ1Log(_:_:_:_:)</a>
+                <a href="../Functions.html#/s:12Square1Tools6SQ1LogySS_S2SSitF">SQ1Log(_:_:_:_:)</a>
               </li>
             </ul>
           </li>
@@ -259,67 +265,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundletF"></a>
-                    <a name="//apple_ref/swift/Method/registerCell(withNibName:bundle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundletF">registerCell(withNibName:bundle:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Registers cell Nib with passed name and same reuse identifier.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>nibName</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Name of the Nib file.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>bundle</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Bundle where Nib file is. By default is the Main Bundle.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundleSS15reuseIdentifiertF"></a>
+                    <a name="/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundleSSSg15reuseIdentifiertF"></a>
                     <a name="//apple_ref/swift/Method/registerCell(withNibName:bundle:reuseIdentifier:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundleSS15reuseIdentifiertF">registerCell(withNibName:bundle:reuseIdentifier:)</a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE12registerCellySS11withNibName_So6BundleCSg6bundleSSSg15reuseIdentifiertF">registerCell(withNibName:bundle:reuseIdentifier:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -334,7 +282,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -635,7 +583,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-12)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

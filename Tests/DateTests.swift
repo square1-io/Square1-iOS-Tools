@@ -28,13 +28,12 @@ class DateTests: XCTestCase {
     let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
     
     XCTAssertNotNil(date)
-    XCTAssertEqual(date!.day, 12)
-    XCTAssertEqual(date!.month, 2)
-    XCTAssertEqual(date!.year, 2017)
-    XCTAssertEqual(date!.hours, 1)
-    XCTAssertEqual(date!.minutes, 17)
-    XCTAssertEqual(date!.seconds, 29)
+    XCTAssertEqual(date!.component(.day, inTimeZone: timeZone), 12)
+    XCTAssertEqual(date!.component(.month, inTimeZone: timeZone), 2)
+    XCTAssertEqual(date!.component(.year, inTimeZone: timeZone), 2017)
+    XCTAssertEqual(date!.component(.hour, inTimeZone: timeZone), 1)
+    XCTAssertEqual(date!.component(.minute, inTimeZone: timeZone), 17)
+    XCTAssertEqual(date!.component(.second, inTimeZone: timeZone), 29)
     
-    XCTAssertEqual(date!.hours(inTimeZone: timeZone), 1)
   }
 }

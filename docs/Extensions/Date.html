@@ -14,7 +14,7 @@
     <a title="Date Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Square1Tools Docs</a> (94% documented)</p>
+        <p><a href="../index.html">Square1Tools Docs</a> (93% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -48,6 +48,9 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Date.html">Date</a>
               </li>
               <li class="nav-group-task">
@@ -58,6 +61,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIColor.html">UIColor</a>
@@ -98,7 +104,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:12Square1Tools6SQ1LogyxyXK_S2SSitlF">SQ1Log(_:_:_:_:)</a>
+                <a href="../Functions.html#/s:12Square1Tools6SQ1LogySS_S2SSitF">SQ1Log(_:_:_:_:)</a>
               </li>
             </ul>
           </li>
@@ -296,9 +302,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE9componentSiAA8CalendarV9ComponentOF"></a>
-                    <a name="//apple_ref/swift/Method/component(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE9componentSiAA8CalendarV9ComponentOF">component(_:)</a>
+                    <a name="/s:10Foundation4DateV12Square1ToolsE9componentSiAA8CalendarV9ComponentO_AA8TimeZoneVSg02inhI0tF"></a>
+                    <a name="//apple_ref/swift/Method/component(_:inTimeZone:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE9componentSiAA8CalendarV9ComponentO_AA8TimeZoneVSg02inhI0tF">component(_:inTimeZone:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,14 +312,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Date component for passed key.</p>
+                        <p>Component of the Date on passed time zone.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">component</span><span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Calendar</span><span class="o">.</span><span class="kt">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">component</span><span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Calendar</span><span class="o">.</span><span class="kt">Component</span><span class="p">,</span> <span class="n">inTimeZone</span> <span class="nv">timeZone</span><span class="p">:</span> <span class="kt">TimeZone</span><span class="p">?</span> <span class="o">=</span> <span class="kt">TimeZone</span><span class="o">.</span><span class="n">current</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -329,7 +335,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Key for desired Date component.</p>
+                                  <p>Desired <code>Component</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeZone</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>TimeZone</code> to use. By default is the current one.</p>
                                 </div>
                               </td>
                             </tr>
@@ -338,7 +356,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Int representation of the component.</p>
+                        <p><code>Component</code> after applying the passed time zone.</p>
                       </div>
                     </section>
                   </div>
@@ -462,56 +480,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE5hoursSiAA8TimeZoneV02infG0_tF"></a>
-                    <a name="//apple_ref/swift/Method/hours(inTimeZone:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE5hoursSiAA8TimeZoneV02infG0_tF">hours(inTimeZone:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Hour component of the Date on passed time zone.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hours</span><span class="p">(</span><span class="n">inTimeZone</span> <span class="nv">timeZone</span><span class="p">:</span> <span class="kt">TimeZone</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>timeZone</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Time zone to use.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Hour component after applying the passed time zone.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10Foundation4DateV12Square1ToolsE6stringS2S10withFormat_tF"></a>
                     <a name="//apple_ref/swift/Method/string(withFormat:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE6stringS2S10withFormat_tF">string(withFormat:)</a>
@@ -591,7 +559,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-12)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

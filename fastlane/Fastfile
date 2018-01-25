@@ -1,0 +1,9 @@
+min_fastlane_version("2.78.0")
+default_platform(:ios)
+
+platform :ios do
+  desc "Run tests"
+  lane :tests do
+    run_tests
+  end
+end

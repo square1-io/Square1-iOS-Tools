@@ -53,13 +53,19 @@ public extension Date {
   public var seconds: Int {
     return component(.second)
   }
-  
-  /// Date component for passed key.
+    
+  /// Component of the Date on passed time zone.
   ///
-  /// - Parameter component: Key for desired Date component.
-  /// - Returns: Int representation of the component.
-  public func component(_ component: Calendar.Component) -> Int{
-    return Calendar.current.component(component, from: self)
+  /// - Parameters:
+  ///   - component: Desired `Component`.
+  ///   - timeZone: `TimeZone` to use. By default is the current one.
+  /// - Returns: `Component` after applying the passed time zone.
+  public func component(_ component: Calendar.Component, inTimeZone timeZone: TimeZone? = TimeZone.current) -> Int {
+    var calendar = Calendar.current
+    if let timeZone = timeZone {
+      calendar.timeZone = timeZone
+    }
+    return calendar.component(component, from: self)
   }
   
   /// Local version of the Date.
@@ -112,17 +118,7 @@ public extension Date {
     return calendar.date(byAdding: components, to: self)
   }
   
-  
-  /// Hour component of the Date on passed time zone.
-  ///
-  /// - Parameter timeZone: Time zone to use.
-  /// - Returns: Hour component after applying the passed time zone.
-  public func hours(inTimeZone timeZone: TimeZone) -> Int {
-    var calendar = Calendar.current
-    calendar.timeZone = timeZone
-    return calendar.component(.hour, from: self)
-  }
-  
+
   
   /// String representation of the Date.
   ///

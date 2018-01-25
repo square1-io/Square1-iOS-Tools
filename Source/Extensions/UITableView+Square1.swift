@@ -56,24 +56,16 @@ public extension UITableView {
     return IndexPath(row: numberOfRows(inSection: section) - 1, section: section)
   }
   
-  /// Registers cell Nib with passed name and same reuse identifier.
-  ///
-  /// - Parameters:
-  ///   - nibName: Name of the Nib file.
-  ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
-  public func registerCell(withNibName nibName: String, bundle: Bundle? = Bundle.main) {
-    registerCell(withNibName: nibName, bundle: bundle, reuseIdentifier: nibName)
-  }
-  
   /// Registers cell Nib with passed name and reuse identifier.
   ///
   /// - Parameters:
   ///   - nibName: Name of the Nib file.
   ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
   ///   - reuseIdentifier: Name for the reuse identifier.
-  public func registerCell(withNibName nibName: String, bundle: Bundle? = Bundle.main, reuseIdentifier: String) {
+  public func registerCell(withNibName nibName: String, bundle: Bundle? = Bundle.main, reuseIdentifier: String? = nil) {
+    let reuseId: String = reuseIdentifier ?? nibName
     let nib = UINib(nibName: nibName, bundle: bundle)
-    register(nib, forCellReuseIdentifier: reuseIdentifier)
+    register(nib, forCellReuseIdentifier: reuseId)
   }
   
   /// Removes footer view from table.
