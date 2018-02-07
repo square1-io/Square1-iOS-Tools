@@ -21,52 +21,24 @@
 import Foundation
 
 
-/// Base async `Operation` subclass.
+/// Helper log method for more accurate console prints.
 ///
-/// Inspired by https://gist.github.com/Sorix/57bc3295dc001434fe08acbb053ed2bc
-public class SQ1AsyncOperation: Operation {
-
-  enum State: String {
-    case ready = "Ready"
-    case executing = "Executing"
-    case finished = "Finished"
-    fileprivate var keyPath: String {
-      return "is" + self.rawValue
-    }
-  }
-  
-  private var state = State.ready {
-    willSet {
-      willChangeValue(forKey: state.keyPath)
-      willChangeValue(forKey: newValue.keyPath)
-    }
-    didSet {
-      didChangeValue(forKey: state.keyPath)
-      didChangeValue(forKey: oldValue.keyPath)
-    }
-  }
-  
-  public override var isAsynchronous: Bool { return true }
-  public override var isExecuting: Bool { return state == .executing }
-  
-  public override func start() {
-    if isCancelled {
-      state = .finished
-    } else {
-      state = .ready
-      main()
-    }
-  }
-  
-  public override func main() {
-    if isCancelled {
-      state = .finished
-    } else {
-      state = .executing
-    }
-  }
-  
-  public func finish() {
-    state = .finished
-  }
+/// Print will only happen on DEBUG.
+///
+/// Inspired by https://github.com/JungleCandy/LoggingPrint/blob/master/LoggingPrint.swift
+/// - Parameters:
+///   - object: Object to be printed. Can be an expression.
+///   - file: Name of the file calling this function. By default, the source file without .swift extension.
+///   - function: Name of the function calling this function. By default, same name as function where this is called.
+///   - line: Line number where this function is called. By default, line number within the file where the call is made.
+public func Log (_ message: String,
+                    _ file: String = #file,
+                    _ function: String = #function,
+                    _ line: Int = #line) {
+  #if DEBUG
+    let fileURL = URL(string: file)?.lastPathComponent ?? "Unknown file"
+    let queue = Thread.isMainThread ? "UI" : "BG"
+    
+    print("(\(queue)) \(fileURL) \(function) [\(line)]: " + message)
+  #endif
 }

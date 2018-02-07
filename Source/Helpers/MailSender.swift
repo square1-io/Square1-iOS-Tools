@@ -27,7 +27,7 @@ fileprivate typealias MailAttachment = [String: Any]
 
 
 /// Helper class to use MFMailComposeViewController.
-public class SQ1MailSender {
+public class MailSender {
   
   /// Message for the email.
   public var message: String = ""

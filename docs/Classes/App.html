@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SQ1ReplaceRootControllerSegue Class Reference</title>
+    <title>App Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/SQ1ReplaceRootControllerSegue" class="dashAnchor"></a>
-    <a title="SQ1ReplaceRootControllerSegue Class Reference"></a>
+    <a name="//apple_ref/swift/Class/App" class="dashAnchor"></a>
+    <a title="App Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Square1Tools Docs</a> (93% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Square1Tools Reference</a>
         <img id="carat" src="../img/carat.png" />
-        SQ1ReplaceRootControllerSegue Class Reference
+        App Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -31,16 +31,16 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/SQ1App.html">SQ1App</a>
+                <a href="../Classes/App.html">App</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SQ1AsyncOperation.html">SQ1AsyncOperation</a>
+                <a href="../Classes/AsyncOperation.html">AsyncOperation</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SQ1MailSender.html">SQ1MailSender</a>
+                <a href="../Classes/MailSender.html">MailSender</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SQ1ReplaceRootControllerSegue.html">SQ1ReplaceRootControllerSegue</a>
+                <a href="../Classes/ReplaceRootControllerSegue.html">ReplaceRootControllerSegue</a>
               </li>
             </ul>
           </li>
@@ -104,7 +104,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:12Square1Tools6SQ1LogySS_S2SSitF">SQ1Log(_:_:_:_:)</a>
+                <a href="../Functions.html#/s:12Square1Tools3LogySS_S2SSitF">Log(_:_:_:_:)</a>
               </li>
             </ul>
           </li>
@@ -124,14 +124,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>SQ1ReplaceRootControllerSegue</h1>
+            <h1>App</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SQ1ReplaceRootControllerSegue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">App</span></code></pre>
 
                 </div>
               </div>
-            <p>A Segue subclass prepared for root UIViewController replacement.</p>
+            <p>Helper class to retrieve info from app&rsquo;s main bundle .plist file.</p>
 
           </section>
           <section class="section task-group-section">
@@ -140,9 +140,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Square1Tools@objc(cs)SQ1ReplaceRootControllerSegue(im)perform"></a>
-                    <a name="//apple_ref/swift/Method/perform()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)SQ1ReplaceRootControllerSegue(im)perform">perform()</a>
+                    <a name="/s:12Square1Tools3AppC7versionSSSgvZ"></a>
+                    <a name="//apple_ref/swift/Variable/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools3AppC7versionSSSgvZ">version</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -150,14 +150,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs a quick fadeout animation before root UIViewController replacement.</p>
+                        <p>Current version of the app, retrieved from the main bundle .plist file.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools3AppC11buildNumberSSSgvZ"></a>
+                    <a name="//apple_ref/swift/Variable/buildNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools3AppC11buildNumberSSSgvZ">buildNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current build number of the app, retrieved from the main bundle .plist file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">buildNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools3AppC4nameSSSgvZ"></a>
+                    <a name="//apple_ref/swift/Variable/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools3AppC4nameSSSgvZ">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>App name, retrieved from, retrieved from the main bundle .plist file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -169,7 +223,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-01-25)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-02-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

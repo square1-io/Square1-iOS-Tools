@@ -37,25 +37,31 @@ public extension UIView {
   
   /// Quick way to add single tap gesture recognition to current UIView.
   ///
-  /// - Parameter selector: Selector to be executed on gesture.
-  public func addSingleTapGesture(executing selector: Selector) {
-    addTapGesture(executing: selector, tapsRequired: 1)
+  /// - Parameter:
+  ///   - target: Target for the selector, if none, will look for cointaining View Controller.
+  ///   - selector: Selector to be executed on gesture.
+  public func addSingleTapGesture(target: Any? = nil, selector: Selector) {
+    addTapGesture(target: target, executing: selector, tapsRequired: 1)
   }
   
   /// Quick way to add double tap gesture recognition to current UIView.
   ///
-  /// - Parameter selector: Selector to be executed on gesture.
-  public func addDoubleTapGesture(executing selector: Selector) {
-    addTapGesture(executing: selector, tapsRequired: 2)
+  /// - Parameter:.
+  ///   - target: Target for the selector, if none, will look for cointaining View Controller.
+  ///   - selector: Selector to be executed on gesture.
+  public func addDoubleTapGesture(target: Any? = nil, selector: Selector) {
+    addTapGesture(target: target, executing: selector, tapsRequired: 2)
   }
   
   /// Quick way to add multiple tap gesture recognition to current UIView.
   ///
   /// - Parameters:
+  ///   - target: Target for the selector, if none, will look for cointaining View Controller.
   ///   - selector: Selector to be executed on gesture.
   ///   - tapsRequired: number of taps required for selector to be triggered.
-  public func addTapGesture(executing selector: Selector, tapsRequired: Int) {
-    let tap = UITapGestureRecognizer(target: viewController, action: selector)
+  public func addTapGesture(target: Any? = nil, executing selector: Selector, tapsRequired: Int) {
+    let tap = UITapGestureRecognizer(target: target != nil ? target : viewController,
+                                     action: selector)
     tap.numberOfTapsRequired = tapsRequired
     isUserInteractionEnabled = true
     addGestureRecognizer(tap)

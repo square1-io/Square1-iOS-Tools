@@ -8,8 +8,15 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/String+Square1.swift",
+      "line": 94,
+      "symbol": "String.replace(pattern:with:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UITableView+Square1.swift",
-      "line": 145,
+      "line": 137,
       "symbol": "UITableView.executeWhenReachingEnd(threshold:target:selector:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

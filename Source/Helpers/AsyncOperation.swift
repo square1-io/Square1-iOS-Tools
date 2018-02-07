@@ -20,30 +20,53 @@
 
 import Foundation
 
-/// Helper class to retrieve info from app's main bundle .plist file.
-public class SQ1App {
-  
-  /// Current version of the app, retrieved from the main bundle .plist file.
-  public static var version: String? {
-    return infoValue(forKey: "CFBundleShortVersionString")
+
+/// Base async `Operation` subclass.
+///
+/// Inspired by https://gist.github.com/Sorix/57bc3295dc001434fe08acbb053ed2bc
+public class AsyncOperation: Operation {
+
+  enum State: String {
+    case ready = "Ready"
+    case executing = "Executing"
+    case finished = "Finished"
+    fileprivate var keyPath: String {
+      return "is" + self.rawValue
+    }
   }
   
-  /// Current build number of the app, retrieved from the main bundle .plist file.
-  public static var buildNumber: String? {
-    return infoValue(forKey: "CFBundleVersion")
+  private var state = State.ready {
+    willSet {
+      willChangeValue(forKey: state.keyPath)
+      willChangeValue(forKey: newValue.keyPath)
+    }
+    didSet {
+      didChangeValue(forKey: state.keyPath)
+      didChangeValue(forKey: oldValue.keyPath)
+    }
   }
   
-  /// App name, retrieved from, retrieved from the main bundle .plist file.
-  public static var name: String? {
-    return infoValue(forKey: "CFBundleName")
+  public override var isAsynchronous: Bool { return true }
+  public override var isExecuting: Bool { return state == .executing }
+  
+  public override func start() {
+    if isCancelled {
+      state = .finished
+    } else {
+      state = .ready
+      main()
+    }
   }
   
-  /// Gets value from main bundle .plist file.
-  ///
-  /// - Parameter key: key name for desired value.
-  /// - Returns: the desired value or nil if it doesn't exist.
-  private static func infoValue(forKey key:String) -> String? {
-    return Bundle.main.infoDictionary?[key] as? String
+  public override func main() {
+    if isCancelled {
+      state = .finished
+    } else {
+      state = .executing
+    }
   }
   
+  public func finish() {
+    state = .finished
+  }
 }

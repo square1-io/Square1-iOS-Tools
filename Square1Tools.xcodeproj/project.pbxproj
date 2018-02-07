@@ -13,14 +13,14 @@
 		D941EC3C20078EC600AD5AED /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3A20078EC600AD5AED /* Queue.swift */; };
 		D941EC4020078ECD00AD5AED /* String+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3E20078ECD00AD5AED /* String+Square1.swift */; };
 		D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3F20078ECD00AD5AED /* Date+Square1.swift */; };
-		D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */; };
-		D941EC4620078ED800AD5AED /* SQ1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4320078ED800AD5AED /* SQ1App.swift */; };
-		D941EC4720078ED800AD5AED /* SQ1Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4420078ED800AD5AED /* SQ1Log.swift */; };
+		D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4220078ED700AD5AED /* AsyncOperation.swift */; };
+		D941EC4620078ED800AD5AED /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4320078ED800AD5AED /* App.swift */; };
+		D941EC4720078ED800AD5AED /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4420078ED800AD5AED /* Log.swift */; };
 		D941EC5020078F3500AD5AED /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4A20078F0500AD5AED /* DateTests.swift */; };
 		D941EC5120078F3900AD5AED /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4B20078F0600AD5AED /* QueueTests.swift */; };
 		D941EC5220078F3C00AD5AED /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4920078F0500AD5AED /* StringTests.swift */; };
 		D941EC5320078F3F00AD5AED /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC4820078F0500AD5AED /* StackTests.swift */; };
-		D941EC632007968400AD5AED /* SQ1ReplaceRootControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */; };
+		D941EC632007968400AD5AED /* ReplaceRootControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC552007968300AD5AED /* ReplaceRootControllerSegue.swift */; };
 		D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC562007968300AD5AED /* UITableViewCell+Square1.swift */; };
 		D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC572007968300AD5AED /* UIColor+Square1.swift */; };
 		D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC582007968300AD5AED /* UITextView+Square1.swift */; };
@@ -28,7 +28,7 @@
 		D941EC682007968400AD5AED /* UITableView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5A2007968300AD5AED /* UITableView+Square1.swift */; };
 		D941EC692007968400AD5AED /* UITextField+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5B2007968300AD5AED /* UITextField+Square1.swift */; };
 		D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5C2007968300AD5AED /* UIView+Square1.swift */; };
-		D941EC6B2007968400AD5AED /* SQ1MailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5D2007968300AD5AED /* SQ1MailSender.swift */; };
+		D941EC6B2007968400AD5AED /* MailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5D2007968300AD5AED /* MailSender.swift */; };
 		D941EC6C2007968400AD5AED /* UIFont+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5E2007968300AD5AED /* UIFont+Square1.swift */; };
 		D941EC6D2007968400AD5AED /* UIImage+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC5F2007968400AD5AED /* UIImage+Square1.swift */; };
 		D941EC6E2007968400AD5AED /* UIApplication+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC602007968400AD5AED /* UIApplication+Square1.swift */; };
@@ -58,14 +58,14 @@
 		D941EC3A20078EC600AD5AED /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		D941EC3E20078ECD00AD5AED /* String+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Square1.swift"; sourceTree = "<group>"; };
 		D941EC3F20078ECD00AD5AED /* Date+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Square1.swift"; sourceTree = "<group>"; };
-		D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1AsyncOperation.swift; sourceTree = "<group>"; };
-		D941EC4320078ED800AD5AED /* SQ1App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1App.swift; sourceTree = "<group>"; };
-		D941EC4420078ED800AD5AED /* SQ1Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1Log.swift; sourceTree = "<group>"; };
+		D941EC4220078ED700AD5AED /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		D941EC4320078ED800AD5AED /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D941EC4420078ED800AD5AED /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D941EC4820078F0500AD5AED /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		D941EC4920078F0500AD5AED /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		D941EC4A20078F0500AD5AED /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		D941EC4B20078F0600AD5AED /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
-		D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1ReplaceRootControllerSegue.swift; sourceTree = "<group>"; };
+		D941EC552007968300AD5AED /* ReplaceRootControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceRootControllerSegue.swift; sourceTree = "<group>"; };
 		D941EC562007968300AD5AED /* UITableViewCell+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Square1.swift"; sourceTree = "<group>"; };
 		D941EC572007968300AD5AED /* UIColor+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Square1.swift"; sourceTree = "<group>"; };
 		D941EC582007968300AD5AED /* UITextView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Square1.swift"; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		D941EC5A2007968300AD5AED /* UITableView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Square1.swift"; sourceTree = "<group>"; };
 		D941EC5B2007968300AD5AED /* UITextField+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Square1.swift"; sourceTree = "<group>"; };
 		D941EC5C2007968300AD5AED /* UIView+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Square1.swift"; sourceTree = "<group>"; };
-		D941EC5D2007968300AD5AED /* SQ1MailSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQ1MailSender.swift; sourceTree = "<group>"; };
+		D941EC5D2007968300AD5AED /* MailSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailSender.swift; sourceTree = "<group>"; };
 		D941EC5E2007968300AD5AED /* UIFont+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Square1.swift"; sourceTree = "<group>"; };
 		D941EC5F2007968400AD5AED /* UIImage+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Square1.swift"; sourceTree = "<group>"; };
 		D941EC602007968400AD5AED /* UIApplication+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Square1.swift"; sourceTree = "<group>"; };
@@ -179,11 +179,11 @@
 		D944F0AC2008BC83001FF5ED /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D941EC4320078ED800AD5AED /* SQ1App.swift */,
-				D941EC4220078ED700AD5AED /* SQ1AsyncOperation.swift */,
-				D941EC4420078ED800AD5AED /* SQ1Log.swift */,
-				D941EC5D2007968300AD5AED /* SQ1MailSender.swift */,
-				D941EC552007968300AD5AED /* SQ1ReplaceRootControllerSegue.swift */,
+				D941EC4320078ED800AD5AED /* App.swift */,
+				D941EC4220078ED700AD5AED /* AsyncOperation.swift */,
+				D941EC4420078ED800AD5AED /* Log.swift */,
+				D941EC5D2007968300AD5AED /* MailSender.swift */,
+				D941EC552007968300AD5AED /* ReplaceRootControllerSegue.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -301,24 +301,24 @@
 				D941EC672007968400AD5AED /* UIDevice+Square1.swift in Sources */,
 				D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */,
 				D941EC6C2007968400AD5AED /* UIFont+Square1.swift in Sources */,
-				D941EC632007968400AD5AED /* SQ1ReplaceRootControllerSegue.swift in Sources */,
+				D941EC632007968400AD5AED /* ReplaceRootControllerSegue.swift in Sources */,
 				D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */,
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
 				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
-				D941EC4520078ED800AD5AED /* SQ1AsyncOperation.swift in Sources */,
-				D941EC6B2007968400AD5AED /* SQ1MailSender.swift in Sources */,
+				D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */,
+				D941EC6B2007968400AD5AED /* MailSender.swift in Sources */,
 				D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */,
 				D941EC3B20078EC600AD5AED /* Stack.swift in Sources */,
 				D941EC692007968400AD5AED /* UITextField+Square1.swift in Sources */,
 				D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */,
-				D941EC4720078ED800AD5AED /* SQ1Log.swift in Sources */,
+				D941EC4720078ED800AD5AED /* Log.swift in Sources */,
 				D941EC682007968400AD5AED /* UITableView+Square1.swift in Sources */,
 				D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */,
 				D99494122018A69500BD937D /* UICollectionView+Square1.swift in Sources */,
 				D941EC6E2007968400AD5AED /* UIApplication+Square1.swift in Sources */,
 				D941EC6D2007968400AD5AED /* UIImage+Square1.swift in Sources */,
-				D941EC4620078ED800AD5AED /* SQ1App.swift in Sources */,
+				D941EC4620078ED800AD5AED /* App.swift in Sources */,
 				D941EC3C20078EC600AD5AED /* Queue.swift in Sources */,
 				D941EC4020078ECD00AD5AED /* String+Square1.swift in Sources */,
 			);

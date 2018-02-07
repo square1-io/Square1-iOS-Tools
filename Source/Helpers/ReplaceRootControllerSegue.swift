@@ -18,27 +18,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-
-/// Helper log method for more accurate console prints.
-///
-/// Print will only happen on DEBUG.
-///
-/// Inspired by https://github.com/JungleCandy/LoggingPrint/blob/master/LoggingPrint.swift
-/// - Parameters:
-///   - object: Object to be printed. Can be an expression.
-///   - file: Name of the file calling this function. By default, the source file without .swift extension.
-///   - function: Name of the function calling this function. By default, same name as function where this is called.
-///   - line: Line number where this function is called. By default, line number within the file where the call is made.
-public func SQ1Log (_ message: String,
-                    _ file: String = #file,
-                    _ function: String = #function,
-                    _ line: Int = #line) {
-  #if DEBUG
-    let fileURL = URL(string: file)?.lastPathComponent ?? "Unknown file"
-    let queue = Thread.isMainThread ? "UI" : "BG"
+/// A Segue subclass prepared for root UIViewController replacement.
+public class ReplaceRootControllerSegue: UIStoryboardSegue {
+  
+  
+  /// Performs a quick fadeout animation before root UIViewController replacement.
+  public override func perform() {
     
-    print("(\(queue)) \(fileURL) \(function) [\(line)]: " + message)
-  #endif
+    let duration = 0.3
+    guard let window = UIApplication.shared.delegate?.window else { return }
+
+    window?.insertSubview(destination.view, belowSubview: source.view)
+
+    UIView.animate(withDuration: duration, animations: {
+      self.source.view.alpha = 0.0
+    }) { _ in
+      window?.bringSubview(toFront: self.destination.view)
+      window?.rootViewController = self.destination
+    }
+  }
 }

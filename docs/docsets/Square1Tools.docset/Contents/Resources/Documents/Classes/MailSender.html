@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DateStatics Extension Reference</title>
+    <title>MailSender Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/DateStatics" class="dashAnchor"></a>
-    <a title="DateStatics Extension Reference"></a>
+    <a name="//apple_ref/swift/Class/MailSender" class="dashAnchor"></a>
+    <a title="MailSender Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Square1Tools Docs</a> (93% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Square1Tools Reference</a>
         <img id="carat" src="../img/carat.png" />
-        DateStatics Extension Reference
+        MailSender Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -124,8 +124,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DateStatics</h1>
-            <p>Undocumented</p>
+            <h1>MailSender</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MailSender</span></code></pre>
+
+                </div>
+              </div>
+            <p>Helper class to use MFMailComposeViewController.</p>
 
           </section>
           <section class="section task-group-section">
@@ -134,9 +140,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE14dateComponentss3SetVyAA8CalendarV9ComponentOGvZ"></a>
-                    <a name="//apple_ref/swift/Variable/dateComponents" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE14dateComponentss3SetVyAA8CalendarV9ComponentOGvZ">dateComponents</a>
+                    <a name="/s:12Square1Tools10MailSenderC7messageSSv"></a>
+                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC7messageSSv">message</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,14 +150,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Components for simple date (day, month and year).</p>
+                        <p>Message for the email.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">dateComponents</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">Calendar</span><span class="o">.</span><span class="kt">Component</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
 
                         </div>
                       </div>
@@ -161,9 +167,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE14timeComponentss3SetVyAA8CalendarV9ComponentOGvZ"></a>
-                    <a name="//apple_ref/swift/Variable/timeComponents" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE14timeComponentss3SetVyAA8CalendarV9ComponentOGvZ">timeComponents</a>
+                    <a name="/s:12Square1Tools10MailSenderC7subjectSSv"></a>
+                    <a name="//apple_ref/swift/Property/subject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC7subjectSSv">subject</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,14 +177,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Components for simple time (hours, minutes and seconds).</p>
+                        <p>Subject for the email.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">timeComponents</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">Calendar</span><span class="o">.</span><span class="kt">Component</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
 
                         </div>
                       </div>
@@ -188,9 +194,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE4withACSgAC4date_AC4timetFZ"></a>
-                    <a name="//apple_ref/swift/Method/with(date:time:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE4withACSgAC4date_AC4timetFZ">with(date:time:)</a>
+                    <a name="/s:12Square1Tools10MailSenderC2toSaySSGv"></a>
+                    <a name="//apple_ref/swift/Property/to" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC2toSaySSGv">to</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -198,14 +204,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>New Date created mixing date and time components from two different Date objects.</p>
+                        <p>Email address for destination.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">with</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools10MailSenderC2ccSaySSGSgv"></a>
+                    <a name="//apple_ref/swift/Property/cc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC2ccSaySSGSgv">cc</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CC email address, if needed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cc</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools10MailSenderC3bccSaySSGSgv"></a>
+                    <a name="//apple_ref/swift/Property/bcc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC3bccSaySSGSgv">bcc</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>BSS email address, if needed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bcc</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools10MailSenderC6isHTMLSbv"></a>
+                    <a name="//apple_ref/swift/Property/isHTML" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC6isHTMLSbv">isHTML</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag indicating that email has HTML format.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isHTML</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools10MailSenderC04showC8ComposerySo16UIViewControllerC4from_tF"></a>
+                    <a name="//apple_ref/swift/Method/showMailComposer(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC04showC8ComposerySo16UIViewControllerC4from_tF">showMailComposer(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays an MFMailComposeViewController over passed UIViewController.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showMailComposer</span><span class="p">(</span><span class="n">from</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -216,33 +330,17 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>date</em>
+                                <em>viewController</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Date who will provide the date components.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>time</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Date who will provide the time components.</p>
+                                  <p>UIViewController who will display the MFMailComposeViewController.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>New mixed Date</p>
                       </div>
                     </section>
                   </div>
@@ -250,9 +348,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DateV12Square1ToolsE4withACSgSS6string_SS6formatAA8TimeZoneV04timeI0tFZ"></a>
-                    <a name="//apple_ref/swift/Method/with(string:format:timeZone:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV12Square1ToolsE4withACSgSS6string_SS6formatAA8TimeZoneV04timeI0tFZ">with(string:format:timeZone:)</a>
+                    <a name="/s:12Square1Tools10MailSenderC13addAttachmenty10Foundation4DataV04withH0_SS8mimeTypeSS8fileNametF"></a>
+                    <a name="//apple_ref/swift/Method/addAttachment(withData:mimeType:fileName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC13addAttachmenty10Foundation4DataV04withH0_SS8mimeTypeSS8fileNametF">addAttachment(withData:mimeType:fileName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,14 +358,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>New Date with string representation, provided format and time zone.</p>
+                        <p>Adds a new attachment to the compsed email.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">with</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">timeZone</span><span class="p">:</span> <span class="kt">TimeZone</span> <span class="o">=</span> <span class="kt">TimeZone</span><span class="o">.</span><span class="n">current</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addAttachment</span><span class="p">(</span><span class="n">withData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">mimeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -278,45 +376,41 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>string</em>
+                                <em>data</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>String representation of the date.</p>
+                                  <p>Data representation of the attachment.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>format</em>
+                                <em>mimeType</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Expected format for the string representation.</p>
+                                  <p>MIMEType for the attachment.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>timeZone</em>
+                                <em>fileName</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Time zone for the Date. By default is the current one.</p>
+                                  <p>Name for the attachment.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>New Date based on string representation</p>
                       </div>
                     </section>
                   </div>

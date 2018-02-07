@@ -186,37 +186,37 @@ extension UIViewController {
   ///
   /// - Parameter frame: Frame of presented keyboard.
   open func keyboardWillShow(withFrame frame: CGRect) {
-    SQ1Log("You must override keyboardWillShow")
+    Log("You must override keyboardWillShow")
   }
   
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
   open func keyboardDidShow(withFrame frame: CGRect) {
-    SQ1Log("You must override keyboardDidShow")
+    Log("You must override keyboardDidShow")
   }
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
   open func keyboardWillHide() {
-    SQ1Log("You must override keyboardWillHide")
+    Log("You must override keyboardWillHide")
   }
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
   open func keyboardDidHide() {
-    SQ1Log("You must override keyboardDidHide")
+    Log("You must override keyboardDidHide")
   }
   
   /// Method to be called on UIKeyboardWillChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
   open func keyboardWillChange(toFrame frame: CGRect) {
-    SQ1Log("You must override keyboardWillChange")
+    Log("You must override keyboardWillChange")
   }
   
   /// Method to be called on UIKeyboardDidChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
   open func keyboardDidChange(toFrame frame: CGRect) {
-    SQ1Log("You must override keyboardDidChange")
+    Log("You must override keyboardDidChange")
   }
 }

@@ -18,25 +18,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-/// A Segue subclass prepared for root UIViewController replacement.
-public class SQ1ReplaceRootControllerSegue: UIStoryboardSegue {
+/// Helper class to retrieve info from app's main bundle .plist file.
+public class App {
   
-  
-  /// Performs a quick fadeout animation before root UIViewController replacement.
-  public override func perform() {
-    
-    let duration = 0.3
-    guard let window = UIApplication.shared.delegate?.window else { return }
-
-    window?.insertSubview(destination.view, belowSubview: source.view)
-
-    UIView.animate(withDuration: duration, animations: {
-      self.source.view.alpha = 0.0
-    }) { _ in
-      window?.bringSubview(toFront: self.destination.view)
-      window?.rootViewController = self.destination
-    }
+  /// Current version of the app, retrieved from the main bundle .plist file.
+  public static var version: String? {
+    return infoValue(forKey: "CFBundleShortVersionString")
   }
+  
+  /// Current build number of the app, retrieved from the main bundle .plist file.
+  public static var buildNumber: String? {
+    return infoValue(forKey: "CFBundleVersion")
+  }
+  
+  /// App name, retrieved from, retrieved from the main bundle .plist file.
+  public static var name: String? {
+    return infoValue(forKey: "CFBundleName")
+  }
+  
+  /// Gets value from main bundle .plist file.
+  ///
+  /// - Parameter key: key name for desired value.
+  /// - Returns: the desired value or nil if it doesn't exist.
+  private static func infoValue(forKey key:String) -> String? {
+    return Bundle.main.infoDictionary?[key] as? String
+  }
+  
 }
