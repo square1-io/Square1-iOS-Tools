@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import Foundation
-
+import CommonCrypto
 
 /// A collection of helpers for String type.
 public extension String {
@@ -86,7 +86,7 @@ public extension String {
       let attributedPlainText = try NSAttributedString(data: encodedData, options: options, documentAttributes: nil)
       return attributedPlainText
     } catch let error {
-      print(error.localizedDescription)
+      Log(error.localizedDescription)
       return nil
     }
   }
@@ -129,6 +129,34 @@ public extension String {
     } catch {
       return nil
     }
+  }
+  
+  
+  /// MD5 hash of the current string.
+  public var md5: String {
+    guard let data = self.data(using: .utf8, allowLossyConversion: true) else { return self }
+      
+    let hash = data.withUnsafeBytes({ (bytes: UnsafePointer<Data>) -> [UInt8] in
+      var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+      CC_MD5(bytes, CC_LONG(data.count), &hash)
+      return hash
+    })
+    
+    return hash.map { String(format: "%02x", $0) }.joined()
+  }
+  
+  
+  /// SHA1 hash of the current string
+  public var sha1: String {
+    guard let data = self.data(using: .utf8, allowLossyConversion: true) else { return self }
+    
+    let hash = data.withUnsafeBytes({ (bytes: UnsafePointer<Data>) -> [UInt8] in
+      var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+      CC_SHA1(bytes, CC_LONG(data.count), &hash)
+      return hash
+    })
+    
+    return hash.map { String(format: "%02x", $0) }.joined()
   }
 
 }

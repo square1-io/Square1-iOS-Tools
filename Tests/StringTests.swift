@@ -93,4 +93,16 @@ class StringTests: XCTestCase {
     let pattern = "\\d"
     XCTAssertEqual(string.regexpMatchesWith(pattern: pattern)?.count, 4)
   }
+  
+  func testMD5() {
+    let string = "Hello world!!"
+    let expected = "1d94dd7dfd050410185a535b9575e184"
+    XCTAssertEqual(string.md5, expected)
+  }
+  
+  func testSHA1() {
+    let string = "Hello world!!"
+    let expected = "a59b02741bff27a4c3e236332f29aa604c723e85"
+    XCTAssertEqual(string.sha1, expected)
+  }
 }
