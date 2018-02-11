@@ -10,12 +10,11 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/square1-io/Square1-iOS-Tools.git", :tag => s.version }
-  s.source_files  = "Source", "Source/**/*.swift"
+  s.source_files  = "Source/**/*.swift"
 
   s.preserve_paths = 'CommonCrypto/*'
   s.xcconfig = { 
                 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/CommonCrypto',
-                'SWIFT_INCLUDE_PATHS' => '${SRCROOT}/CommonCrypto' 
+                'SWIFT_INCLUDE_PATHS' => '$(inherited) ${PODS_TARGET_SRCROOT}/CommonCrypto' 
                }
-
 end
