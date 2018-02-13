@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/square1-io/Square1-iOS-Tools"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author       = "Square1"
-  s.platform     = :ios
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/square1-io/Square1-iOS-Tools.git", :tag => s.version }
   s.source_files  = "Source/**/*.swift"
