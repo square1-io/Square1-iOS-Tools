@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Square1Tools Docs</a> (93% documented)</p>
+        <p><a href="../index.html">Square1Tools Docs</a> (91% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -41,6 +41,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReplaceRootControllerSegue.html">ReplaceRootControllerSegue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Storage.html">Storage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Storage/Directory.html">– Directory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/MapsApp.html">MapsApp</a>
               </li>
             </ul>
           </li>
@@ -838,10 +852,183 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC12Square1ToolsE22openOnAvailableMapAppsySC22CLLocationCoordinate2DV8location_SS11markerTitleSSSg011actionSheetN0AI7messageSS6canceltF"></a>
+                    <a name="//apple_ref/swift/Method/openOnAvailableMapApps(location:markerTitle:actionSheetTitle:message:cancel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC12Square1ToolsE22openOnAvailableMapAppsySC22CLLocationCoordinate2DV8location_SS11markerTitleSSSg011actionSheetN0AI7messageSS6canceltF">openOnAvailableMapApps(location:markerTitle:actionSheetTitle:message:cancel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays an action sheet showing supported maps apps if they&rsquo;re installed.
+Otherwise, will try to open location with Google Maps first and the Apple Maps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openOnAvailableMapApps</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span>
+                                   <span class="nv">markerTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                   <span class="nv">actionSheetTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                   <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                   <span class="nv">cancel</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Cancel"</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>CLLocationCoordinate2D</code> to open.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>markerTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>title for the marker displayed on the maps app.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>actionSheetTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional title for the action sheet.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional message for the action sheet.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>text for the cancel action. By default it will be <q>Cancel</q>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC12Square1ToolsE4openySC22CLLocationCoordinate2DV8location_AC7MapsAppO2inSS11markerTitletF"></a>
+                    <a name="//apple_ref/swift/Method/open(location:in:markerTitle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC12Square1ToolsE4openySC22CLLocationCoordinate2DV8location_AC7MapsAppO2inSS11markerTitletF">open(location:in:markerTitle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opens the procided <code>CLLocationCoordinate2D</code> on the desired maps app.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">open</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="k">in</span> <span class="nv">mapsApp</span><span class="p">:</span> <span class="kt"><a href="../Enums/MapsApp.html">MapsApp</a></span><span class="p">,</span> <span class="nv">markerTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>CLLocationCoordinate2D</code> to open.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapsApp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Enums/MapsApp.html">MapsApp</a></code> to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>markerTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>title for the marker displayed on the maps app.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-02-09)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-02-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

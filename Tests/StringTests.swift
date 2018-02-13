@@ -105,4 +105,11 @@ class StringTests: XCTestCase {
     let expected = "a59b02741bff27a4c3e236332f29aa604c723e85"
     XCTAssertEqual(string.sha1, expected)
   }
+  
+  func testContainsString() {
+    let string = "Hello World!!"
+    XCTAssertTrue(string.contains("world"))
+    XCTAssertTrue(string.contains("World", ignoringCase: false))
+    XCTAssertFalse(string.contains("world", ignoringCase: false))
+  }
 }

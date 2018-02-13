@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C3F20330D610042694C /* UIViewController+Maps.swift */; };
+		D92A2C4220330E800042694C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C4120330E7F0042694C /* Storage.swift */; };
 		D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1Tools.framework */; };
 		D941EC2F20078C4900AD5AED /* Square1Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = D941EC2120078C4800AD5AED /* Square1Tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D941EC3B20078EC600AD5AED /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC3920078EC600AD5AED /* Stack.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		D900BAA8202DF6320056A160 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		D92A2C3F20330D610042694C /* UIViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Maps.swift"; sourceTree = "<group>"; };
+		D92A2C4120330E7F0042694C /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		D941EC1E20078C4800AD5AED /* Square1Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Square1Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D941EC2120078C4800AD5AED /* Square1Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square1Tools.h; sourceTree = "<group>"; };
 		D941EC2220078C4800AD5AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				D941EC5C2007968300AD5AED /* UIView+Square1.swift */,
 				D941EC622007968400AD5AED /* UIViewController+Square1.swift */,
 				D99494112018A69500BD937D /* UICollectionView+Square1.swift */,
+				D92A2C3F20330D610042694C /* UIViewController+Maps.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				D941EC4420078ED800AD5AED /* Log.swift */,
 				D941EC5D2007968300AD5AED /* MailSender.swift */,
 				D941EC552007968300AD5AED /* ReplaceRootControllerSegue.swift */,
+				D92A2C4120330E7F0042694C /* Storage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -317,12 +323,14 @@
 				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
 				D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */,
+				D92A2C4220330E800042694C /* Storage.swift in Sources */,
 				D941EC6B2007968400AD5AED /* MailSender.swift in Sources */,
 				D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */,
 				D941EC3B20078EC600AD5AED /* Stack.swift in Sources */,
 				D941EC692007968400AD5AED /* UITextField+Square1.swift in Sources */,
 				D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */,
 				D941EC4720078ED800AD5AED /* Log.swift in Sources */,
+				D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */,
 				D941EC682007968400AD5AED /* UITableView+Square1.swift in Sources */,
 				D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */,
 				D99494122018A69500BD937D /* UICollectionView+Square1.swift in Sources */,

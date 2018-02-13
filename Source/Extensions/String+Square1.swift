@@ -159,4 +159,18 @@ public extension String {
     return hash.map { String(format: "%02x", $0) }.joined()
   }
 
+  
+  /// Checks if string contains `string`
+  ///
+  /// - Parameters:
+  ///   - string: text to look for
+  ///   - ignoringCase: flag to indicate if checking should or shouldn't ignore case. By default is `true`
+  /// - Returns: `true` if `string` if found, otherwise `false`
+  public func contains(_ string: String, ignoringCase: Bool = true) -> Bool {
+    if ignoringCase == true {
+      return self.range(of: string, options: .caseInsensitive) != nil
+    } else {
+      return self.range(of: string) != nil
+    }
+  }
 }
