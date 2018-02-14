@@ -22,6 +22,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UIViewController+Maps.swift",
+      "line": 26,
+      "symbol": "MapsApp.googleMaps",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UIViewController+Maps.swift",
+      "line": 27,
+      "symbol": "MapsApp.appleMaps",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/AsyncOperation.swift",
       "line": 49,
       "symbol": "AsyncOperation.isAsynchronous",
@@ -54,6 +68,20 @@
       "line": 69,
       "symbol": "AsyncOperation.finish()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/Storage.swift",
+      "line": 32,
+      "symbol": "Storage.Directory.documents",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/Storage.swift",
+      "line": 33,
+      "symbol": "Storage.Directory.cache",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     }
   ],
