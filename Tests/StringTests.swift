@@ -112,4 +112,17 @@ class StringTests: XCTestCase {
     XCTAssertTrue(string.contains("World", ignoringCase: false))
     XCTAssertFalse(string.contains("world", ignoringCase: false))
   }
+  
+  func testBase64Encode() {
+    let string = "Hello World!!"
+    let expected = "SGVsbG8gV29ybGQhIQ=="
+    XCTAssertEqual(string.base64Encoded, expected)
+  }
+  
+  func testBase64Decode() {
+    let string = "SGVsbG8gV29ybGQhIQ=="
+    let expected = "Hello World!!"
+    XCTAssertEqual(string.base64Decoded, expected)
+  }
+  
 }

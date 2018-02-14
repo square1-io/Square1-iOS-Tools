@@ -159,6 +159,17 @@ public extension String {
     return hash.map { String(format: "%02x", $0) }.joined()
   }
 
+  /// Base64 encoded version of the current string.
+  public var base64Encoded: String? {
+    return self.data(using: .utf8)?.base64EncodedString()
+  }
+  
+  
+  /// Base64 decoded version of the current string.
+  public var base64Decoded: String? {
+    guard let data = Data(base64Encoded: self) else { return nil }
+    return String(data: data, encoding: .utf8)
+  }
   
   /// Checks if string contains `string`
   ///
