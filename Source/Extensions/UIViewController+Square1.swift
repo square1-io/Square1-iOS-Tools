@@ -84,8 +84,8 @@ extension UIViewController {
   ///   - completion: Completion closure executed after presentation.
   public func modal(fromStoryboard name: String? = nil,
                     vcID: String,
-                    preparation: ((UIViewController) -> ())?,
-                    completion: (() -> ())?) {
+                    preparation: ((UIViewController) -> ())? = nil,
+                    completion: (() -> ())? = nil) {
     guard let sb = storyboard(named: name) else { return }
     guard let vc = viewController(fromStoryboard: sb, withID: vcID) else { return }
     
