@@ -78,24 +78,6 @@ public extension UITableView {
     tableHeaderView = UIView(frame: CGRect.zero)
   }
   
-  /// Scrolls to the top of the table.
-  ///
-  /// - Parameter animated: Animate scrolling of not.
-  public func scrollToTop(animated: Bool) {
-    setContentOffset(CGPoint.zero, animated: animated)
-  }
-  
-  /// Scrolls to the bottom of the table.
-  ///
-  /// - Parameter animated: Animate scrolling of not.
-  public func scrollToBottom(animated: Bool) {
-    let Yoffset = contentSize.height + contentInset.bottom - bounds.size.height
-    
-    if Yoffset > 0 {
-      let bottomOffset = CGPoint(x: 0, y: Yoffset)
-      setContentOffset(bottomOffset, animated: animated)
-    }
-  }
   
   /// Reload table with completion closure after reload.
   ///
@@ -134,15 +116,5 @@ public extension UITableView {
     headerView.translatesAutoresizingMaskIntoConstraints = true
   }
   
-  func executeWhenReachingEnd(threshold: CGFloat, target: UIViewController, selector: Selector) {
-    let y = contentOffset.y + bounds.size.height - contentInset.bottom
-    let h = contentSize.height
-    let actionThreshold = threshold < 0 ? threshold : -threshold
-    
-    if y > h + actionThreshold {
-      if target.responds(to: selector) {
-        target.perform(selector)
-      }
-    }
-  }
+
 }

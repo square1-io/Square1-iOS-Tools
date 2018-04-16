@@ -54,7 +54,10 @@ public class MailSender {
   private let kMimeTypeKey = "mimeType"
   private let kFileNameKey = "fileName"
   
-  weak var delegate: MFMailComposeViewControllerDelegate?
+  public weak var delegate: MFMailComposeViewControllerDelegate?
+  
+  public init() {}
+  
   
   /// Displays an MFMailComposeViewController over passed UIViewController.
   ///

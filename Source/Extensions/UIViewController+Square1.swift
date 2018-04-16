@@ -219,4 +219,14 @@ extension UIViewController {
   open func keyboardDidChange(toFrame frame: CGRect) {
     Log("You must override keyboardDidChange")
   }
+  
+  
+  /// Helper method to get precedent `UIViewController` in navigation stack
+  public var previousViewControllerInNavigationStack: UIViewController? {
+    guard let nav = navigationController, nav.viewControllers.count >= 2 else {
+      return nil
+    }
+    let numViewControllers = nav.viewControllers.count
+    return nav.viewControllers[numViewControllers - 2]
+  }
 }

@@ -92,7 +92,6 @@ public enum MapsApp {
 // Extension to handle opening Google Maps and Apple Maps.
 public extension UIViewController {
   
-  
   /// Displays an action sheet showing supported maps apps if they're installed.
   /// Otherwise, will try to open location with Google Maps first and the Apple Maps.
   /// - Parameters:

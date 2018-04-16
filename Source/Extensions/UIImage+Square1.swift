@@ -109,4 +109,35 @@ public extension UIImage {
     
     return UIImage(cgImage: cgImage)
   }
+  
+  
+  /// Creates a tinted image with `color` of the current image
+  ///
+  /// - Parameter color: color for tint
+  /// - Returns: new tinted image or same image of something goes wrong
+  public func tintWith(color: UIColor) -> UIImage {
+    
+    UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+    guard let context = UIGraphicsGetCurrentContext() else {
+      return self
+    }
+    
+    //Flip image to avoid inverted result image
+    context.scaleBy(x: 1.0, y: -1.0)
+    context.translateBy(x: 0.0, y: -size.height)
+    
+    context.setBlendMode(.multiply)
+    
+    let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+    context.clip(to: rect, mask: cgImage!)
+    color.setFill()
+    context.fill(rect)
+    
+    guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+      return self
+    }
+    UIGraphicsEndImageContext()
+    
+    return image
+  }
 }

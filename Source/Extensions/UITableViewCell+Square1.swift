@@ -32,4 +32,17 @@ public extension UITableViewCell {
     return view as? UITableView
   }
   
+  
+  /// Helper to geat and chamge cell's selection color.
+  public var selectionColor : UIColor? {
+    get {
+      return selectedBackgroundView?.backgroundColor
+    }
+    
+    set {
+      let bgView = UIView()
+      bgView.backgroundColor = newValue
+      selectedBackgroundView = bgView
+    }
+  }
 }
