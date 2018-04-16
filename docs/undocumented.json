@@ -15,13 +15,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UITableView+Square1.swift",
-      "line": 137,
-      "symbol": "UITableView.executeWhenReachingEnd(threshold:target:selector:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Extensions/UIViewController+Maps.swift",
       "line": 26,
       "symbol": "MapsApp.googleMaps",
@@ -67,6 +60,20 @@
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/AsyncOperation.swift",
       "line": 69,
       "symbol": "AsyncOperation.finish()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/MailSender.swift",
+      "line": 57,
+      "symbol": "MailSender.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/MailSender.swift",
+      "line": 59,
+      "symbol": "MailSender.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
