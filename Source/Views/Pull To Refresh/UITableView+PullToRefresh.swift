@@ -62,6 +62,7 @@ public extension UITableView {
   public func stopRefreshAnimation(animated: Bool = true,
                                    _ completion: (() -> ())? = nil) {
     guard let pullToRefreshView = tableHeaderView as? PullToRefreshView else {
+      completion?()
       return
     }
 
@@ -86,6 +87,15 @@ public extension UITableView {
       pullToRefreshView.stopRefreshAnimation()
       completion?()
     }
+  }
+  
+  
+  /// Helper function to update the attached pullToRefreshView with current scroll offset.
+  public func updatePullToRefresh() {
+    guard let pullToRefreshView = tableHeaderView as? PullToRefreshView else {
+      return
+    }
+    pullToRefreshView.didScrollWith(offset: contentOffset.y)
   }
 }
 
