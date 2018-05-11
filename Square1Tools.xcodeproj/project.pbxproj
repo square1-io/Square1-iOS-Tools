@@ -37,6 +37,7 @@
 		D941EC6F2007968400AD5AED /* UINavigationController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC612007968400AD5AED /* UINavigationController+Square1.swift */; };
 		D941EC702007968400AD5AED /* UIViewController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941EC622007968400AD5AED /* UIViewController+Square1.swift */; };
 		D95E3ADC205AD0D900BBF03F /* UITabBarController+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E3ADB205AD0D900BBF03F /* UITabBarController+Square1.swift */; };
+		D974297F20A47D1100CC5586 /* UINib+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974297E20A47D1100CC5586 /* UINib+Square1.swift */; };
 		D9865A1D2091BE2400E34CBB /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9865A1C2091BE2400E34CBB /* PullToRefreshView.swift */; };
 		D9865A202091C74500E34CBB /* UITableView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9865A1F2091C74500E34CBB /* UITableView+PullToRefresh.swift */; };
 		D99494122018A69500BD937D /* UICollectionView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99494112018A69500BD937D /* UICollectionView+Square1.swift */; };
@@ -89,6 +90,7 @@
 		D941EC612007968400AD5AED /* UINavigationController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Square1.swift"; sourceTree = "<group>"; };
 		D941EC622007968400AD5AED /* UIViewController+Square1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Square1.swift"; sourceTree = "<group>"; };
 		D95E3ADB205AD0D900BBF03F /* UITabBarController+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Square1.swift"; sourceTree = "<group>"; };
+		D974297E20A47D1100CC5586 /* UINib+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Square1.swift"; sourceTree = "<group>"; };
 		D9865A1C2091BE2400E34CBB /* PullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		D9865A1F2091C74500E34CBB /* UITableView+PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		D99494112018A69500BD937D /* UICollectionView+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Square1.swift"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				D92A2C3F20330D610042694C /* UIViewController+Maps.swift */,
 				D95E3ADB205AD0D900BBF03F /* UITabBarController+Square1.swift */,
 				D9B736B7206A3B43009440B0 /* UIScrollView+Square1.swift */,
+				D974297E20A47D1100CC5586 /* UINib+Square1.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				D941EC632007968400AD5AED /* ReplaceRootControllerSegue.swift in Sources */,
 				D9865A202091C74500E34CBB /* UITableView+PullToRefresh.swift in Sources */,
 				D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */,
+				D974297F20A47D1100CC5586 /* UINib+Square1.swift in Sources */,
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
 				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
