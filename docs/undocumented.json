@@ -92,24 +92,24 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshView.swift",
-      "line": 29,
-      "symbol": "PullToRefreshView.isRefreshing",
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 56,
+      "symbol": "PullToRefreshControl.isAnimating",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshView.swift",
-      "line": 30,
-      "symbol": "PullToRefreshView.isReady",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 120,
+      "symbol": "UITableView.addCustomRefreshControl(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshView.swift",
-      "line": 31,
-      "symbol": "PullToRefreshView.refreshThreshold",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 127,
+      "symbol": "UICollectionView.addCustomRefreshControl(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

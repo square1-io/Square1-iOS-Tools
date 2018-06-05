@@ -40,7 +40,10 @@
                 <a href="../Classes/MailSender.html">MailSender</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/PullToRefreshView.html">PullToRefreshView</a>
+                <a href="../Classes/PullToRefreshControl.html">PullToRefreshControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PullToRefreshControlView.html">PullToRefreshControlView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReplaceRootControllerSegue.html">ReplaceRootControllerSegue</a>
@@ -151,201 +154,16 @@
         <section>
           <section class="section">
             <h1>UITableView</h1>
-            
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableView</span> <span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIDataSourceTranslating</span></code></pre>
+
+                </div>
+              </div>
+            <p>Helpers for UITableView.</p>
+
           </section>
           <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE16addPullToRefreshyAC0fghB0CF"></a>
-                    <a name="//apple_ref/swift/Method/addPullToRefresh(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE16addPullToRefreshyAC0fghB0CF">addPullToRefresh(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds passed <code>pullToRefreshView</code> as header of the table view.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPullToRefresh</span><span class="p">(</span><span class="n">_</span> <span class="nv">pullToRefreshView</span><span class="p">:</span> <span class="kt"><a href="../Classes/PullToRefreshView.html">PullToRefreshView</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pullToRefreshView</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>PullToRefreshView to use as header.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE16pullRefreshReadySbvp"></a>
-                    <a name="//apple_ref/swift/Property/pullRefreshReady" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE16pullRefreshReadySbvp">pullRefreshReady</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns <code>true</code> if header pullToRefreshView is ready, otherwise <code>false</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pullRefreshReady</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE21startRefreshAnimationyyF"></a>
-                    <a name="//apple_ref/swift/Method/startRefreshAnimation()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE21startRefreshAnimationyyF">startRefreshAnimation()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Calls the <code>startRefreshAnimation</code> function of header pullToRefreshView
-Also, it adapts the content inset of the tableView.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startRefreshAnimation</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE20stopRefreshAnimationySb8animated_yycSgtF"></a>
-                    <a name="//apple_ref/swift/Method/stopRefreshAnimation(animated:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE20stopRefreshAnimationySb8animated_yycSgtF">stopRefreshAnimation(animated:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Calls the <code>stopRefreshAnimation</code> function of header pullToRefreshView
-Also, it adapts the content inset of the tableView.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopRefreshAnimation</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-                                 <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code>true</code> if we want o animate the hiding of the pullToRefreshView.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>completion block to execute after hiding the pullToRefreshView.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC12Square1ToolsE19updatePullToRefreshyyF"></a>
-                    <a name="//apple_ref/swift/Method/updatePullToRefresh()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE19updatePullToRefreshyyF">updatePullToRefresh()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Helper function to update the attached pullToRefreshView with current scroll offset.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updatePullToRefresh</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -368,7 +186,7 @@ Also, it adapts the content inset of the tableView.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastSection</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastSection</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -395,7 +213,7 @@ Also, it adapts the content inset of the tableView.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfRows</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfRows</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -422,7 +240,7 @@ Also, it adapts the content inset of the tableView.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indexPathForLastRow</span> <span class="p">:</span> <span class="kt">IndexPath</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indexPathForLastRow</span><span class="p">:</span> <span class="kt">IndexPath</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -678,11 +496,42 @@ Also, it adapts the content inset of the tableView.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE23addCustomRefreshControlyAC06PullTogH0CF"></a>
+                    <a name="//apple_ref/swift/Method/addCustomRefreshControl(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE23addCustomRefreshControlyAC06PullTogH0CF">addCustomRefreshControl(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCustomRefreshControl</span><span class="p">(</span><span class="n">_</span> <span class="nv">refreshControl</span><span class="p">:</span> <span class="kt"><a href="../Classes/PullToRefreshControl.html">PullToRefreshControl</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-06-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

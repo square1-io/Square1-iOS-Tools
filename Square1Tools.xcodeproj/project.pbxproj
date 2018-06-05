@@ -43,6 +43,7 @@
 		D99494122018A69500BD937D /* UICollectionView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99494112018A69500BD937D /* UICollectionView+Square1.swift */; };
 		D9B736B8206A3B43009440B0 /* UIScrollView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B736B7206A3B43009440B0 /* UIScrollView+Square1.swift */; };
 		D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1128C2010FC180066A06C /* Bool+Square1.swift */; };
+		D9F934EC20C188D50011D406 /* PullToRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F934EB20C188D50011D406 /* PullToRefreshControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		D99494112018A69500BD937D /* UICollectionView+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Square1.swift"; sourceTree = "<group>"; };
 		D9B736B7206A3B43009440B0 /* UIScrollView+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Square1.swift"; sourceTree = "<group>"; };
 		D9C1128C2010FC180066A06C /* Bool+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Square1.swift"; sourceTree = "<group>"; };
+		D9F934EB20C188D50011D406 /* PullToRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		D9865A1E2091C72500E34CBB /* Pull To Refresh */ = {
 			isa = PBXGroup;
 			children = (
+				D9F934EB20C188D50011D406 /* PullToRefreshControl.swift */,
 				D9865A1C2091BE2400E34CBB /* PullToRefreshView.swift */,
 				D9865A1F2091C74500E34CBB /* UITableView+PullToRefresh.swift */,
 			);
@@ -357,6 +360,7 @@
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
 				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
+				D9F934EC20C188D50011D406 /* PullToRefreshControl.swift in Sources */,
 				D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */,
 				D92A2C4220330E800042694C /* Storage.swift in Sources */,
 				D941EC6B2007968400AD5AED /* MailSender.swift in Sources */,

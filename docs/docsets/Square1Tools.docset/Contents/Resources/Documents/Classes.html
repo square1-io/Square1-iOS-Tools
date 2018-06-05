@@ -10,6 +10,7 @@
     
   </head>
   <body>
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
@@ -39,7 +40,10 @@
                 <a href="Classes/MailSender.html">MailSender</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/PullToRefreshView.html">PullToRefreshView</a>
+                <a href="Classes/PullToRefreshControl.html">PullToRefreshControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PullToRefreshControlView.html">PullToRefreshControlView</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ReplaceRootControllerSegue.html">ReplaceRootControllerSegue</a>
@@ -159,9 +163,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Square1Tools@objc(cs)PullToRefreshView"></a>
-                    <a name="//apple_ref/swift/Class/PullToRefreshView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)PullToRefreshView">PullToRefreshView</a>
+                    <a name="/s:12Square1Tools3AppC"></a>
+                    <a name="//apple_ref/swift/Class/App" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools3AppC">App</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -169,49 +173,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper view to implement pull to refresh custom views.
-Because UICollectionReusableView inherits from UIView, can be used on table and collection views.
-<em>IMPORTANT</em>: This class doesn&rsquo;t implements any layout.</p>
+                        <p>Helper class to retrieve info from app&rsquo;s main bundle .plist file.</p>
 
-                        <a href="Classes/PullToRefreshView.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/App.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">PullToRefreshView</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Square1Tools@objc(cs)ReplaceRootControllerSegue"></a>
-                    <a name="//apple_ref/swift/Class/ReplaceRootControllerSegue" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)ReplaceRootControllerSegue">ReplaceRootControllerSegue</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A Segue subclass prepared for root UIViewController replacement.</p>
-
-                        <a href="Classes/ReplaceRootControllerSegue.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReplaceRootControllerSegue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">App</span></code></pre>
 
                         </div>
                       </div>
@@ -245,7 +215,71 @@ Because UICollectionReusableView inherits from UIView, can be used on table and 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AsyncOperation</span><span class="p">:</span> <span class="kt">Operation</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AsyncOperation</span> <span class="p">:</span> <span class="kt">Operation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools10MailSenderC"></a>
+                    <a name="//apple_ref/swift/Class/MailSender" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools10MailSenderC">MailSender</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Helper class to use MFMailComposeViewController.</p>
+
+                        <a href="Classes/MailSender.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MailSender</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Square1Tools@objc(cs)ReplaceRootControllerSegue"></a>
+                    <a name="//apple_ref/swift/Class/ReplaceRootControllerSegue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)ReplaceRootControllerSegue">ReplaceRootControllerSegue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Segue subclass prepared for root UIViewController replacement.</p>
+
+                        <a href="Classes/ReplaceRootControllerSegue.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReplaceRootControllerSegue</span> <span class="p">:</span> <span class="kt">UIStoryboardSegue</span></code></pre>
 
                         </div>
                       </div>
@@ -292,9 +326,9 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12Square1Tools10MailSenderC"></a>
-                    <a name="//apple_ref/swift/Class/MailSender" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12Square1Tools10MailSenderC">MailSender</a>
+                    <a name="/c:@M@Square1Tools@objc(cs)PullToRefreshControlView"></a>
+                    <a name="//apple_ref/swift/Class/PullToRefreshControlView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)PullToRefreshControlView">PullToRefreshControlView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -302,31 +336,28 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper class to use MFMailComposeViewController.</p>
+                        <p>Helper view to implement pull to refresh custom controls.
+<em>IMPORTANT</em>: This class doesn&rsquo;t implements any layout.</p>
 
-                        <a href="Classes/MailSender.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/PullToRefreshControlView.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MailSender</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">PullToRefreshControlView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12Square1Tools3AppC"></a>
-                    <a name="//apple_ref/swift/Class/App" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12Square1Tools3AppC">App</a>
+                    <a name="/c:@M@Square1Tools@objc(cs)PullToRefreshControl"></a>
+                    <a name="//apple_ref/swift/Class/PullToRefreshControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Square1Tools@objc(cs)PullToRefreshControl">PullToRefreshControl</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -334,15 +365,15 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper class to retrieve info from app&rsquo;s main bundle .plist file.</p>
+                        <p>Helper subclass of <code>UIRefreshControl</code> to help implement pull to refresh custom controls.</p>
 
-                        <a href="Classes/App.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/PullToRefreshControl.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">App</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PullToRefreshControl</span> <span class="p">:</span> <span class="kt">UIRefreshControl</span></code></pre>
 
                         </div>
                       </div>
@@ -354,8 +385,8 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-05-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-06-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

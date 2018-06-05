@@ -32,7 +32,7 @@ public extension UITableView {
   public var numberOfRows : Int {
     var rowCount = 0
     
-    for section in 0...numberOfSections {
+    for section in 0..<numberOfSections {
       rowCount += numberOfRows(inSection: section)
     }
     
