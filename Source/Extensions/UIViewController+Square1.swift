@@ -141,7 +141,7 @@ extension UIViewController {
   }
   
   /// Stops listening to all keyboard notification.
-  func stopListeningToKeyboardNotifications() {
+  public func stopListeningToKeyboardNotifications() {
     NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
     NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidShow, object: nil)
     NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
@@ -185,40 +185,28 @@ extension UIViewController {
   /// Method to be called on UIKeyboardWillShow notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardWillShow(withFrame frame: CGRect) {
-    Log("You must override keyboardWillShow")
-  }
+  @objc open func keyboardWillShow(withFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardDidShow(withFrame frame: CGRect) {
-    Log("You must override keyboardDidShow")
-  }
+  open func keyboardDidShow(withFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
-  open func keyboardWillHide() {
-    Log("You must override keyboardWillHide")
-  }
+  @objc open func keyboardWillHide() {}
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
-  open func keyboardDidHide() {
-    Log("You must override keyboardDidHide")
-  }
+  open func keyboardDidHide() {}
   
   /// Method to be called on UIKeyboardWillChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardWillChange(toFrame frame: CGRect) {
-    Log("You must override keyboardWillChange")
-  }
+  open func keyboardWillChange(toFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardDidChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardDidChange(toFrame frame: CGRect) {
-    Log("You must override keyboardDidChange")
-  }
+  open func keyboardDidChange(toFrame frame: CGRect) {}
   
   
   /// Helper method to get precedent `UIViewController` in navigation stack

@@ -62,7 +62,9 @@ public extension UITableView {
   ///   - nibName: Name of the Nib file.
   ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
   ///   - reuseIdentifier: Name for the reuse identifier.
-  public func registerCell(withNibName nibName: String, bundle: Bundle? = Bundle.main, reuseIdentifier: String? = nil) {
+  public func registerCell(withNibName nibName: String,
+                           bundle: Bundle? = Bundle.main,
+                           reuseIdentifier: String? = nil) {
     let reuseId: String = reuseIdentifier ?? nibName
     let nib = UINib(nibName: nibName, bundle: bundle)
     register(nib, forCellReuseIdentifier: reuseId)
