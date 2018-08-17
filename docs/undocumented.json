@@ -64,6 +64,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/Keychain.swift",
+      "line": 20,
+      "symbol": "Keychain.init(accessGroup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/MailSender.swift",
       "line": 57,
       "symbol": "MailSender.delegate",

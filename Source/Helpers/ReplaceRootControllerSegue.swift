@@ -28,15 +28,15 @@ public class ReplaceRootControllerSegue: UIStoryboardSegue {
   public override func perform() {
     
     let duration = 0.3
-    guard let window = UIApplication.shared.delegate?.window else { return }
+    guard let window = UIApplication.shared.keyWindow else { return }
 
-    window?.insertSubview(destination.view, belowSubview: source.view)
+    window.insertSubview(destination.view, belowSubview: source.view)
 
     UIView.animate(withDuration: duration, animations: {
       self.source.view.alpha = 0.0
     }) { _ in
-      window?.bringSubview(toFront: self.destination.view)
-      window?.rootViewController = self.destination
+      self.source.dismiss(animated: false, completion: nil)
+      window.rootViewController = self.destination
     }
   }
 }
