@@ -1,4 +1,4 @@
-# Square1 Tools
+# Square1 iOS Tools
 
 <p align="center">
 <img src="https://img.shields.io/cocoapods/v/Square1Tools.svg" alt="Cocoapods"/>
