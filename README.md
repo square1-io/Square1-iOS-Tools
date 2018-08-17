@@ -7,8 +7,19 @@
 
 A handy collection of helpers, types and hacks used on our Swift projects.
 
-### Prerequisites
+## Index
+* [Prerequisites](#prerequisites)
+* [Installing](#installing)
+    * [Cocoapods](#cocoapods)
+* [Running the tests](#running-the-tests)
+* [How to use](#how-to-use)
+    * [Keychain](#keychain)
+* [Contributing](#contributing)
+* [Authors](#authors)
+* [License](#license)
+* [Acknowledgments](#acknowledgments)
 
+### Prerequisites
 * iOS 9.0+
 * XCode 9+
 * Swift 4+
@@ -42,6 +53,31 @@ import Square1Tools
 ## How to use
 
 Check the [documentation page](http://htmlpreview.github.io/?https://github.com/square1-io/Square1-iOS-Tools/blob/master/docs/index.html).
+
+### Keychain
+
+*Keychain* is a helper class to quickly access to stored values in iOS Keychain.
+
+You can instance a Keychain object like this:
+
+```swift
+let keychain = Keychain()
+
+// You can also instance it with a specific access group.
+let anotherKeychain = Keychain(accessGroup: "MyGroup")
+```
+
+Using Keychain is straightforward :
+```swift
+// Save into keychain
+keychain.save("Hello World!!", forKey: "MyKey") // returns true if ok, otherwise false
+
+// Read from keychain
+keychain.get("MyKey") // returns String?
+
+// Delete from keychain
+keychain.delete("MyKey") // returns true if ok, otherwise false
+```
 
 ## Contributing
 
