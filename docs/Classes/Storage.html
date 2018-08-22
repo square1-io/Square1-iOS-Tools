@@ -271,6 +271,78 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12Square1Tools7StorageC4savey10Foundation4DataV_AC9DirectoryO2toSS2astFZ"></a>
+                    <a name="//apple_ref/swift/Method/save(_:to:as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools7StorageC4savey10Foundation4DataV_AC9DirectoryO2toSS2astFZ">save(_:to:as:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves a <code>Data</code> object into <code>directory</code> with name <code>fileName</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+                        <span class="n">to</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt"><a href="../Classes/Storage/Directory.html">Directory</a></span><span class="p">,</span>
+                        <span class="k">as</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Data</code> object to save.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/Storage/Directory.html">Directory</a></code> that will be use to save the object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the file who will save the object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12Square1Tools7StorageC4readxSgSS_AC9DirectoryO4fromxm2asts9DecodableRzlFZ"></a>
                     <a name="//apple_ref/swift/Method/read(_:from:as:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:12Square1Tools7StorageC4readxSgSS_AC9DirectoryO4fromxm2asts9DecodableRzlFZ">read(_:from:as:)</a>
@@ -338,6 +410,69 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
                       <div>
                         <h4>Return Value</h4>
                         <p>desired <code>Decodable</code> object.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Square1Tools7StorageC4read10Foundation4DataVSgSS_AC9DirectoryO4fromtFZ"></a>
+                    <a name="//apple_ref/swift/Method/read(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Square1Tools7StorageC4read10Foundation4DataVSgSS_AC9DirectoryO4fromtFZ">read(_:from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a <code>Data</code> with name <code>fileName</code> object from <code>directory</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">read</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                        <span class="n">from</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt"><a href="../Classes/Storage/Directory.html">Directory</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name of the file who stores the object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/Storage/Directory.html">Directory</a></code> who helds the file.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>desired <code>Data</code> object.</p>
                       </div>
                     </section>
                   </div>
@@ -467,7 +602,7 @@ Inspired by Saoud Rizwan, <a href="https://gist.github.com/saoudrizwan/b7ab1febd
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-08-17)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-08-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

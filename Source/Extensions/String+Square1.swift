@@ -184,4 +184,13 @@ public extension String {
       return self.range(of: string) != nil
     }
   }
+  
+  
+  /// Returns escaped version of curent String allowing certain characters
+  ///
+  /// - Parameter allowed: `CharacterSet` of allowed characters. Default is `alphanumerics`
+  /// - Returns: Escaped string of nil of something goes wrong
+  public func escaped(allowed: CharacterSet = .alphanumerics) -> String? {
+     return addingPercentEncoding(withAllowedCharacters: allowed)
+  }
 }
