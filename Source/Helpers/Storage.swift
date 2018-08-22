@@ -26,7 +26,6 @@ public class Storage {
   
   private init() {}
   
-  
   /// Enum matching available directories for saving/reading.
   public enum Directory {
     case documents
@@ -39,22 +38,24 @@ public class Storage {
       switch self {
       case .documents:
         searchPathDirectory = .documentDirectory
-      default:
+      case .cache:
         searchPathDirectory = .cachesDirectory
       }
       
-      if let url = FileManager.default.urls(for: searchPathDirectory, in: .userDomainMask).first {
+      if let url = FileManager.default.urls(for: searchPathDirectory,
+                                            in: .userDomainMask).first {
         return url
       } else {
         fatalError("Error getting URL for directory \(searchPathDirectory)")
       }
     }
     
-    
     /// Clears all files on the directory.
     public func clear() {
       do {
-        let contents = try FileManager.default.contentsOfDirectory(at: self.url, includingPropertiesForKeys: nil, options: [])
+        let contents = try FileManager.default.contentsOfDirectory(at: self.url,
+                                                                   includingPropertiesForKeys: nil,
+                                                                   options: [])
         for fileUrl in contents {
           try FileManager.default.removeItem(at: fileUrl)
         }
@@ -72,18 +73,38 @@ public class Storage {
   ///   - object: `Encodable` object to save.
   ///   - directory: `Directory` that will be use to save the object.
   ///   - fileName: name of the file who will save the object.
-  public static func save<T: Encodable>(_ object: T, to directory: Directory, as fileName: String) {
-    let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
-    
-    let encoder = JSONEncoder()
+  public static func save<T: Encodable>(_ object: T,
+                                        to directory: Directory,
+                                        as fileName: String) {
     do {
-      let data = try encoder.encode(object)
-      FileManager.default.createFile(atPath: url.path, contents: data, attributes: nil)
+      let data = try JSONEncoder().encode(object)
+      save(data, to: directory, as: fileName)
     } catch {
       fatalError("Error saving \(object): \(error.localizedDescription)")
     }
   }
   
+  
+  /// Saves a `Data` object into `directory` with name `fileName`.
+  ///
+  /// - Parameters:
+  ///   - data: `Data` object to save.
+  ///   - directory: `Directory` that will be use to save the object.
+  ///   - fileName: name of the file who will save the object.
+  public static func save(_ data: Data,
+                          to directory: Directory,
+                          as fileName: String) {
+    
+    guard let escapedName = fileName.escaped() else {
+      return
+    }
+    
+    let url = directory.url.appendingPathComponent(escapedName,
+                                                   isDirectory: false)
+    FileManager.default.createFile(atPath: url.path,
+                                   contents: data,
+                                   attributes: nil)
+  }
   
   /// Reads a `Decodable` with name `fileName` object from `directory`.
   ///
@@ -93,25 +114,44 @@ public class Storage {
   ///   - type: type of object we're reading.
   /// - Returns: desired `Decodable` object.
   public static func read<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
-    let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
     
-    if !FileManager.default.fileExists(atPath: url.path) {
-      return nil
-    }
-    
-    if let data = FileManager.default.contents(atPath: url.path) {
-      let decoder = JSONDecoder()
+    if let data = read(fileName, from: directory) {
+
       do {
-        let object = try decoder.decode(type, from: data)
+        let object = try JSONDecoder().decode(type, from: data)
         return object
       } catch {
-        Log("Error reading from \(url.path): \(error.localizedDescription)")
+        Log("Error reading file \(fileName): \(error.localizedDescription)")
         return nil
       }
       
     } else {
       return nil
     }
+  }
+  
+  
+  /// Reads a `Data` with name `fileName` object from `directory`.
+  ///
+  /// - Parameters:
+  ///   - fileName: name of the file who stores the object.
+  ///   - directory: `Directory` who helds the file.
+  /// - Returns: desired `Data` object.
+  public static func read(_ fileName: String,
+                          from directory: Directory) -> Data? {
+    
+    guard let escapedName = fileName.escaped() else {
+      return nil
+    }
+    
+    let url = directory.url.appendingPathComponent(escapedName,
+                                                   isDirectory: false)
+    
+    if !FileManager.default.fileExists(atPath: url.path) {
+      return nil
+    }
+    
+    return FileManager.default.contents(atPath: url.path)
   }
   
   

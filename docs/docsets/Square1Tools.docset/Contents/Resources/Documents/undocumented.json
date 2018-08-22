@@ -86,14 +86,14 @@
     },
     {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/Storage.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "Storage.Directory.documents",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Wedge/Proyectos/square1/Square1Tools/Source/Helpers/Storage.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "Storage.Directory.cache",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
