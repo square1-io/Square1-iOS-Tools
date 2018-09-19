@@ -43,7 +43,7 @@ public extension UICollectionView {
   ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
   ///   - reuseIdentifier: Name for the reuse identifier. If not present, nibName will be used as reuse identifier.
   public func registerHeader(withNibName nibName: String, bundle: Bundle? = Bundle.main, reuseIdentifier: String? = nil ) {
-    registerSupplementaryView(withNibName: nibName, bundle: bundle, kind: UICollectionElementKindSectionHeader, reuseIdentifier: reuseIdentifier)
+    registerSupplementaryView(withNibName: nibName, bundle: bundle, kind: UICollectionView.elementKindSectionHeader, reuseIdentifier: reuseIdentifier)
   }
   
   /// Registers footer Nib with passed name and reuse identifier.
@@ -53,7 +53,7 @@ public extension UICollectionView {
   ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
   ///   - reuseIdentifier: Name for the reuse identifier. If not present, nibName will be used as reuse identifier.
   public func registerFooter(withNibName nibName: String, bundle: Bundle? = Bundle.main, reuseIdentifier: String? = nil ) {
-    registerSupplementaryView(withNibName: nibName, bundle: bundle, kind: UICollectionElementKindSectionFooter, reuseIdentifier: reuseIdentifier)
+    registerSupplementaryView(withNibName: nibName, bundle: bundle, kind: UICollectionView.elementKindSectionFooter, reuseIdentifier: reuseIdentifier)
   }
   
   

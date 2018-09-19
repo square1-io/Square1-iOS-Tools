@@ -110,7 +110,7 @@ public extension UITableView {
     headerView.setNeedsLayout()
     headerView.layoutIfNeeded()
     
-    let headerSize = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+    let headerSize = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     headerView.frame.size.height = headerSize.height
     
     tableHeaderView = headerView

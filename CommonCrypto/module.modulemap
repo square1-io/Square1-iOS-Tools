@@ -1,4 +1,0 @@
-module CommonCrypto [system] {
-  umbrella header "CommonCrypto-square1.h"
-  export *
-}

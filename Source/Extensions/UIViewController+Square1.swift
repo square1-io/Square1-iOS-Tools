@@ -132,22 +132,40 @@ extension UIViewController {
 
   /// Listens to all keyboard notifications.
   public func listenToKeyboardNotifications() {
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(notification:)), name: .UIKeyboardDidHide, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: .UIKeyboardWillChangeFrame, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidChange(notification:)), name: .UIKeyboardDidChangeFrame, object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillShow(notification:)),
+                                           name: UIResponder.keyboardWillShowNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardDidShow(notification:)),
+                                           name: UIResponder.keyboardDidShowNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillHide(notification:)),
+                                           name: UIResponder.keyboardWillHideNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardDidHide(notification:)),
+                                           name: UIResponder.keyboardDidHideNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillChange(notification:)),
+                                           name: UIResponder.keyboardWillChangeFrameNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardDidChange(notification:)),
+                                           name: UIResponder.keyboardDidChangeFrameNotification,
+                                           object: nil)
   }
   
   /// Stops listening to all keyboard notification.
   public func stopListeningToKeyboardNotifications() {
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidShow, object: nil)
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidHide, object: nil)
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillChangeFrame, object: nil)
-    NotificationCenter.default.removeObserver(self, name: .UIKeyboardDidChangeFrame, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
   }
   
   @objc private func keyboardWillShow(notification: NSNotification) {
@@ -178,7 +196,7 @@ extension UIViewController {
     guard let keyboardInfo = notification.userInfo else {
       return CGRect.zero
     }
-    let keyboardFrameValue = keyboardInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+    let keyboardFrameValue = keyboardInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
     return keyboardFrameValue.cgRectValue
   }
   

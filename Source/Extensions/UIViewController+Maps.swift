@@ -76,7 +76,7 @@ public enum MapsApp {
       let mapItem = MKMapItem(placemark: placemark)
       mapItem.name = markerTitle
       let regionDistance: CLLocationDistance = 1000
-      let regionSpan = MKCoordinateRegionMakeWithDistance(location, regionDistance, regionDistance)
+      let regionSpan = MKCoordinateRegion(center: location, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
       
       let options = [
         MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),

@@ -25,7 +25,7 @@ public extension UIImage {
   
   /// Current UIImage bytes size.
   public var bytes: Int? {
-    return UIImageJPEGRepresentation(self, 1)?.count
+    return self.jpegData(compressionQuality: 1)?.count
   }
   
   /// Is image in portraint mode?
