@@ -1,5 +1,5 @@
 //
-//  SameStoryboardViewController.swift
+//  OtherStoryboardViewController.swift
 //  Square1ToolsApp
 //
 //  Created by Ginés Navarro Fernández on 21/01/2019.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SameStoryboardViewController: UIViewController {
+class OtherStoryboardViewController: UIViewController {
 
 }

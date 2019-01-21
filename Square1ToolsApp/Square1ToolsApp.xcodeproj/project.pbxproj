@@ -16,6 +16,9 @@
 		10F696D421F5F8FA0063CD2C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696D321F5F8FA0063CD2C /* KeyboardViewController.swift */; };
 		10F696D921F60F5E0063CD2C /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */; };
 		10F696DB21F611020063CD2C /* SameStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */; };
+		10F696E421F61D790063CD2C /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F696E321F61D790063CD2C /* Other.storyboard */; };
+		10F696E621F61F000063CD2C /* OtherStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696E521F61F000063CD2C /* OtherStoryboardViewController.swift */; };
+		10F696E821F621890063CD2C /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696E721F621890063CD2C /* UIViewController+Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		10F696D321F5F8FA0063CD2C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameStoryboardViewController.swift; sourceTree = "<group>"; };
+		10F696E321F61D790063CD2C /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
+		10F696E521F61F000063CD2C /* OtherStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherStoryboardViewController.swift; sourceTree = "<group>"; };
+		10F696E721F621890063CD2C /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,9 @@
 			children = (
 				10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */,
 				10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */,
+				10F696E521F61F000063CD2C /* OtherStoryboardViewController.swift */,
+				10F696E321F61D790063CD2C /* Other.storyboard */,
+				10F696E721F621890063CD2C /* UIViewController+Storyboard.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F696B421F5EAC20063CD2C /* LaunchScreen.storyboard in Resources */,
+				10F696E421F61D790063CD2C /* Other.storyboard in Resources */,
 				10F696B121F5EAC20063CD2C /* Assets.xcassets in Resources */,
 				10F696AF21F5EABF0063CD2C /* Main.storyboard in Resources */,
 			);
@@ -237,9 +247,11 @@
 			files = (
 				10F696DB21F611020063CD2C /* SameStoryboardViewController.swift in Sources */,
 				10F696AC21F5EABF0063CD2C /* MainTableViewController.swift in Sources */,
+				10F696E621F61F000063CD2C /* OtherStoryboardViewController.swift in Sources */,
 				10F696D921F60F5E0063CD2C /* StoryboardViewController.swift in Sources */,
 				10F696D421F5F8FA0063CD2C /* KeyboardViewController.swift in Sources */,
 				10F696AA21F5EABF0063CD2C /* AppDelegate.swift in Sources */,
+				10F696E821F621890063CD2C /* UIViewController+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

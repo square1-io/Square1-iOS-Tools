@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F696E021F614970063CD2C /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DF21F614970063CD2C /* Storyboardable.swift */; };
 		D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C3F20330D610042694C /* UIViewController+Maps.swift */; };
 		D92A2C4220330E800042694C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C4120330E7F0042694C /* Storage.swift */; };
 		D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1Tools.framework */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10F696DF21F614970063CD2C /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		D900BAA8202DF6320056A160 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 		D92A2C3F20330D610042694C /* UIViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Maps.swift"; sourceTree = "<group>"; };
 		D92A2C4120330E7F0042694C /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10F696DE21F614810063CD2C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				10F696DF21F614970063CD2C /* Storyboardable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D900BAB8202DF7480056A160 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 		D941EC2020078C4800AD5AED /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				10F696DE21F614810063CD2C /* Protocols */,
 				D9865A1B2091BDFE00E34CBB /* Views */,
 				D900BAB8202DF7480056A160 /* Config */,
 				D944F0AC2008BC83001FF5ED /* Helpers */,
@@ -357,6 +368,7 @@
 				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
 				D9F934EC20C188D50011D406 /* PullToRefreshControl.swift in Sources */,
+				10F696E021F614970063CD2C /* Storyboardable.swift in Sources */,
 				D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */,
 				D92A2C4220330E800042694C /* Storage.swift in Sources */,
 				D941EC6B2007968400AD5AED /* MailSender.swift in Sources */,

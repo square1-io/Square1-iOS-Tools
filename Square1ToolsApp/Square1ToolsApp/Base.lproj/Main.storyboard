@@ -52,17 +52,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-Vc-07G">
-                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29l-oO-Cty">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="NVo-X6-zRr"/>
+                                        </constraints>
                                         <state key="normal" title="VC in same Storyboard"/>
                                         <connections>
                                             <action selector="sameStoryboard:" destination="EnF-GP-PeF" eventType="touchUpInside" id="LAL-Mi-QVt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-eq-jY9">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="70"/>
                                         <state key="normal" title="VC in other Storyboard"/>
                                         <connections>
                                             <action selector="otherStoryboard:" destination="EnF-GP-PeF" eventType="touchUpInside" id="FP0-gW-uCD"/>
@@ -87,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1839" y="-1"/>
         </scene>
-        <!--Same Storyboard View Controller-->
+        <!--From the same storyboard-->
         <scene sceneID="j15-Pv-V1b">
             <objects>
-                <viewController id="Y7l-ld-QtJ" customClass="SameStoryboardViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SameStoryboardViewController" title="From the same storyboard" id="Y7l-ld-QtJ" customClass="SameStoryboardViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iYV-ny-fvf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
