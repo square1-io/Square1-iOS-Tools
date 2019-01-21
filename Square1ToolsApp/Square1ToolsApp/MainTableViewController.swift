@@ -20,15 +20,28 @@ class MainTableViewController: UITableViewController {
     performSegue(withIdentifier: "toKeyboard", sender: nil)
   }
   
+  func goToStoryboard() {
+    performSegue(withIdentifier: "toStoryboard", sender: nil)
+  }
+  
   // MARK: - TableView DataSource.
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return 2
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-    cell.textLabel?.text = "Keyboard"
+    
+    switch indexPath.row {
+    case 0:
+      cell.textLabel?.text = "Keyboard"
+    case 1:
+      cell.textLabel?.text = "Storyboard"
+    default:
+      break
+    }
+    
     return cell
   }
   
@@ -43,6 +56,8 @@ class MainTableViewController: UITableViewController {
     switch indexPath.row {
     case 0:
       goToKeyboard()
+    case 1:
+      goToStoryboard()
     default:
       break
     }

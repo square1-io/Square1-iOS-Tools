@@ -14,6 +14,8 @@
 		10F696B421F5EAC20063CD2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F696B221F5EAC20063CD2C /* LaunchScreen.storyboard */; };
 		10F696CB21F5EC7A0063CD2C /* Square1Tools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F696C121F5EB1B0063CD2C /* Square1Tools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10F696D421F5F8FA0063CD2C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696D321F5F8FA0063CD2C /* KeyboardViewController.swift */; };
+		10F696D921F60F5E0063CD2C /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */; };
+		10F696DB21F611020063CD2C /* SameStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		10F696B521F5EAC20063CD2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F696BB21F5EB1B0063CD2C /* Square1Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Square1Tools.xcodeproj; path = ../Square1Tools.xcodeproj; sourceTree = "<group>"; };
 		10F696D321F5F8FA0063CD2C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
+		10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameStoryboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				10F696A921F5EABF0063CD2C /* AppDelegate.swift */,
 				10F696AB21F5EABF0063CD2C /* MainTableViewController.swift */,
+				10F696D621F60ECC0063CD2C /* Storyboard */,
 				10F696D121F5F4D70063CD2C /* Keyboard */,
 				10F696AD21F5EABF0063CD2C /* Main.storyboard */,
 				10F696B021F5EAC20063CD2C /* Assets.xcassets */,
@@ -123,6 +128,15 @@
 				10F696D321F5F8FA0063CD2C /* KeyboardViewController.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		10F696D621F60ECC0063CD2C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				10F696D821F60F5E0063CD2C /* StoryboardViewController.swift */,
+				10F696DA21F611020063CD2C /* SameStoryboardViewController.swift */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F696DB21F611020063CD2C /* SameStoryboardViewController.swift in Sources */,
 				10F696AC21F5EABF0063CD2C /* MainTableViewController.swift in Sources */,
+				10F696D921F60F5E0063CD2C /* StoryboardViewController.swift in Sources */,
 				10F696D421F5F8FA0063CD2C /* KeyboardViewController.swift in Sources */,
 				10F696AA21F5EABF0063CD2C /* AppDelegate.swift in Sources */,
 			);

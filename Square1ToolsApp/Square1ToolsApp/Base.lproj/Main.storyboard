@@ -36,11 +36,71 @@
                     <navigationItem key="navigationItem" title="Square1Tools" id="Upi-ip-VQb"/>
                     <connections>
                         <segue destination="8EA-mq-S4e" kind="show" identifier="toKeyboard" id="kfk-Hg-8s7"/>
+                        <segue destination="EnF-GP-PeF" kind="show" identifier="toStoryboard" id="Ohm-h6-7E3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkc-GC-Ta9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="115.59220389805098"/>
+        </scene>
+        <!--Storyboard-->
+        <scene sceneID="bBA-uz-Hws">
+            <objects>
+                <viewController title="Storyboard" id="EnF-GP-PeF" customClass="StoryboardViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHV-1w-gp1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-Vc-07G">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29l-oO-Cty">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                        <state key="normal" title="VC in same Storyboard"/>
+                                        <connections>
+                                            <action selector="sameStoryboard:" destination="EnF-GP-PeF" eventType="touchUpInside" id="LAL-Mi-QVt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-eq-jY9">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                        <state key="normal" title="VC in other Storyboard"/>
+                                        <connections>
+                                            <action selector="otherStoryboard:" destination="EnF-GP-PeF" eventType="touchUpInside" id="FP0-gW-uCD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="29l-oO-Cty" firstAttribute="width" secondItem="6d6-eq-jY9" secondAttribute="width" id="fH8-R0-z0R"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f7Y-bs-wcS" firstAttribute="trailing" secondItem="ytg-Vc-07G" secondAttribute="trailing" id="2au-pt-2G4"/>
+                            <constraint firstItem="ytg-Vc-07G" firstAttribute="top" secondItem="f7Y-bs-wcS" secondAttribute="top" id="QR3-bf-Y09"/>
+                            <constraint firstItem="ytg-Vc-07G" firstAttribute="leading" secondItem="f7Y-bs-wcS" secondAttribute="leading" id="jLI-6C-aly"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f7Y-bs-wcS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpj-9g-IY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="-1"/>
+        </scene>
+        <!--Same Storyboard View Controller-->
+        <scene sceneID="j15-Pv-V1b">
+            <objects>
+                <viewController id="Y7l-ld-QtJ" customClass="SameStoryboardViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iYV-ny-fvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gc2-P6-OfJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjS-2n-SdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2591" y="-1"/>
         </scene>
         <!--Keyboard-->
         <scene sceneID="CE6-Yg-lCc">
