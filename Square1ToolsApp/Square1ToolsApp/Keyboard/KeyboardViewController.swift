@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  KeyboardViewController.swift
 //  Square1ToolsApp
 //
 //  Created by Ginés Navarro Fernández on 21/01/2019.
@@ -9,11 +9,19 @@
 import UIKit
 import Square1Tools
 
-class ViewController: UIViewController {
-
+class KeyboardViewController: UIViewController {
+  
+  // MARK: - Lifecycle.
+  
+  deinit {
+    stopListeningToKeyboardNotifications()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    listenToKeyboardNotifications()
   }
+  
+  // MARK: - KeyboardNotifications
 }
-
