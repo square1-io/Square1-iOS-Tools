@@ -185,7 +185,7 @@ extension UIViewController {
   }
   
   @objc private func keyboardWillChange(notification: NSNotification) {
-    keyboardWillChange(toFrame: frame(from: notification))
+    keyboardWillChange(toFrame: frame(from: notification), animation: animation(from: notification))
   }
   
   @objc private func keyboardDidChange(notification: NSNotification) {
@@ -223,7 +223,8 @@ extension UIViewController {
   
   /// Method to be called on UIKeyboardWillShow notification. Must be overrided with desired implementation.
   ///
-  /// - Parameter frame: Frame of presented keyboard.
+  /// - Parameter   frame: Frame of presented keyboard.
+  ///               animation: KeyboardAnimation of presented keyboard.
   @objc open func keyboardWillShow(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
@@ -232,6 +233,9 @@ extension UIViewController {
   @objc open func keyboardDidShow(withFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
+  ///
+  /// - Parameter   frame: Frame of presented keyboard.
+  ///               animation: KeyboardAnimation of presented keyboard.
   @objc open func keyboardWillHide(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
@@ -240,7 +244,8 @@ extension UIViewController {
   /// Method to be called on UIKeyboardWillChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  @objc open func keyboardWillChange(toFrame frame: CGRect) {}
+  ///             animation: KeyboardAnimation of presented keyboard.
+  @objc open func keyboardWillChange(toFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidChangeFrame notification. Must be overrided with desired implementation.
   ///

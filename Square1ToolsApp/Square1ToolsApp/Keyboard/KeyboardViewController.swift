@@ -53,7 +53,7 @@ class KeyboardViewController: UIViewController {
   
   override func keyboardDidHide() {}
   
-  override func keyboardWillChange(toFrame frame: CGRect) {}
+  override func keyboardWillChange(toFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {}
   
   override func keyboardDidChange(toFrame frame: CGRect) {}
 }
