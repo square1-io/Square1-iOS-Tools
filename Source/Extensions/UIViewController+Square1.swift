@@ -177,7 +177,7 @@ extension UIViewController {
   }
   
   @objc private func keyboardWillHide(notification: NSNotification) {
-    keyboardWillHide()
+    keyboardWillHide(withFrame: frame(from: notification), animation: animation(from: notification))
   }
   
   @objc private func keyboardDidHide(notification: NSNotification) {
@@ -232,7 +232,7 @@ extension UIViewController {
   @objc open func keyboardDidShow(withFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
-  @objc open func keyboardWillHide() {}
+  @objc open func keyboardWillHide(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
   @objc open func keyboardDidHide() {}
