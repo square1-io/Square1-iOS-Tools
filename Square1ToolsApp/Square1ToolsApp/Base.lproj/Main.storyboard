@@ -114,21 +114,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPF-CD-5oA">
-                                <rect key="frame" x="139" y="85" width="97" height="30"/>
+                                <rect key="frame" x="87.5" y="597" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.5" green="0.17254901959999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="c0M-8l-JBp"/>
+                                    <constraint firstAttribute="width" constant="200" id="c0M-8l-JBp"/>
                                     <constraint firstAttribute="height" constant="30" id="oiY-fJ-v1Z"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8EA-mq-S4e" id="rcE-v4-1rY"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pPF-CD-5oA" firstAttribute="centerX" secondItem="gYZ-7G-6oy" secondAttribute="centerX" id="DCy-ei-y5c"/>
-                            <constraint firstItem="pPF-CD-5oA" firstAttribute="top" secondItem="Ko9-8n-Ow2" secondAttribute="top" constant="21" id="TWl-Ab-ilT"/>
+                            <constraint firstItem="Ko9-8n-Ow2" firstAttribute="bottom" secondItem="pPF-CD-5oA" secondAttribute="bottom" constant="40" id="oLC-ql-Khu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ko9-8n-Ow2"/>
                     </view>

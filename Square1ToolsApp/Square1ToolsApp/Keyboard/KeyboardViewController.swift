@@ -25,15 +25,37 @@ class KeyboardViewController: UIViewController {
   
   // MARK: - KeyboardNotifications
   
-  override func keyboardWillShow(withFrame frame: CGRect) {}
+  override func keyboardWillShow(withFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {
+    let duration = animation.duration ?? 0.3
+    let options = animation.curve?.toAnimationOption() ?? []
+    
+    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options, animations: {
+      self.view.frame.origin.y -= frame.height
+    }, completion: nil)
+  }
 
   override func keyboardDidShow(withFrame frame: CGRect) {}
   
-  override func keyboardWillHide() {}
+  override func keyboardWillHide(withFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {
+    let duration = animation.duration ?? 0.3
+    let options = animation.curve?.toAnimationOption() ?? []
+    
+    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options, animations: {
+      self.view.frame.origin.y = 0
+    }, completion: nil)
+  }
   
   override func keyboardDidHide() {}
   
-  override func keyboardWillChange(toFrame frame: CGRect) {}
+  override func keyboardWillChange(toFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {}
   
   override func keyboardDidChange(toFrame frame: CGRect) {}
+}
+
+extension KeyboardViewController: UITextFieldDelegate {
+  
+  public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
 }
