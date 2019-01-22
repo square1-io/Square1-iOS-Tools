@@ -169,7 +169,7 @@ extension UIViewController {
   }
   
   @objc private func keyboardWillShow(notification: NSNotification) {
-    keyboardWillShow(withFrame: frame(from: notification))
+    keyboardWillShow(withFrame: frame(from: notification), animation: animation(from: notification))
   }
   
   @objc private func keyboardDidShow(notification: NSNotification) {
@@ -200,10 +200,31 @@ extension UIViewController {
     return keyboardFrameValue.cgRectValue
   }
   
+  public class KeyboardAnimation: NSObject {
+    public let duration: Float?
+    public let curve: Int?
+    
+    init(duration: Float?, curve: Int?) {
+      self.duration = duration
+      self.curve = curve
+      
+      super.init()
+    }
+  }
+  
+  private func animation(from notification: NSNotification) -> KeyboardAnimation {
+    let keyboardInfo = notification.userInfo
+    
+    let duration = keyboardInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber
+    let curve = keyboardInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+  
+    return KeyboardAnimation(duration: duration?.floatValue, curve: curve?.intValue)
+  }
+  
   /// Method to be called on UIKeyboardWillShow notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  @objc open func keyboardWillShow(withFrame frame: CGRect) {}
+  @objc open func keyboardWillShow(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
   ///

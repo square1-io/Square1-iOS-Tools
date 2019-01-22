@@ -25,9 +25,19 @@ class KeyboardViewController: UIViewController {
   
   // MARK: - KeyboardNotifications
   
-  override func keyboardWillShow(withFrame frame: CGRect) {}
+  override func keyboardWillShow(withFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {
+    let duration = animation.duration ?? 0.3
+    var options: UIView.AnimationOptions? = nil
+    if let curve = animation.curve {
+      options = UIView.AnimationOptions(rawValue: UInt(curve << 16))
+    }
+    
+    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options ?? [], animations: {
+      
+    }, completion: nil)
+  }
 
-  override func keyboardDidShow(withFrame frame: CGRect) {}
+  /*override func keyboardDidShow(withFrame frame: CGRect) {}
   
   override func keyboardWillHide() {}
   
@@ -35,5 +45,5 @@ class KeyboardViewController: UIViewController {
   
   override func keyboardWillChange(toFrame frame: CGRect) {}
   
-  override func keyboardDidChange(toFrame frame: CGRect) {}
+  override func keyboardDidChange(toFrame frame: CGRect) {}*/
 }
