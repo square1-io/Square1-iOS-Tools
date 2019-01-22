@@ -202,9 +202,9 @@ extension UIViewController {
   
   public class KeyboardAnimation: NSObject {
     public let duration: Float?
-    public let curve: Int?
+    public let curve: UIView.AnimationCurve?
     
-    init(duration: Float?, curve: Int?) {
+    init(duration: Float?, curve: UIView.AnimationCurve?) {
       self.duration = duration
       self.curve = curve
       
@@ -216,9 +216,13 @@ extension UIViewController {
     let keyboardInfo = notification.userInfo
     
     let duration = keyboardInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber
-    let curve = keyboardInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-  
-    return KeyboardAnimation(duration: duration?.floatValue, curve: curve?.intValue)
+    
+    var animationCurve: UIView.AnimationCurve? = nil
+    if let curve = keyboardInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber {
+      animationCurve = UIView.AnimationCurve(rawValue: curve.intValue)
+    }
+    
+    return KeyboardAnimation(duration: duration?.floatValue, curve: animationCurve)
   }
   
   /// Method to be called on UIKeyboardWillShow notification. Must be overrided with desired implementation.
