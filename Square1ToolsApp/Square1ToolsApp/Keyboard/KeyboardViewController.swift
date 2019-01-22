@@ -27,12 +27,9 @@ class KeyboardViewController: UIViewController {
   
   override func keyboardWillShow(withFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {
     let duration = animation.duration ?? 0.3
-    var options: UIView.AnimationOptions? = nil
-    if let curve = animation.curve {
-      options = curve.toAnimationOption()
-    }
+    let options = animation.curve?.toAnimationOption() ?? []
     
-    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options ?? [], animations: {
+    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options, animations: {
       self.view.frame.origin.y -= frame.height
     }, completion: nil)
   }
@@ -41,12 +38,9 @@ class KeyboardViewController: UIViewController {
   
   override func keyboardWillHide(withFrame frame: CGRect, animation: UIViewController.KeyboardAnimation) {
     let duration = animation.duration ?? 0.3
-    var options: UIView.AnimationOptions? = nil
-    if let curve = animation.curve {
-      options = curve.toAnimationOption()
-    }
+    let options = animation.curve?.toAnimationOption() ?? []
     
-    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options ?? [], animations: {
+    UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: options, animations: {
       self.view.frame.origin.y = 0
     }, completion: nil)
   }
@@ -63,18 +57,5 @@ extension KeyboardViewController: UITextFieldDelegate {
   public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
-  }
-}
-
-extension UIView.AnimationCurve {
-  
-  func toAnimationOption() -> UIView.AnimationOptions? {
-    switch self {
-    case .easeInOut: return UIView.AnimationOptions.curveEaseInOut
-    case .easeIn: return UIView.AnimationOptions.curveEaseIn
-    case .linear: return UIView.AnimationOptions.curveLinear
-    case .easeOut: return UIView.AnimationOptions.curveEaseOut
-    default: return nil
-    }
   }
 }

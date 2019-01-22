@@ -68,3 +68,16 @@ public extension UIView {
   }
   
 }
+
+extension UIView.AnimationCurve {
+  
+  public func toAnimationOption() -> UIView.AnimationOptions? {
+    switch self {
+    case .easeInOut: return UIView.AnimationOptions.curveEaseInOut
+    case .easeIn: return UIView.AnimationOptions.curveEaseIn
+    case .linear: return UIView.AnimationOptions.curveLinear
+    case .easeOut: return UIView.AnimationOptions.curveEaseOut
+    default: return nil
+    }
+  }
+}

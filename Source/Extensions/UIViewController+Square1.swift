@@ -227,8 +227,9 @@ extension UIViewController {
   
   /// Method to be called on UIKeyboardWillShow notification. Must be overrided with desired implementation.
   ///
-  /// - Parameter   frame: Frame of presented keyboard.
-  ///               animation: KeyboardAnimation of presented keyboard.
+  /// - Parameters:
+  ///   - frame: Frame of presented keyboard.
+  ///   - animation: KeyboardAnimation of presented keyboard.
   @objc open func keyboardWillShow(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
@@ -238,8 +239,9 @@ extension UIViewController {
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
   ///
-  /// - Parameter   frame: Frame of presented keyboard.
-  ///               animation: KeyboardAnimation of presented keyboard.
+  /// - Parameters:
+  ///   - frame: Frame of presented keyboard.
+  ///   - animation: KeyboardAnimation of presented keyboard.
   @objc open func keyboardWillHide(withFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
@@ -247,8 +249,9 @@ extension UIViewController {
   
   /// Method to be called on UIKeyboardWillChangeFrame notification. Must be overrided with desired implementation.
   ///
-  /// - Parameter frame: Frame of presented keyboard.
-  ///             animation: KeyboardAnimation of presented keyboard.
+  /// - Parameters:
+  ///   - frame: Frame of presented keyboard.
+  ///   - animation: KeyboardAnimation of presented keyboard.
   @objc open func keyboardWillChange(toFrame frame: CGRect, animation: KeyboardAnimation) {}
   
   /// Method to be called on UIKeyboardDidChangeFrame notification. Must be overrided with desired implementation.
