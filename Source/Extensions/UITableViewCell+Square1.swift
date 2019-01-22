@@ -23,17 +23,7 @@ import UIKit
 /// Helpers for UITableViewCell.
 public extension UITableViewCell {
   
-  /// UITableView for current cell or nil if is not attached to any.
-  public var tableView: UITableView? {
-    var view = self.superview
-    while (view != nil && view!.isKind(of: UITableView.self) == false) {
-      view = view!.superview
-    }
-    return view as? UITableView
-  }
-  
-  
-  /// Helper to geat and chamge cell's selection color.
+  /// Helper to get and change cell's selection color.
   public var selectionColor : UIColor? {
     get {
       return selectedBackgroundView?.backgroundColor
