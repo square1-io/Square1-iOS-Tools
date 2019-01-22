@@ -69,8 +69,9 @@ public extension UIView {
   
 }
 
-extension UIView.AnimationCurve {
+public extension UIView.AnimationCurve {
   
+  /// AnimationCurve to AnimationOptions.
   public func toAnimationOption() -> UIView.AnimationOptions? {
     switch self {
     case .easeInOut: return UIView.AnimationOptions.curveEaseInOut

@@ -200,6 +200,7 @@ extension UIViewController {
     return keyboardFrameValue.cgRectValue
   }
   
+  /// Keyboard animation info.
   public class KeyboardAnimation: NSObject {
     public let duration: Float?
     public let curve: UIView.AnimationCurve?

@@ -13,7 +13,7 @@
     <a title="Square1Tools  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Square1Tools Docs</a> (90% documented)</p>
+        <p><a href="index.html">Square1Tools Docs</a> (88% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -127,7 +127,13 @@
                 <a href="Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/UIView/AnimationCurve.html">– AnimationCurve</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController/KeyboardAnimation.html">– KeyboardAnimation</a>
               </li>
             </ul>
           </li>
@@ -135,7 +141,15 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:12Square1Tools3LogySS_S2SSitF">Log(_:_:_:_:)</a>
+                <a href="Functions.html#/s:12Square1Tools3LogyySS_S2SSitF">Log(_:_:_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Storyboardable.html">Storyboardable</a>
               </li>
             </ul>
           </li>
@@ -156,7 +170,7 @@
         <section>
           <section class="section">
             
-            <h1 id='square1-tools' class='heading'>Square1 Tools</h1>
+            <h1 id='square1-ios-tools' class='heading'>Square1 iOS Tools</h1>
 
 <p align="center">
 <img src="https://img.shields.io/cocoapods/v/Square1Tools.svg" alt="Cocoapods"/>
@@ -164,6 +178,26 @@
 </p>
 
 <p>A handy collection of helpers, types and hacks used on our Swift projects.</p>
+<h2 id='index' class='heading'>Index</h2>
+
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installing">Installing</a>
+
+<ul>
+<li><a href="#cocoapods">Cocoapods</a></li>
+</ul></li>
+<li><a href="#running-the-tests">Running the tests</a></li>
+<li><a href="#how-to-use">How to use</a>
+
+<ul>
+<li><a href="#keychain">Keychain</a></li>
+</ul></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#authors">Authors</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
 <h3 id='prerequisites' class='heading'>Prerequisites</h3>
 
 <ul>
@@ -202,6 +236,27 @@ import Square1Tools
 <h2 id='how-to-use' class='heading'>How to use</h2>
 
 <p>Check the <a href="http://htmlpreview.github.io/?https://github.com/square1-io/Square1-iOS-Tools/blob/master/docs/index.html">documentation page</a>.</p>
+<h3 id='keychain' class='heading'>Keychain</h3>
+
+<p><em>Keychain</em> is a helper class to quickly access to stored values in iOS Keychain.</p>
+
+<p>You can instance a Keychain object like this:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">keychain</span> <span class="o">=</span> <span class="kt">Keychain</span><span class="p">()</span>
+
+<span class="c1">// You can also instance it with a specific access group.</span>
+<span class="k">let</span> <span class="nv">anotherKeychain</span> <span class="o">=</span> <span class="kt">Keychain</span><span class="p">(</span><span class="nv">accessGroup</span><span class="p">:</span> <span class="s">"MyGroup"</span><span class="p">)</span>
+</code></pre>
+
+<p>Using Keychain is straightforward :</p>
+<pre class="highlight swift"><code><span class="c1">// Save into keychain</span>
+<span class="n">keychain</span><span class="o">.</span><span class="nf">save</span><span class="p">(</span><span class="s">"Hello World!!"</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"MyKey"</span><span class="p">)</span> <span class="c1">// returns true if ok, otherwise false</span>
+
+<span class="c1">// Read from keychain</span>
+<span class="n">keychain</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"MyKey"</span><span class="p">)</span> <span class="c1">// returns String?</span>
+
+<span class="c1">// Delete from keychain</span>
+<span class="n">keychain</span><span class="o">.</span><span class="nf">delete</span><span class="p">(</span><span class="s">"MyKey"</span><span class="p">)</span> <span class="c1">// returns true if ok, otherwise false</span>
+</code></pre>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING</a> for details on our code of conduct, and the process for submitting pull requests to us.
@@ -221,8 +276,8 @@ Make sure you comment modified and new code and use <a href="https://github.com/
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2018-08-22)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-01-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
