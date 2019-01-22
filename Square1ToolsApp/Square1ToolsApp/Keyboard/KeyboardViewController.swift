@@ -24,4 +24,16 @@ class KeyboardViewController: UIViewController {
   }
   
   // MARK: - KeyboardNotifications
+  
+  override func keyboardWillShow(withFrame frame: CGRect) {}
+
+  override func keyboardDidShow(withFrame frame: CGRect) {}
+  
+  override func keyboardWillHide() {}
+  
+  override func keyboardDidHide() {}
+  
+  override func keyboardWillChange(toFrame frame: CGRect) {}
+  
+  override func keyboardDidChange(toFrame frame: CGRect) {}
 }

@@ -208,23 +208,23 @@ extension UIViewController {
   /// Method to be called on UIKeyboardDidShow notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardDidShow(withFrame frame: CGRect) {}
+  @objc open func keyboardDidShow(withFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardWillHide notification. Must be overrided with desired implementation.
   @objc open func keyboardWillHide() {}
   
   /// Method to be called on UIKeyboardDidHide notification. Must be overrided with desired implementation.
-  open func keyboardDidHide() {}
+  @objc open func keyboardDidHide() {}
   
   /// Method to be called on UIKeyboardWillChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardWillChange(toFrame frame: CGRect) {}
+  @objc open func keyboardWillChange(toFrame frame: CGRect) {}
   
   /// Method to be called on UIKeyboardDidChangeFrame notification. Must be overrided with desired implementation.
   ///
   /// - Parameter frame: Frame of presented keyboard.
-  open func keyboardDidChange(toFrame frame: CGRect) {}
+  @objc open func keyboardDidChange(toFrame frame: CGRect) {}
   
   
   /// Helper method to get precedent `UIViewController` in navigation stack
