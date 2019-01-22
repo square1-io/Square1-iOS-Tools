@@ -21,8 +21,8 @@ A handy collection of helpers, types and hacks used on our Swift projects.
 
 ### Prerequisites
 * iOS 9.0+
-* XCode 9+
-* Swift 4+
+* XCode 10+
+* Swift 4.2+
 
 ## Installing
 
