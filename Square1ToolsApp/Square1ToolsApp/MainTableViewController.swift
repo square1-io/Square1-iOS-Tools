@@ -10,6 +10,12 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
+  private var items: [String] {
+    return ["Keyboard",
+            "Storyboard",
+            "Labels"]
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -24,27 +30,23 @@ class MainTableViewController: UITableViewController {
     performSegue(withIdentifier: "toStoryboard", sender: nil)
   }
   
+  func goToLabels() {
+    performSegue(withIdentifier: "toLabels", sender: nil)
+  }
+  
   // MARK: - TableView DataSource.
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 2
+    return items.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
     
-    switch indexPath.row {
-    case 0:
-      cell.textLabel?.text = "Keyboard"
-    case 1:
-      cell.textLabel?.text = "Storyboard"
-    default:
-      break
-    }
+    cell.textLabel?.text = items[indexPath.row]
     
     return cell
   }
-  
   
   // MARK: - TableView Delegate.
   
@@ -58,6 +60,8 @@ class MainTableViewController: UITableViewController {
       goToKeyboard()
     case 1:
       goToStoryboard()
+    case 2:
+      goToLabels()
     default:
       break
     }
