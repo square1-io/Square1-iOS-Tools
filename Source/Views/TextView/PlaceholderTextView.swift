@@ -23,7 +23,18 @@ import UIKit
 open class PlaceholderTextView: UITextView {
 
   /// Label to configure the placeholder text.
-  public let placeholderLabel = UILabel()
+  public var placeholderLabel = UILabel()
+  
+  @IBInspectable public var textColorPlaceholder: UIColor = .gray {
+    didSet {
+      placeholderLabel.textColor = textColorPlaceholder
+    }
+  }
+  @IBInspectable public var textPlaceholder: String = "" {
+    didSet {
+      placeholderLabel.text = textPlaceholder
+    }
+  }
   
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
