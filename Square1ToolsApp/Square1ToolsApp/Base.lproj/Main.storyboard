@@ -37,6 +37,7 @@
                     <connections>
                         <segue destination="8EA-mq-S4e" kind="show" identifier="toKeyboard" id="kfk-Hg-8s7"/>
                         <segue destination="EnF-GP-PeF" kind="show" identifier="toStoryboard" id="Ohm-h6-7E3"/>
+                        <segue destination="I5T-Q2-KDR" kind="show" identifier="toLabels" id="JHH-oK-KZW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkc-GC-Ta9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpj-9g-IY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839" y="-1"/>
+        </scene>
+        <!--Labels View Controller-->
+        <scene sceneID="Ptd-QB-Pqz">
+            <objects>
+                <viewController id="I5T-Q2-KDR" customClass="LabelsViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sYa-Vw-Xeo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test label with a substring with different color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-Ej-QrV">
+                                <rect key="frame" x="87.5" y="100" width="200" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="J9s-VW-Y1l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-83-Khx">
+                                <rect key="frame" x="77.5" y="191" width="220" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="r9v-RL-cXk"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bhT-Ej-QrV" firstAttribute="centerX" secondItem="sYa-Vw-Xeo" secondAttribute="centerX" id="WGM-cp-ww6"/>
+                            <constraint firstItem="YIM-83-Khx" firstAttribute="top" secondItem="bhT-Ej-QrV" secondAttribute="bottom" constant="50" id="bDn-Y1-pDB"/>
+                            <constraint firstItem="YIM-83-Khx" firstAttribute="centerX" secondItem="sYa-Vw-Xeo" secondAttribute="centerX" id="qtG-e0-oFz"/>
+                            <constraint firstItem="bhT-Ej-QrV" firstAttribute="top" secondItem="nQo-lD-RLg" secondAttribute="top" constant="36" id="yOA-bN-Yxy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nQo-lD-RLg"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelColor" destination="bhT-Ej-QrV" id="1Ry-EC-GjA"/>
+                        <outlet property="labelLineHeight" destination="YIM-83-Khx" id="Pyf-Jv-ZI9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkF-GV-OQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="715"/>
         </scene>
         <!--From the same storyboard-->
         <scene sceneID="j15-Pv-V1b">
