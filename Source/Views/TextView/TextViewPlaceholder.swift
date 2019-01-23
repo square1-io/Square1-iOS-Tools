@@ -20,11 +20,11 @@
 
 import UIKit
 
-class TextViewPlaceholder: UITextView {
+open class TextViewPlaceholder: UITextView {
 
-  let placeholderLabel = UILabel()
+  public let placeholderLabel = UILabel()
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     configureView()
   }
@@ -34,21 +34,26 @@ class TextViewPlaceholder: UITextView {
     configureView()
   }
   
-  override func layoutSubviews() {
+  override open func layoutSubviews() {
     super.layoutSubviews()
     
-    let placeholderX: CGFloat = 0
-    let placeholderY: CGFloat = 0
-    let placeholderWidth = frame.width
-    let placeholderHeight = frame.height
+    let placeholderX: CGFloat = textContainer.lineFragmentPadding + textContainerInset.left
+    let placeholderY: CGFloat = textContainerInset.top
+    let placeholderWidth = frame.width - placeholderX - textContainerInset.right
+    let placeholderHeight = frame.height - textContainerInset.bottom * 2
     
-    placeholderLabel.frame = CGRect(x: placeholderX, y: placeholderY, width: placeholderWidth, height: placeholderHeight)
+    var size = placeholderLabel.sizeThatFits(CGSize(width: placeholderWidth, height: placeholderHeight))
+    if size.height > placeholderHeight {
+      size.height = placeholderHeight
+    }
+    placeholderLabel.frame = CGRect(x: placeholderX, y: placeholderY, width: size.width, height: size.height)
   }
   
   // MARK: Private.
   
   private func configureView() {
     placeholderLabel.numberOfLines = 0
+    placeholderLabel.font = font
     addSubview(placeholderLabel)
   }
 }

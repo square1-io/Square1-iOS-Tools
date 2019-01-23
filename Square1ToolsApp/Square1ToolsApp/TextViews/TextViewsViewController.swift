@@ -7,7 +7,22 @@
 //
 
 import UIKit
+import Square1Tools
 
 class TextViewsViewController: UIViewController {
   
+  @IBOutlet weak var placeholderTextView: TextViewPlaceholder!
+  
+  // MARK: - Lifecycle and setup.
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    placeholderTextView.becomeFirstResponder()
+    configurePlaceholderTextView()
+  }
+  
+  private func configurePlaceholderTextView() {
+    placeholderTextView.placeholderLabel.text = "Placeholder test in TextView"
+  }
 }
