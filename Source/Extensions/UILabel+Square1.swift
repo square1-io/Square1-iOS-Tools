@@ -30,14 +30,13 @@ public extension UILabel {
   ///   - color: `UIColor` of string.
   ///   - range: The content `String`.
   func setColor(color: UIColor, range string: String) {
-    guard let text = text,
-      let newAttributedString = attributedText?.mutableCopy() as? NSMutableAttributedString else {
+    guard let text = text else {
       return
     }
+    
+    let newAttributedString = attributedText?.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString(string:text)
     let range = (text as NSString).range(of: string)
-    
-    newAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
-    
+    newAttributedString.addAttribute(.foregroundColor, value: color, range: range)
     attributedText = newAttributedString
   }
   
@@ -51,7 +50,7 @@ public extension UILabel {
     
     self.text = text
     
-    guard let paragraphAtt = attributedText?.attribute(NSAttributedString.Key.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle else {
+    guard let paragraphAtt = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle else {
       return
     }
     
@@ -61,7 +60,7 @@ public extension UILabel {
     }
     
     paragraphStyle.lineSpacing = lineHeight
-    attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+    attributedString.addAttribute(.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
     attributedText = attributedString
   }
 }
