@@ -10,11 +10,11 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-  private var items: [String] {
+  private lazy var items: [String] = {
     return ["Keyboard",
             "Storyboard",
             "Labels"]
-  }
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()

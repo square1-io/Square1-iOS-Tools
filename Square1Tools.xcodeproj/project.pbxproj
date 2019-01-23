@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1092410221F87C1C00E147A2 /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092410121F87C1C00E147A2 /* TextViewPlaceholder.swift */; };
 		10F129EB21F85A28001CE08D /* UILabel+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F129EA21F85A28001CE08D /* UILabel+Square1.swift */; };
 		10F696E021F614970063CD2C /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DF21F614970063CD2C /* Storyboardable.swift */; };
 		D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C3F20330D610042694C /* UIViewController+Maps.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1092410121F87C1C00E147A2 /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		10F129EA21F85A28001CE08D /* UILabel+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Square1.swift"; sourceTree = "<group>"; };
 		10F696DF21F614970063CD2C /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		D900BAA8202DF6320056A160 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1092410021F87BF100E147A2 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				1092410121F87C1C00E147A2 /* TextViewPlaceholder.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 		10F696DE21F614810063CD2C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		D9865A1B2091BDFE00E34CBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1092410021F87BF100E147A2 /* TextView */,
 				D9865A1E2091C72500E34CBB /* Pull To Refresh */,
 			);
 			path = Views;
@@ -360,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1092410221F87C1C00E147A2 /* TextViewPlaceholder.swift in Sources */,
 				D941EC672007968400AD5AED /* UIDevice+Square1.swift in Sources */,
 				D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */,
 				D95E3ADC205AD0D900BBF03F /* UITabBarController+Square1.swift in Sources */,
