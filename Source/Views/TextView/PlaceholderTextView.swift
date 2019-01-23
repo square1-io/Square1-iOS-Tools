@@ -22,6 +22,7 @@ import UIKit
 
 open class PlaceholderTextView: UITextView {
 
+  /// Label to configure the placeholder text.
   public let placeholderLabel = UILabel()
   
   required public init?(coder aDecoder: NSCoder) {
@@ -47,9 +48,8 @@ open class PlaceholderTextView: UITextView {
     let placeholderHeight = frame.height - placeholderY - textContainerInset.bottom
     
     var size = placeholderLabel.sizeThatFits(CGSize(width: placeholderWidth, height: placeholderHeight))
-    if size.height > placeholderHeight {
-      size.height = placeholderHeight
-    }
+    size.height = min(size.height, placeholderHeight)
+    size.width = min(size.width, placeholderWidth)
     placeholderLabel.frame = CGRect(x: placeholderX, y: placeholderY, width: size.width, height: size.height)
   }
   
