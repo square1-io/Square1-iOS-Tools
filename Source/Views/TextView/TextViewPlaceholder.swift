@@ -34,13 +34,17 @@ open class TextViewPlaceholder: UITextView {
     configureView()
   }
   
+  deinit {
+    removeNotifications()
+  }
+  
   override open func layoutSubviews() {
     super.layoutSubviews()
     
     let placeholderX: CGFloat = textContainer.lineFragmentPadding + textContainerInset.left
     let placeholderY: CGFloat = textContainerInset.top
     let placeholderWidth = frame.width - placeholderX - textContainerInset.right
-    let placeholderHeight = frame.height - textContainerInset.bottom * 2
+    let placeholderHeight = frame.height - placeholderY - textContainerInset.bottom
     
     var size = placeholderLabel.sizeThatFits(CGSize(width: placeholderWidth, height: placeholderHeight))
     if size.height > placeholderHeight {
@@ -55,5 +59,23 @@ open class TextViewPlaceholder: UITextView {
     placeholderLabel.numberOfLines = 0
     placeholderLabel.font = font
     addSubview(placeholderLabel)
+    
+    addNotifications()
+  }
+  
+  // MARK: Notifications.
+  
+  private func addNotifications() {
+    NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: nil)
+  }
+  
+  private func removeNotifications() {
+    NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
+  }
+  
+  @objc private func textDidChange(notification: Notification) {
+    if let object = notification.object as? UITextView, self == object {
+      placeholderLabel.isHidden = text.count > 0
+    }
   }
 }

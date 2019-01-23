@@ -24,5 +24,6 @@ class TextViewsViewController: UIViewController {
   
   private func configurePlaceholderTextView() {
     placeholderTextView.placeholderLabel.text = "Placeholder test in TextView"
+    placeholderTextView.placeholderLabel.textColor = .gray
   }
 }
