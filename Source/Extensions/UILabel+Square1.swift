@@ -30,14 +30,13 @@ public extension UILabel {
   ///   - color: `UIColor` of string.
   ///   - range: The content `String`.
   func setColor(color: UIColor, range string: String) {
-    guard let text = text else {
+    guard let text = text,
+      let newAttributedString = attributedText?.mutableCopy() as? NSMutableAttributedString else {
       return
     }
     let range = (text as NSString).range(of: string)
     
-    let newAttributedString = NSMutableAttributedString(string:text)
-    newAttributedString.setAttributes([NSAttributedString.Key.foregroundColor: color],
-                                      range: range)
+    newAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
     
     attributedText = newAttributedString
   }
