@@ -20,7 +20,7 @@
 
 import UIKit
 
-open class TextViewPlaceholder: UITextView {
+open class PlaceholderTextView: UITextView {
 
   public let placeholderLabel = UILabel()
   

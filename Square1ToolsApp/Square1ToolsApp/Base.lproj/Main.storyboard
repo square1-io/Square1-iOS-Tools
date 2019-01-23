@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-xg-UWT" customClass="TextViewPlaceholder" customModule="Square1Tools">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-xg-UWT" customClass="PlaceholderTextView" customModule="Square1Tools">
                                 <rect key="frame" x="20" y="84" width="335" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="C7N-ff-HIg"/>
@@ -169,7 +169,7 @@
                         <viewLayoutGuide key="safeArea" id="ZWl-rx-eZI"/>
                     </view>
                     <connections>
-                        <outlet property="placeholderTextView" destination="ijb-xg-UWT" id="HQ7-uC-QgL"/>
+                        <outlet property="placeholderTextView" destination="ijb-xg-UWT" id="SU8-6f-P9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPD-qg-nlz" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,7 @@ import Square1Tools
 
 class TextViewsViewController: UIViewController {
   
-  @IBOutlet weak var placeholderTextView: TextViewPlaceholder!
+  @IBOutlet weak var placeholderTextView: PlaceholderTextView!
   
   // MARK: - Lifecycle and setup.
   
