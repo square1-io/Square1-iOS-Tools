@@ -13,7 +13,8 @@ class MainTableViewController: UITableViewController {
   private lazy var items: [String] = {
     return ["Keyboard",
             "Storyboard",
-            "Labels"]
+            "Labels",
+            "TextViews"]
   }()
   
   override func viewDidLoad() {
@@ -32,6 +33,10 @@ class MainTableViewController: UITableViewController {
   
   func goToLabels() {
     performSegue(withIdentifier: "toLabels", sender: nil)
+  }
+  
+  func goToTextViews() {
+    performSegue(withIdentifier: "toTextViews", sender: nil)
   }
   
   // MARK: - TableView DataSource.
@@ -62,6 +67,8 @@ class MainTableViewController: UITableViewController {
       goToStoryboard()
     case 2:
       goToLabels()
+    case 3:
+      goToTextViews()
     default:
       break
     }
