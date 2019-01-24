@@ -38,6 +38,7 @@
                         <segue destination="8EA-mq-S4e" kind="show" identifier="toKeyboard" id="kfk-Hg-8s7"/>
                         <segue destination="EnF-GP-PeF" kind="show" identifier="toStoryboard" id="Ohm-h6-7E3"/>
                         <segue destination="I5T-Q2-KDR" kind="show" identifier="toLabels" id="JHH-oK-KZW"/>
+                        <segue destination="i9s-2u-ggd" kind="show" identifier="toTextViews" id="bjc-OA-wJf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkc-GC-Ta9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,12 +90,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpj-9g-IY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="-1"/>
+            <point key="canvasLocation" x="1977" y="-791"/>
         </scene>
-        <!--Labels View Controller-->
+        <!--Labels-->
         <scene sceneID="Ptd-QB-Pqz">
             <objects>
-                <viewController id="I5T-Q2-KDR" customClass="LabelsViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Labels" id="I5T-Q2-KDR" customClass="LabelsViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sYa-Vw-Xeo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +141,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkF-GV-OQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="715"/>
+            <point key="canvasLocation" x="1985" y="-104"/>
+        </scene>
+        <!--TextViews-->
+        <scene sceneID="i45-48-fIC">
+            <objects>
+                <viewController title="TextViews" id="i9s-2u-ggd" customClass="TextViewsViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1w9-6c-k8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-xg-UWT" customClass="PlaceholderTextView" customModule="Square1Tools">
+                                <rect key="frame" x="20" y="84" width="335" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="C7N-ff-HIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorPlaceholder">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textPlaceholder" value="Placeholder test in TextView"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ijb-xg-UWT" firstAttribute="top" secondItem="ZWl-rx-eZI" secondAttribute="top" constant="20" id="149-Sq-M5b"/>
+                            <constraint firstItem="ijb-xg-UWT" firstAttribute="leading" secondItem="ZWl-rx-eZI" secondAttribute="leading" constant="20" id="6mj-Hj-w7Y"/>
+                            <constraint firstItem="ZWl-rx-eZI" firstAttribute="trailing" secondItem="ijb-xg-UWT" secondAttribute="trailing" constant="20" id="Q9m-6t-04O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZWl-rx-eZI"/>
+                    </view>
+                    <connections>
+                        <outlet property="placeholderTextView" destination="ijb-xg-UWT" id="SU8-6f-P9x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPD-qg-nlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="626"/>
         </scene>
         <!--From the same storyboard-->
         <scene sceneID="j15-Pv-V1b">
@@ -155,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjS-2n-SdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2591" y="-1"/>
+            <point key="canvasLocation" x="2729" y="-791"/>
         </scene>
         <!--Keyboard-->
         <scene sceneID="CE6-Yg-lCc">
@@ -197,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07W-JK-rHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="-699"/>
+            <point key="canvasLocation" x="1985" y="-1489"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rc8-MQ-WyD">
