@@ -20,6 +20,7 @@
 
 import UIKit
 
+@IBDesignable
 open class PlaceholderTextView: UITextView {
 
   /// Label to configure the placeholder text.

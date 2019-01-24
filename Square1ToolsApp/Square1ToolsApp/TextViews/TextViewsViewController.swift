@@ -19,11 +19,5 @@ class TextViewsViewController: UIViewController {
     super.viewDidLoad()
     
     placeholderTextView.becomeFirstResponder()
-    configurePlaceholderTextView()
-  }
-  
-  private func configurePlaceholderTextView() {
-    placeholderTextView.placeholderLabel.text = "Placeholder test in TextView"
-    placeholderTextView.placeholderLabel.textColor = .gray
   }
 }
