@@ -14,7 +14,8 @@ class MainTableViewController: UITableViewController {
     return ["Keyboard",
             "Storyboard",
             "Labels",
-            "TextViews"]
+            "TextViews",
+            "Logs"]
   }()
   
   override func viewDidLoad() {
@@ -37,6 +38,10 @@ class MainTableViewController: UITableViewController {
   
   func goToTextViews() {
     performSegue(withIdentifier: "toTextViews", sender: nil)
+  }
+  
+  func goToLogs() {
+    performSegue(withIdentifier: "toLogs", sender: nil)
   }
   
   // MARK: - TableView DataSource.
@@ -69,6 +74,8 @@ class MainTableViewController: UITableViewController {
       goToLabels()
     case 3:
       goToTextViews()
+    case 4:
+      goToLogs()
     default:
       break
     }

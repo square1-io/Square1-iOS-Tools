@@ -39,6 +39,7 @@
                         <segue destination="EnF-GP-PeF" kind="show" identifier="toStoryboard" id="Ohm-h6-7E3"/>
                         <segue destination="I5T-Q2-KDR" kind="show" identifier="toLabels" id="JHH-oK-KZW"/>
                         <segue destination="i9s-2u-ggd" kind="show" identifier="toTextViews" id="bjc-OA-wJf"/>
+                        <segue destination="rcL-fU-mE0" kind="show" identifier="toLogs" id="dRI-wG-MUE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkc-GC-Ta9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,6 +182,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPD-qg-nlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977" y="626"/>
+        </scene>
+        <!--Logs-->
+        <scene sceneID="kjt-0g-6vz">
+            <objects>
+                <viewController title="Logs" id="rcL-fU-mE0" customClass="LogsViewController" customModule="Square1ToolsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcZ-0v-clr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idJ-FS-h8t">
+                                <rect key="frame" x="118" y="95" width="139" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Print Test logs"/>
+                                <connections>
+                                    <action selector="printLogs:" destination="rcL-fU-mE0" eventType="touchUpInside" id="rNI-nM-ium"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The logs appears in Xcode console and Console App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-Bq-Iv0">
+                                <rect key="frame" x="87.5" y="161" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZSR-E2-NLK"/>
+                                    <constraint firstAttribute="width" constant="200" id="met-gM-Sgz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="idJ-FS-h8t" firstAttribute="centerX" secondItem="jcZ-0v-clr" secondAttribute="centerX" id="6AJ-0Y-Bl9"/>
+                            <constraint firstItem="idJ-FS-h8t" firstAttribute="top" secondItem="4VV-s6-FjR" secondAttribute="top" constant="31" id="FNh-7f-beH"/>
+                            <constraint firstItem="I1f-Bq-Iv0" firstAttribute="centerX" secondItem="jcZ-0v-clr" secondAttribute="centerX" id="NHq-gl-xTX"/>
+                            <constraint firstItem="I1f-Bq-Iv0" firstAttribute="top" secondItem="idJ-FS-h8t" secondAttribute="bottom" constant="26" id="Ww3-zg-X2w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4VV-s6-FjR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffD-TV-dvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="1373"/>
         </scene>
         <!--From the same storyboard-->
         <scene sceneID="j15-Pv-V1b">

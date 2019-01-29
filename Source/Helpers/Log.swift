@@ -46,7 +46,7 @@ public func Log (_ message: String,
 #if DEBUG
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
-                log: OSLog = OSLog.default,
+                log: OSLog,
                 type: OSLogType = OSLogType.default,
                 _ logAccess: LogAccess = .public,
                 _ function: StaticString = #function,
@@ -60,7 +60,7 @@ public func Log(_ message: String,
 
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
-                log: OSLog = OSLog.default,
+                log: OSLog,
                 type: OSLogType = OSLogType.default,
                 _ logAccess: LogAccess = .public) {
   os_log(logAccess.toStaticString(), log: log, type: type, message)
