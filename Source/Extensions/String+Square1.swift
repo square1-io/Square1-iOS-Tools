@@ -86,7 +86,7 @@ public extension String {
       let attributedPlainText = try NSAttributedString(data: encodedData, options: options, documentAttributes: nil)
       return attributedPlainText
     } catch let error {
-      Log(error.localizedDescription)
+      Log(message: error.localizedDescription)
       return nil
     }
   }

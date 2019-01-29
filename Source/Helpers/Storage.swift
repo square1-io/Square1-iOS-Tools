@@ -60,7 +60,7 @@ public class Storage {
           try FileManager.default.removeItem(at: fileUrl)
         }
       } catch {
-        Log("Error cleaning directory \(self)")
+        Log(message: "Error cleaning directory \(self)")
         return
       }
     }
@@ -121,7 +121,7 @@ public class Storage {
         let object = try JSONDecoder().decode(type, from: data)
         return object
       } catch {
-        Log("Error reading file \(fileName): \(error.localizedDescription)")
+        Log(message: "Error reading file \(fileName): \(error.localizedDescription)")
         return nil
       }
       
@@ -166,7 +166,7 @@ public class Storage {
       do {
         try FileManager.default.removeItem(at: url)
       } catch {
-        Log("Error deleting file \(fileName) from \(directory): \(error.localizedDescription)")
+        Log(message: "Error deleting file \(fileName) from \(directory): \(error.localizedDescription)")
       }
     }
   }

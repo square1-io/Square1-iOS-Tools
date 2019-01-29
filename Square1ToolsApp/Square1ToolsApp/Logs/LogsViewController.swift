@@ -13,10 +13,10 @@ class LogsViewController: UIViewController {
   
   // MARK: - Actions
   @IBAction func printLogs(_ sender: UIButton) {
-    Log("Default message", log: Logs.test)
+    Log("Default message with default OSLog")
     Log("Debug message", log: Logs.test, type: .debug)
     Log("Info message", log: Logs.test, type: .info)
-    Log("Ohter default message", log: Logs.test, type: .default)
+    Log("Other default message", log: Logs.test, type: .default)
     Log("Error message", log: Logs.test, type: .error)
     Log("Fault message", log: Logs.test, type: .fault)
   }

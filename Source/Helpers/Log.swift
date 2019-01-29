@@ -31,10 +31,10 @@ import os
 ///   - file: Name of the file calling this function. By default, the source file without .swift extension.
 ///   - function: Name of the function calling this function. By default, same name as function where this is called.
 ///   - line: Line number where this function is called. By default, line number within the file where the call is made.
-public func Log (_ message: String,
-                    _ file: String = #file,
-                    _ function: String = #function,
-                    _ line: Int = #line) {
+public func Log (message: String,
+                 _ file: String = #file,
+                 _ function: String = #function,
+                 _ line: Int = #line) {
   #if DEBUG
     let fileURL = URL(string: file)?.lastPathComponent ?? "Unknown file"
     let queue = Thread.isMainThread ? "UI" : "BG"
@@ -61,7 +61,7 @@ public func Log (_ message: String,
 ///   - line: Line number where this function is called. By default, line number within the file where the call is made.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
-                log: OSLog,
+                log: OSLog = OSLog.default,
                 type: OSLogType = OSLogType.default,
                 _ logAccess: LogAccess = .public,
                 _ function: StaticString = #function,
@@ -88,7 +88,7 @@ public func Log(_ message: String,
 ///   - logAccess: the level of privacity of the log. By default is public.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
-                log: OSLog,
+                log: OSLog = OSLog.default,
                 type: OSLogType = OSLogType.default,
                 _ logAccess: LogAccess = .public) {
   os_log(logAccess.toStaticString(), log: log, type: type, message)
