@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import Foundation
-
+import os
 
 /// Helper log method for more accurate console prints.
 ///
@@ -41,4 +41,60 @@ public func Log (_ message: String,
     
     print("(\(queue)) \(fileURL) \(function) [\(line)]: " + message)
   #endif
+}
+
+#if DEBUG
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+public func Log(_ message: String,
+                log: OSLog = OSLog.default,
+                type: OSLogType = OSLogType.default,
+                _ logAccess: LogAccess = .public,
+                _ function: StaticString = #function,
+                _ line: Int = #line) {
+  
+  let customMessage = "\(type.descriptionLog) \(function) [\(line)]: \(message)"
+  os_log(logAccess.toStaticString(), log: log, type: type, customMessage)
+}
+
+#else
+
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+public func Log(_ message: String,
+                log: OSLog = OSLog.default,
+                type: OSLogType = OSLogType.default,
+                _ logAccess: LogAccess = .public) {
+  os_log(logAccess.toStaticString(), log: log, type: type, message)
+}
+#endif
+
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+extension OSLogType {
+  
+  public var descriptionLog: String {
+    switch self {
+    case OSLogType.info:
+      return "ℹ️ℹ️ℹ️(info)"
+    case OSLogType.debug:
+      return "🔹🔹🔹(debug)"
+    case OSLogType.error:
+      return "‼️‼️‼️(error)"
+    case OSLogType.fault:
+      return "💣💣💣(fault)"
+    default:
+      return "⬜️⬜️⬜️(default)"
+    }
+  }
+}
+
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+public enum LogAccess {
+  case `public`
+  case `private`
+  
+  fileprivate func toStaticString() -> StaticString {
+    switch self {
+    case .public: return "%{PUBLIC}@"
+    case .private: return "%{PRIVATE}@"
+    }
+  }
 }
