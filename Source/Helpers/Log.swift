@@ -44,6 +44,21 @@ public func Log (_ message: String,
 }
 
 #if DEBUG
+/// Helper log method for more accurate console prints.
+///
+/// Prints using OSLog. The `logAccess` set the visibility of the logs.
+/// If it is private the log message doesn't appear in the logs console when
+/// the device isn't connected.
+///
+/// https://developer.apple.com/documentation/os/logging
+///
+/// - Parameters:
+///   - message: Object to be printed. Can be an expression.
+///   - log: OSLog object for this log.
+///   - type: OSLogType for this log.
+///   - logAccess: the level of privacity of the log. By default is public.
+///   - function: Name of the function calling this function. By default, same name as function where this is called.
+///   - line: Line number where this function is called. By default, line number within the file where the call is made.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
                 log: OSLog,
@@ -58,6 +73,19 @@ public func Log(_ message: String,
 
 #else
 
+/// Helper log method for more accurate console prints.
+///
+/// Prints using OSLog. The `logAccess` set the visibility of the logs.
+/// If it is private the log message doesn't appear in the logs console when
+/// the device isn't connected.
+///
+/// https://developer.apple.com/documentation/os/logging
+///
+/// - Parameters:
+///   - message: Object to be printed. Can be an expression.
+///   - log: OSLog object for this log.
+///   - type: OSLogType for this log.
+///   - logAccess: the level of privacity of the log. By default is public.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public func Log(_ message: String,
                 log: OSLog,
@@ -70,7 +98,7 @@ public func Log(_ message: String,
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 extension OSLogType {
   
-  public var descriptionLog: String {
+  fileprivate var descriptionLog: String {
     switch self {
     case OSLogType.info:
       return "ℹ️ℹ️ℹ️(info)"
@@ -86,6 +114,7 @@ extension OSLogType {
   }
 }
 
+/// Levels of visibility for logs.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public enum LogAccess {
   case `public`
