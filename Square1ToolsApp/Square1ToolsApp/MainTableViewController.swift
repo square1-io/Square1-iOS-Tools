@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Square1Tools
+
 class MainTableViewController: UITableViewController {
 
   private lazy var items: [String] = {
