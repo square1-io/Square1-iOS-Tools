@@ -79,9 +79,23 @@
     },
     {
       "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Keychain.swift",
-      "line": 20,
+      "line": 32,
       "symbol": "Keychain.init(accessGroup:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Log.swift",
+      "line": 120,
+      "symbol": "LogAccess.public",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Log.swift",
+      "line": 121,
+      "symbol": "LogAccess.private",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
@@ -121,7 +135,7 @@
     },
     {
       "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Protocols/Storyboardable.swift",
-      "line": 11,
+      "line": 23,
       "symbol": "Storyboardable",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
@@ -144,6 +158,48 @@
       "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
       "line": 127,
       "symbol": "UICollectionView.addCustomRefreshControl(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 24,
+      "symbol": "PlaceholderTextView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 29,
+      "symbol": "PlaceholderTextView.textColorPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 34,
+      "symbol": "PlaceholderTextView.textPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 40,
+      "symbol": "PlaceholderTextView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 45,
+      "symbol": "PlaceholderTextView.init(frame:textContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 54,
+      "symbol": "PlaceholderTextView.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
