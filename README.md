@@ -79,6 +79,28 @@ keychain.get("MyKey") // returns String?
 keychain.delete("MyKey") // returns true if ok, otherwise false
 ```
 
+### Log
+
+*Log* is a helper method for more accurate console prints. From iOS 10 we use [OSLog](https://developer.apple.com/documentation/os/oslog) class to print logs. You can use the Mac`s Console app to filter and manage logs by subsystem and category. We add more util info in debug mode like line, function and emojis.
+
+More info [Unified logging](https://developer.apple.com/documentation/os/logging).
+
+
+Usage
+```Swift
+Log("Default message with default OSLog")
+```
+
+```Swift
+let testLog = OSLog(subsystem: "S1.Square1ToolsApp.test", category: "test")
+Log("Info message", log: testLog, type: .info)
+```
+Console app output(filter for subsystem)
+![Console Logs](resources/img/ConsoleLogs.png)
+
+Console Xcode output
+![Xcode Logs](resources/img/XcodeLogs.png)
+
 ## Contributing
 
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
