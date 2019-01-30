@@ -13,7 +13,7 @@
     <a title="Square1Tools  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Square1Tools Docs</a> (88% documented)</p>
+        <p><a href="index.html">Square1Tools Docs</a> (85% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -42,6 +42,9 @@
                 <a href="Classes/MailSender.html">MailSender</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/PlaceholderTextView.html">PlaceholderTextView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/PullToRefreshControl.html">PullToRefreshControl</a>
               </li>
               <li class="nav-group-task">
@@ -61,6 +64,9 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/LogAccess.html">LogAccess</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/MapsApp.html">MapsApp</a>
               </li>
@@ -98,6 +104,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UILabel.html">UILabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UINavigationController.html">UINavigationController</a>
@@ -141,7 +150,10 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:12Square1Tools3LogyySS_S2SSitF">Log(_:_:_:_:)</a>
+                <a href="Functions.html#/s:12Square1Tools3Log_3log4type___ySS_So06OS_os_D0CSo0g1_d1_E2_taAA0C6AccessOs12StaticStringVSitF">Log(_:log:type:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:12Square1Tools3Log7message___ySS_S2SSitF">Log(message:_:_:_:)</a>
               </li>
             </ul>
           </li>
@@ -192,6 +204,7 @@
 
 <ul>
 <li><a href="#keychain">Keychain</a></li>
+<li><a href="#log">Log</a></li>
 </ul></li>
 <li><a href="#contributing">Contributing</a></li>
 <li><a href="#authors">Authors</a></li>
@@ -202,8 +215,8 @@
 
 <ul>
 <li>iOS 9.0+</li>
-<li>XCode 9+</li>
-<li>Swift 4+</li>
+<li>XCode 10+</li>
+<li>Swift 4.2+</li>
 </ul>
 <h2 id='installing' class='heading'>Installing</h2>
 <h3 id='cocoapods' class='heading'>Cocoapods</h3>
@@ -257,14 +270,33 @@ import Square1Tools
 <span class="c1">// Delete from keychain</span>
 <span class="n">keychain</span><span class="o">.</span><span class="nf">delete</span><span class="p">(</span><span class="s">"MyKey"</span><span class="p">)</span> <span class="c1">// returns true if ok, otherwise false</span>
 </code></pre>
+<h3 id='log' class='heading'>Log</h3>
+
+<p><em>Log</em> is a helper method for more accurate console prints. From iOS 10 we use <a href="https://developer.apple.com/documentation/os/oslog">OSLog</a> class to print logs. You can use the Mac&rsquo;s Console app to filter and manage logs by subsystem and category. We add more util info in debug mode like line, function and emojis.</p>
+
+<p>More info <a href="https://developer.apple.com/documentation/os/logging">Unified logging</a>.</p>
+
+<p>Usage</p>
+<pre class="highlight plaintext"><code>Log("Default message with default OSLog")
+</code></pre>
+<pre class="highlight plaintext"><code>let testLog = OSLog(subsystem: "S1.Square1ToolsApp.test", category: "test")
+Log("Info message", log: testLog, type: .info)
+</code></pre>
+
+<p>Console app output(filter for subsystem)
+<img src="resources/img/ConsoleLogs.png" alt="Console Logs"></p>
+
+<p>Console Xcode output
+<img src="resources/img/XcodeLogs.png" alt="Xcode Logs"></p>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING</a> for details on our code of conduct, and the process for submitting pull requests to us.
-Make sure you comment modified and new code and use <a href="https://github.com/realm/jazzy">Jazzy</a> to generate new documentation before making a pul request.</p>
+Make sure you comment modified and new code and use <a href="https://github.com/realm/jazzy">Jazzy</a> to generate new documentation before making a pull request.</p>
 <h2 id='authors' class='heading'>Authors</h2>
 
 <ul>
 <li><a href="https://github.com/WedgeSparda">Roberto Pastor</a></li>
+<li><a href="https://github.com/ginesguiropa">Ginés Navarro</a></li>
 </ul>
 <h2 id='license' class='heading'>License</h2>
 
@@ -276,7 +308,7 @@ Make sure you comment modified and new code and use <a href="https://github.com/
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-01-22)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-01-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

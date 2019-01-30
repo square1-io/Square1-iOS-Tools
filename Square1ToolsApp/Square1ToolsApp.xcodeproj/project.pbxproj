@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		109240FF21F865FD00E147A2 /* LabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109240FE21F865FD00E147A2 /* LabelsViewController.swift */; };
 		1092410521F887CD00E147A2 /* TextViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092410421F887CD00E147A2 /* TextViewsViewController.swift */; };
+		10F2DA3F2200828700DC96CF /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DA3E2200828700DC96CF /* LogsViewController.swift */; };
+		10F2DA412200868300DC96CF /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DA402200868300DC96CF /* Logs.swift */; };
 		10F696AA21F5EABF0063CD2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696A921F5EABF0063CD2C /* AppDelegate.swift */; };
 		10F696AC21F5EABF0063CD2C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696AB21F5EABF0063CD2C /* MainTableViewController.swift */; };
 		10F696AF21F5EABF0063CD2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F696AD21F5EABF0063CD2C /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		109240FE21F865FD00E147A2 /* LabelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsViewController.swift; sourceTree = "<group>"; };
 		1092410421F887CD00E147A2 /* TextViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewsViewController.swift; sourceTree = "<group>"; };
+		10F2DA3E2200828700DC96CF /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		10F2DA402200868300DC96CF /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		10F696A621F5EABF0063CD2C /* Square1ToolsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square1ToolsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F696A921F5EABF0063CD2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F696AB21F5EABF0063CD2C /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 			path = TextViews;
 			sourceTree = "<group>";
 		};
+		10F2DA3C2200823B00DC96CF /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				10F2DA3E2200828700DC96CF /* LogsViewController.swift */,
+				10F2DA402200868300DC96CF /* Logs.swift */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
 		10F6969D21F5EABF0063CD2C = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 			children = (
 				10F696A921F5EABF0063CD2C /* AppDelegate.swift */,
 				10F696AB21F5EABF0063CD2C /* MainTableViewController.swift */,
+				10F2DA3C2200823B00DC96CF /* Logs */,
 				1092410321F8869F00E147A2 /* TextViews */,
 				10F696D621F60ECC0063CD2C /* Storyboard */,
 				10F696D121F5F4D70063CD2C /* Keyboard */,
@@ -272,8 +286,10 @@
 				10F696E621F61F000063CD2C /* OtherStoryboardViewController.swift in Sources */,
 				1092410521F887CD00E147A2 /* TextViewsViewController.swift in Sources */,
 				10F696D921F60F5E0063CD2C /* StoryboardViewController.swift in Sources */,
+				10F2DA3F2200828700DC96CF /* LogsViewController.swift in Sources */,
 				10F696D421F5F8FA0063CD2C /* KeyboardViewController.swift in Sources */,
 				10F696AA21F5EABF0063CD2C /* AppDelegate.swift in Sources */,
+				10F2DA412200868300DC96CF /* Logs.swift in Sources */,
 				10F696E821F621890063CD2C /* UIViewController+Storyboard.swift in Sources */,
 				109240FF21F865FD00E147A2 /* LabelsViewController.swift in Sources */,
 			);
