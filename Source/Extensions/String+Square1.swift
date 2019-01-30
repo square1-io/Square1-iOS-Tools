@@ -50,8 +50,9 @@ public extension String {
   }
   
   /// Basic match of the current string with email regular expression.
-  public var isValidEmail: Bool {
-    let pattern = "^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
+  /// - Parameters: stricted: if true it doesn't let email like user+1@mail.com.
+  public func isValidEmail(stricted: Bool = false) -> Bool {
+    let pattern = stricted ? "^[A-Z0-9a-z\\._%-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$" : "^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
     let emailPredicate = NSPredicate(format: "SELF MATCHES %@", pattern)
     return emailPredicate.evaluate(with: self)
   }
