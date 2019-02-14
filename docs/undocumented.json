@@ -9,8 +9,15 @@
     },
     {
       "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/String+Square1.swift",
-      "line": 94,
+      "line": 101,
       "symbol": "String.replace(pattern:with:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIView+Square1.swift",
+      "line": 116,
+      "symbol": "UIView.updateShadow()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
