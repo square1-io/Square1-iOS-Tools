@@ -29,4 +29,18 @@ public extension UITextField {
     return text.trimmed
   }
   
+  /// Placeholder color and font.
+  ///
+  /// - Parameters:
+  ///   - color: placeholder color.
+  ///   - font: placeholder font.
+  public func placeholder(color: UIColor, font: UIFont) {
+    let attributes = [
+      NSAttributedString.Key.foregroundColor: color,
+      NSAttributedString.Key.font: font]
+    
+    attributedPlaceholder =
+      NSAttributedString(string: placeholder ?? "",
+                         attributes: attributes as [NSAttributedString.Key: Any])
+  }
 }
