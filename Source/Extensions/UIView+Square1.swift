@@ -67,6 +67,95 @@ public extension UIView {
     addGestureRecognizer(tap)
   }
   
+  /// IBInspectable borderColor.
+  @IBInspectable var borderColor: UIColor {
+    get {
+      guard let color = layer.borderColor else {
+        return .black
+      }
+      return UIColor(cgColor: color)
+    }
+    set {
+      layer.borderColor = newValue.cgColor
+    }
+  }
+  
+  /// IBInspectable shadowColor.
+  @IBInspectable var shadowColor: UIColor {
+    get {
+      guard let color = layer.shadowColor else {
+        return .black
+      }
+      return UIColor(cgColor: color)
+    }
+    set {
+      layer.shadowColor = newValue.cgColor
+    }
+  }
+  
+  /// IBInspectable shadowRadius.
+  @IBInspectable var shadowRadius: CGFloat {
+    get {
+      return layer.shadowRadius
+    }
+    set {
+      layer.shadowRadius = newValue
+    }
+  }
+  
+  /// IBInspectable shadowOpacity.
+  @IBInspectable var shadowOpacity: Float {
+    get {
+      return layer.shadowOpacity
+    }
+    set {
+      layer.shadowOpacity = newValue
+    }
+  }
+  
+  func updateShadow() {
+    layer.shadowColor = shadowColor.cgColor
+  }
+  
+  /// IBInspectable shadowOffsetWidth.
+  @IBInspectable var shadowOffsetWidth: CGFloat {
+    get {
+      return layer.shadowOffset.width
+    }
+    set {
+      layer.shadowOffset = CGSize(width: newValue, height: layer.shadowOffset.height)
+    }
+  }
+  
+  /// IBInspectable shadowOffsetHeight.
+  @IBInspectable var shadowOffsetHeight: CGFloat {
+    get {
+      return layer.shadowOffset.height
+    }
+    set {
+      layer.shadowOffset = CGSize(width: layer.shadowOffset.width, height: newValue)
+    }
+  }
+  
+  /// IBInspectable cornerRadius.
+  @IBInspectable var cornerRadius: CGFloat {
+    get {
+      return layer.cornerRadius
+    }
+    set {
+      layer.cornerRadius = newValue
+    }
+  }
+  
+  /// IBInspectable borderWidth.
+  @IBInspectable var borderWidth: CGFloat {
+    get {
+      return layer.borderWidth
+    }
+    set {
+      layer.borderWidth = newValue
+    }
+  }
 }
 
 public extension UIView.AnimationCurve {
