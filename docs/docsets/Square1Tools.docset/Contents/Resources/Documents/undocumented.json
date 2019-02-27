@@ -1,0 +1,215 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/Date+Square1.swift",
+      "line": null,
+      "symbol": "DateStatics",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/String+Square1.swift",
+      "line": 101,
+      "symbol": "String.replace(pattern:with:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIView+Square1.swift",
+      "line": 116,
+      "symbol": "UIView.updateShadow()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIViewController+Maps.swift",
+      "line": 26,
+      "symbol": "MapsApp.googleMaps",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIViewController+Maps.swift",
+      "line": 27,
+      "symbol": "MapsApp.appleMaps",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIViewController+Square1.swift",
+      "line": 205,
+      "symbol": "UIViewController.KeyboardAnimation.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Extensions/UIViewController+Square1.swift",
+      "line": 206,
+      "symbol": "UIViewController.KeyboardAnimation.curve",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/AsyncOperation.swift",
+      "line": 49,
+      "symbol": "AsyncOperation.isAsynchronous",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/AsyncOperation.swift",
+      "line": 50,
+      "symbol": "AsyncOperation.isExecuting",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/AsyncOperation.swift",
+      "line": 52,
+      "symbol": "AsyncOperation.start()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/AsyncOperation.swift",
+      "line": 61,
+      "symbol": "AsyncOperation.main()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/AsyncOperation.swift",
+      "line": 69,
+      "symbol": "AsyncOperation.finish()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Keychain.swift",
+      "line": 32,
+      "symbol": "Keychain.init(accessGroup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Log.swift",
+      "line": 120,
+      "symbol": "LogAccess.public",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Log.swift",
+      "line": 121,
+      "symbol": "LogAccess.private",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/MailSender.swift",
+      "line": 57,
+      "symbol": "MailSender.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/MailSender.swift",
+      "line": 59,
+      "symbol": "MailSender.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Storage.swift",
+      "line": 31,
+      "symbol": "Storage.Directory.documents",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Helpers/Storage.swift",
+      "line": 32,
+      "symbol": "Storage.Directory.cache",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Protocols/Storyboardable.swift",
+      "line": null,
+      "symbol": "Storyboardable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Protocols/Storyboardable.swift",
+      "line": 23,
+      "symbol": "Storyboardable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 56,
+      "symbol": "PullToRefreshControl.isAnimating",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 120,
+      "symbol": "UITableView.addCustomRefreshControl(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/Pull To Refresh/PullToRefreshControl.swift",
+      "line": 127,
+      "symbol": "UICollectionView.addCustomRefreshControl(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 24,
+      "symbol": "PlaceholderTextView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 29,
+      "symbol": "PlaceholderTextView.textColorPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 34,
+      "symbol": "PlaceholderTextView.textPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 40,
+      "symbol": "PlaceholderTextView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 45,
+      "symbol": "PlaceholderTextView.init(frame:textContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gines/Workspace/Square1-iOS-Tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 54,
+      "symbol": "PlaceholderTextView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/gines/Workspace/Square1-iOS-Tools"
+}
