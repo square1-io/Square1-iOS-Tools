@@ -10,6 +10,7 @@
 		1092410221F87C1C00E147A2 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092410121F87C1C00E147A2 /* PlaceholderTextView.swift */; };
 		10F129EB21F85A28001CE08D /* UILabel+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F129EA21F85A28001CE08D /* UILabel+Square1.swift */; };
 		10F696E021F614970063CD2C /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DF21F614970063CD2C /* Storyboardable.swift */; };
+		C7B49E9C222680D100CED146 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B49E9B222680D100CED146 /* ReusableView.swift */; };
 		D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C3F20330D610042694C /* UIViewController+Maps.swift */; };
 		D92A2C4220330E800042694C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C4120330E7F0042694C /* Storage.swift */; };
 		D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1Tools.framework */; };
@@ -62,6 +63,7 @@
 		1092410121F87C1C00E147A2 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		10F129EA21F85A28001CE08D /* UILabel+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Square1.swift"; sourceTree = "<group>"; };
 		10F696DF21F614970063CD2C /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		C7B49E9B222680D100CED146 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D900BAA8202DF6320056A160 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 		D92A2C3F20330D610042694C /* UIViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Maps.swift"; sourceTree = "<group>"; };
 		D92A2C4120330E7F0042694C /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				10F696DF21F614970063CD2C /* Storyboardable.swift */,
+				C7B49E9B222680D100CED146 /* ReusableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1092410221F87C1C00E147A2 /* PlaceholderTextView.swift in Sources */,
+				C7B49E9C222680D100CED146 /* ReusableView.swift in Sources */,
 				D941EC672007968400AD5AED /* UIDevice+Square1.swift in Sources */,
 				D941EC652007968400AD5AED /* UIColor+Square1.swift in Sources */,
 				D95E3ADC205AD0D900BBF03F /* UITabBarController+Square1.swift in Sources */,
