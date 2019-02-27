@@ -14,7 +14,7 @@
     <a title="UITableView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Square1Tools Docs</a> (84% documented)</p>
+        <p><a href="../index.html">Square1Tools Docs</a> (85% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -161,6 +161,9 @@
           <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NibLoadableView.html">NibLoadableView</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ReusableView.html">ReusableView</a>
               </li>
@@ -332,6 +335,264 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE8registeryyxmSo0aB4CellCRbzAC08ReusableB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/register(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE8registeryyxmSo0aB4CellCRbzAC08ReusableB0RzlF">register(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers UITableViewCell class of provided type if implements ReusableView protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE8registeryyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/register(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE8registeryyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF">register(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers UITableViewCell class of provided type if implements ReusableView and NibLoadableView protocols.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE19dequeueReusableCell3forx10Foundation9IndexPathV_tSo0abG0CRbzAC0fB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/dequeueReusableCell(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE19dequeueReusableCell3forx10Foundation9IndexPathV_tSo0abG0CRbzAC0fB0RzlF">dequeueReusableCell(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dequeues reusable UITableViewCell cell if implements ReusableView protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>indexPath of dequeing UITableViewCell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Dequeued UITableViewCell</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE19dequeueReusableCell3forx10Foundation9IndexPathV_tSo0abG0CRbzAC011NibLoadableB0RzAC0fB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/dequeueReusableCell(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE19dequeueReusableCell3forx10Foundation9IndexPathV_tSo0abG0CRbzAC011NibLoadableB0RzAC0fB0RzlF">dequeueReusableCell(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dequeues reusable UITableViewCell cell if implements ReusableView and NibLoadableView protocols.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>indexPath of dequeing UITableViewCell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Dequeued UITableViewCell</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE020registerHeaderFooterB0yyxmSo0abfgB0CRbzAC08ReusableB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/registerHeaderFooterView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE020registerHeaderFooterB0yyxmSo0abfgB0CRbzAC08ReusableB0RzlF">registerHeaderFooterView(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers UITableViewHeaderFooterView view class of provided type if implements ReusableView protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerHeaderFooterView</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewHeaderFooterView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE020registerHeaderFooterB0yyxmSo0abfgB0CRbzAC011NibLoadableB0RzAC08ReusableB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/registerHeaderFooterView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE020registerHeaderFooterB0yyxmSo0abfgB0CRbzAC011NibLoadableB0RzAC08ReusableB0RzlF">registerHeaderFooterView(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers UITableViewHeaderFooterView view class of provided type if implements ReusableView and NibLoadableView protocols.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerHeaderFooterView</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewHeaderFooterView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC12Square1ToolsE027dequeueReusableHeaderFooterB03forx10Foundation9IndexPathV_tSo0abghB0CRbzAC011NibLoadableB0RzAC0fB0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/dequeueReusableHeaderFooterView(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC12Square1ToolsE027dequeueReusableHeaderFooterB03forx10Foundation9IndexPathV_tSo0abghB0CRbzAC011NibLoadableB0RzAC0fB0RzlF">dequeueReusableHeaderFooterView(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dequeues reusable UITableViewHeaderFooterView calls if implements ReusableView and NibLoadableView protocols.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableHeaderFooterView</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UITableViewHeaderFooterView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>IndexPath of dequeing UITableViewHeaderFooterView.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Dequeued UITableViewHeaderFooterView.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:So11UITableViewC12Square1ToolsE12registerCell11withNibName6bundle15reuseIdentifierySS_So8NSBundleCSgSSSgtF"></a>
                     <a name="//apple_ref/swift/Method/registerCell(withNibName:bundle:reuseIdentifier:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:So11UITableViewC12Square1ToolsE12registerCell11withNibName6bundle15reuseIdentifierySS_So8NSBundleCSgSSSgtF">registerCell(withNibName:bundle:reuseIdentifier:)</a>
@@ -349,7 +610,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "Please use the register method based on ReusableView and/or NibLoadableView protocols")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                          <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
                          <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 

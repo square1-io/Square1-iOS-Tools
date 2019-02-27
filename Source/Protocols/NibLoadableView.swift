@@ -20,7 +20,7 @@
 
 import Foundation
 
-/// Protocol for cells to set a default nib name mathing their class name.
+/// Protocol for Views to set a default nib name mathing their class name.
 public protocol NibLoadableView: AnyObject {
     static var nibName: String { get }
 }

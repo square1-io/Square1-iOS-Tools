@@ -20,7 +20,7 @@
 
 import Foundation
 
-/// Protocol for cells to set a default reuse identifier matching their class name.
+/// Protocol for Views to set a default reuse identifier matching their class name.
 public protocol ReusableView: AnyObject {
     static var defaultReuseIdentifier: String { get }
 }

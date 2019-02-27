@@ -134,15 +134,29 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/NibLoadableView.swift",
+      "line": 25,
+      "symbol": "NibLoadableView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/NibLoadableView.swift",
+      "line": 29,
+      "symbol": "NibLoadableView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/ReusableView.swift",
-      "line": 26,
+      "line": 25,
       "symbol": "ReusableView.defaultReuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/ReusableView.swift",
-      "line": 30,
+      "line": 29,
       "symbol": "ReusableView.defaultReuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
