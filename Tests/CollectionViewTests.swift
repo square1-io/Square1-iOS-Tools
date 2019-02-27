@@ -18,15 +18,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import XCTest
+@testable import Square1Tools
 
-/// Protocol for cells to set a default reuse identifier matching their class name.
-public protocol ReusableView: AnyObject {
-    static var defaultReuseIdentifier: String { get }
-}
+class CollectionViewTestCell: UICollectionViewCell, ReusableView {}
 
-extension ReusableView where Self: UIView {
-    public static var defaultReuseIdentifier: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last!
+class CollectionViewTests: XCTestCase {
+
+    private var collectionView: UICollectionView!
+    
+    override func setUp() {
+        super.setUp()
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100),
+                                          collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    func test01_CollectionViewRegister() {
+        collectionView.register(CollectionViewTestCell.self)
+        XCTAssertTrue(true)
     }
 }
+
+
+
+

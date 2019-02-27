@@ -22,118 +22,118 @@ import XCTest
 @testable import Square1Tools
 
 class StackTests: XCTestCase {
-  
-  var stack = Stack<Int>()
-  
-  func testEmpty() {
-    XCTAssertTrue(stack.isEmpty)
-  }
-  
-  func testNotEmpty() {
-    stack.push(5)
-    XCTAssertFalse(stack.isEmpty)
-  }
-  
-  func testEmptyMultiple() {
-    stack.push(3)
-    stack.push(1)
-    stack.push(2)
     
-    let _ = stack.pop()
-    let _ = stack.pop()
-    let _ = stack.pop()
+    var stack = Stack<Int>()
     
-    XCTAssertTrue(stack.isEmpty)
-  }
-  
-  func testCountZero() {
-    XCTAssertTrue(stack.count == 0)
-  }
-  
-  func testCountOne() {
-    stack.push(5)
-    XCTAssertEqual(stack.count, 1)
-  }
-  
-  func testCountMultiplePush() {
-    stack.push(3)
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
-    stack.push(1)
-    stack.push(2)
+    func test01_Empty() {
+        XCTAssertTrue(stack.isEmpty)
+    }
     
-    XCTAssertEqual(stack.count, 6)
-  }
-  
-  func testCountPushPop() {
-    stack.push(3)
-    stack.push(1)
-    stack.push(2)
+    func test02_NotEmpty() {
+        stack.push(5)
+        XCTAssertFalse(stack.isEmpty)
+    }
     
-    let _ = stack.pop()
-    let _ = stack.pop()
-    let _ = stack.pop()
+    func test03_EmptyMultiple() {
+        stack.push(3)
+        stack.push(1)
+        stack.push(2)
+        
+        let _ = stack.pop()
+        let _ = stack.pop()
+        let _ = stack.pop()
+        
+        XCTAssertTrue(stack.isEmpty)
+    }
     
-    XCTAssertEqual(stack.count, 0)
-  }
-  
-  func testPop() {
-    stack.push(1)
+    func test04_CountZero() {
+        XCTAssertTrue(stack.count == 0)
+    }
     
-    XCTAssertEqual(stack.pop(), 1)
-  }
-  
-  func testPopMultiple() {
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
+    func test05_CountOne() {
+        stack.push(5)
+        XCTAssertEqual(stack.count, 1)
+    }
     
-    let _ = stack.pop()
-    let _ = stack.pop()
+    func test06_CountMultiplePush() {
+        stack.push(3)
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        stack.push(1)
+        stack.push(2)
+        
+        XCTAssertEqual(stack.count, 6)
+    }
     
-    stack.push(4)
-    stack.push(5)
+    func test07_CountPushPop() {
+        stack.push(3)
+        stack.push(1)
+        stack.push(2)
+        
+        let _ = stack.pop()
+        let _ = stack.pop()
+        let _ = stack.pop()
+        
+        XCTAssertEqual(stack.count, 0)
+    }
     
-    let _ = stack.pop()
+    func test08_Pop() {
+        stack.push(1)
+        
+        XCTAssertEqual(stack.pop(), 1)
+    }
     
-    XCTAssertEqual(stack.count, 2)
-  }
-  
-  func testTop() {
-    stack.push(1)
-    stack.push(2)
+    func test09_PopMultiple() {
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        
+        let _ = stack.pop()
+        let _ = stack.pop()
+        
+        stack.push(4)
+        stack.push(5)
+        
+        let _ = stack.pop()
+        
+        XCTAssertEqual(stack.count, 2)
+    }
     
-    XCTAssertEqual(stack.top(), 2)
-  }
-  
-  func testTopMultiple() {
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
+    func test10_Top() {
+        stack.push(1)
+        stack.push(2)
+        
+        XCTAssertEqual(stack.top(), 2)
+    }
     
-    let _ = stack.pop()
-    let _ = stack.pop()
+    func test11_TopMultiple() {
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        
+        let _ = stack.pop()
+        let _ = stack.pop()
+        
+        stack.push(4)
+        stack.push(5)
+        
+        let _ = stack.pop()
+        
+        XCTAssertEqual(stack.top(), 4)
+    }
     
-    stack.push(4)
-    stack.push(5)
+    func test12_TopEmpty() {
+        stack.push(1)
+        stack.push(3)
+        
+        let _ = stack.pop()
+        let _ = stack.pop()
+        
+        XCTAssertNil(stack.top())
+    }
     
-    let _ = stack.pop()
-    
-    XCTAssertEqual(stack.top(), 4)
-  }
-  
-  func testTopEmpty() {
-    stack.push(1)
-    stack.push(3)
-    
-    let _ = stack.pop()
-    let _ = stack.pop()
-    
-    XCTAssertNil(stack.top())
-  }
-  
-  func testPopEmpty() {
-    XCTAssertNil(stack.pop())
-  }
+    func test13_PopEmpty() {
+        XCTAssertNil(stack.pop())
+    }
 }

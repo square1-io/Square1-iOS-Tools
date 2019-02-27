@@ -20,7 +20,7 @@
 
 import Foundation
 
-public protocol Storyboardable: class {}
+public protocol Storyboardable: AnyObject {}
 
 public extension Storyboardable where Self: UIViewController {
   

@@ -22,18 +22,18 @@ import XCTest
 @testable import Square1Tools
 
 class DateTests: XCTestCase {
-  func testDateCreation() {
-    let dateString = "2017-02-12 01:17:29"
-    let timeZone = TimeZone(identifier: "GMT")!
-    let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
-    
-    XCTAssertNotNil(date)
-    XCTAssertEqual(date!.component(.day, inTimeZone: timeZone), 12)
-    XCTAssertEqual(date!.component(.month, inTimeZone: timeZone), 2)
-    XCTAssertEqual(date!.component(.year, inTimeZone: timeZone), 2017)
-    XCTAssertEqual(date!.component(.hour, inTimeZone: timeZone), 1)
-    XCTAssertEqual(date!.component(.minute, inTimeZone: timeZone), 17)
-    XCTAssertEqual(date!.component(.second, inTimeZone: timeZone), 29)
-    
-  }
+    func test01_DateCreation() {
+        let dateString = "2017-02-12 01:17:29"
+        let timeZone = TimeZone(identifier: "GMT")!
+        let date = Date.with(string: dateString, format: "yyyy-MM-dd HH:mm:ss", timeZone: timeZone)
+        
+        XCTAssertNotNil(date)
+        XCTAssertEqual(date!.component(.day, inTimeZone: timeZone), 12)
+        XCTAssertEqual(date!.component(.month, inTimeZone: timeZone), 2)
+        XCTAssertEqual(date!.component(.year, inTimeZone: timeZone), 2017)
+        XCTAssertEqual(date!.component(.hour, inTimeZone: timeZone), 1)
+        XCTAssertEqual(date!.component(.minute, inTimeZone: timeZone), 17)
+        XCTAssertEqual(date!.component(.second, inTimeZone: timeZone), 29)
+        
+    }
 }

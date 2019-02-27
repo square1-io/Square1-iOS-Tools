@@ -11,6 +11,9 @@
 		10F129EB21F85A28001CE08D /* UILabel+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F129EA21F85A28001CE08D /* UILabel+Square1.swift */; };
 		10F696E021F614970063CD2C /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F696DF21F614970063CD2C /* Storyboardable.swift */; };
 		C7B49E9C222680D100CED146 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B49E9B222680D100CED146 /* ReusableView.swift */; };
+		C7B49E9E22268B6400CED146 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B49E9D22268B6400CED146 /* NibLoadableView.swift */; };
+		C7B49EA02226A22900CED146 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B49E9F2226A22900CED146 /* TableViewTests.swift */; };
+		C7B49EA22226A51000CED146 /* CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B49EA12226A51000CED146 /* CollectionViewTests.swift */; };
 		D92A2C4020330D610042694C /* UIViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C3F20330D610042694C /* UIViewController+Maps.swift */; };
 		D92A2C4220330E800042694C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A2C4120330E7F0042694C /* Storage.swift */; };
 		D941EC2820078C4900AD5AED /* Square1Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D941EC1E20078C4800AD5AED /* Square1Tools.framework */; };
@@ -64,6 +67,9 @@
 		10F129EA21F85A28001CE08D /* UILabel+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Square1.swift"; sourceTree = "<group>"; };
 		10F696DF21F614970063CD2C /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		C7B49E9B222680D100CED146 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		C7B49E9D22268B6400CED146 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		C7B49E9F2226A22900CED146 /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
+		C7B49EA12226A51000CED146 /* CollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTests.swift; sourceTree = "<group>"; };
 		D900BAA8202DF6320056A160 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 		D92A2C3F20330D610042694C /* UIViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Maps.swift"; sourceTree = "<group>"; };
 		D92A2C4120330E7F0042694C /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			children = (
 				10F696DF21F614970063CD2C /* Storyboardable.swift */,
 				C7B49E9B222680D100CED146 /* ReusableView.swift */,
+				C7B49E9D22268B6400CED146 /* NibLoadableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -186,11 +193,13 @@
 		D941EC2B20078C4900AD5AED /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D941EC2E20078C4900AD5AED /* Info.plist */,
+				C7B49EA12226A51000CED146 /* CollectionViewTests.swift */,
 				D941EC4A20078F0500AD5AED /* DateTests.swift */,
 				D941EC4B20078F0600AD5AED /* QueueTests.swift */,
 				D941EC4820078F0500AD5AED /* StackTests.swift */,
 				D941EC4920078F0500AD5AED /* StringTests.swift */,
-				D941EC2E20078C4900AD5AED /* Info.plist */,
+				C7B49E9F2226A22900CED146 /* TableViewTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -390,6 +399,7 @@
 				10F696E021F614970063CD2C /* Storyboardable.swift in Sources */,
 				D941EC4520078ED800AD5AED /* AsyncOperation.swift in Sources */,
 				D92A2C4220330E800042694C /* Storage.swift in Sources */,
+				C7B49E9E22268B6400CED146 /* NibLoadableView.swift in Sources */,
 				D941EC6B2007968400AD5AED /* MailSender.swift in Sources */,
 				D941EC642007968400AD5AED /* UITableViewCell+Square1.swift in Sources */,
 				D941EC3B20078EC600AD5AED /* Stack.swift in Sources */,
@@ -419,6 +429,8 @@
 				D941EC5020078F3500AD5AED /* DateTests.swift in Sources */,
 				D941EC5220078F3C00AD5AED /* StringTests.swift in Sources */,
 				D941EC5120078F3900AD5AED /* QueueTests.swift in Sources */,
+				C7B49EA22226A51000CED146 /* CollectionViewTests.swift in Sources */,
+				C7B49EA02226A22900CED146 /* TableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

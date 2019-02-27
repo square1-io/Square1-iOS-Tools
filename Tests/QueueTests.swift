@@ -22,106 +22,106 @@ import XCTest
 @testable import Square1Tools
 
 class QueueTests: XCTestCase {
-  var queue = Queue<Int>()
-  
-  func testEmpty() {
-    XCTAssertTrue(queue.isEmpty)
-  }
-  
-  func testNotEmpty() {
-    queue.enqueue(1)
-    XCTAssertFalse(queue.isEmpty)
-  }
-  
-  func testEmptyMultiple() {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
+    var queue = Queue<Int>()
     
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
+    func test01_Empty() {
+        XCTAssertTrue(queue.isEmpty)
+    }
     
-    XCTAssertTrue(queue.isEmpty)
-  }
-  
-  func testCountZero() {
-    XCTAssertEqual(queue.count, 0)
-  }
-  
-  func testCountOne() {
-    queue.enqueue(1)
-    XCTAssertEqual(queue.count, 1)
-  }
-  
-  func testCountMultipleEmpty() {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
+    func test02_NotEmpty() {
+        queue.enqueue(1)
+        XCTAssertFalse(queue.isEmpty)
+    }
     
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
+    func test03_EmptyMultiple() {
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        
+        XCTAssertTrue(queue.isEmpty)
+    }
     
-    XCTAssertEqual(queue.count, 0)
-  }
-  
-  func testCountMultiple() {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
+    func test04_CountZero() {
+        XCTAssertEqual(queue.count, 0)
+    }
     
-    XCTAssertEqual(queue.count, 6)
-  }
-  
-  func testDequeue() {
-    queue.enqueue(1)
+    func test05_CountOne() {
+        queue.enqueue(1)
+        XCTAssertEqual(queue.count, 1)
+    }
     
-    XCTAssertEqual(queue.dequeue(), 1)
-  }
-  
-  func testDequeueMultiple() {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
+    func test06_CountMultipleEmpty() {
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        
+        XCTAssertEqual(queue.count, 0)
+    }
     
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
+    func test07_CountMultiple() {
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        
+        XCTAssertEqual(queue.count, 6)
+    }
     
-    queue.enqueue(3)
+    func test08_Dequeue() {
+        queue.enqueue(1)
+        
+        XCTAssertEqual(queue.dequeue(), 1)
+    }
     
-    XCTAssertEqual(queue.dequeue(), 3)
-  }
-  
-  func testFront() {
-    queue.enqueue(1)
+    func test09_DequeueMultiple() {
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        
+        queue.enqueue(3)
+        
+        XCTAssertEqual(queue.dequeue(), 3)
+    }
     
-    XCTAssertEqual(queue.front(), 1)
-  }
-  
-  func testFrontMultiple() {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
+    func test10_Front() {
+        queue.enqueue(1)
+        
+        XCTAssertEqual(queue.front(), 1)
+    }
     
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
-    let _ = queue.dequeue()
+    func test11_FrontMultiple() {
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        let _ = queue.dequeue()
+        
+        queue.enqueue(3)
+        
+        XCTAssertEqual(queue.front(), 3)
+    }
     
-    queue.enqueue(3)
+    func test12_FrontEmpty() {
+        XCTAssertNil(queue.front())
+    }
     
-    XCTAssertEqual(queue.front(), 3)
-  }
-  
-  func testFrontEmpty() {
-    XCTAssertNil(queue.front())
-  }
-  
-  func testDequeueEmpty() {
-    XCTAssertNil(queue.dequeue())
-  }
+    func test13_DequeueEmpty() {
+        XCTAssertNil(queue.dequeue())
+    }
 }

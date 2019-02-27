@@ -20,13 +20,13 @@
 
 import Foundation
 
-/// Protocol for cells to set a default reuse identifier matching their class name.
-public protocol ReusableView: AnyObject {
-    static var defaultReuseIdentifier: String { get }
+/// Protocol for cells to set a default nib name mathing their class name.
+public protocol NibLoadableView: AnyObject {
+    static var nibName: String { get }
 }
 
-extension ReusableView where Self: UIView {
-    public static var defaultReuseIdentifier: String {
+extension NibLoadableView where Self: UIView {
+    public static var nibName: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 }
