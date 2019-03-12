@@ -48,7 +48,6 @@
 		D974297F20A47D1100CC5586 /* UINib+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974297E20A47D1100CC5586 /* UINib+Square1.swift */; };
 		D99494122018A69500BD937D /* UICollectionView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99494112018A69500BD937D /* UICollectionView+Square1.swift */; };
 		D9B736B8206A3B43009440B0 /* UIScrollView+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B736B7206A3B43009440B0 /* UIScrollView+Square1.swift */; };
-		D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1128C2010FC180066A06C /* Bool+Square1.swift */; };
 		D9F934EC20C188D50011D406 /* PullToRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F934EB20C188D50011D406 /* PullToRefreshControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +107,6 @@
 		D974297E20A47D1100CC5586 /* UINib+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Square1.swift"; sourceTree = "<group>"; };
 		D99494112018A69500BD937D /* UICollectionView+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Square1.swift"; sourceTree = "<group>"; };
 		D9B736B7206A3B43009440B0 /* UIScrollView+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Square1.swift"; sourceTree = "<group>"; };
-		D9C1128C2010FC180066A06C /* Bool+Square1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Square1.swift"; sourceTree = "<group>"; };
 		D9F934EB20C188D50011D406 /* PullToRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				D941EC3E20078ECD00AD5AED /* String+Square1.swift */,
-				D9C1128C2010FC180066A06C /* Bool+Square1.swift */,
 				D941EC3F20078ECD00AD5AED /* Date+Square1.swift */,
 				D941EC602007968400AD5AED /* UIApplication+Square1.swift */,
 				D941EC572007968300AD5AED /* UIColor+Square1.swift */,
@@ -393,7 +390,6 @@
 				D941EC6A2007968400AD5AED /* UIView+Square1.swift in Sources */,
 				D974297F20A47D1100CC5586 /* UINib+Square1.swift in Sources */,
 				D941EC4120078ECD00AD5AED /* Date+Square1.swift in Sources */,
-				D9C1128D2010FC180066A06C /* Bool+Square1.swift in Sources */,
 				D941EC662007968400AD5AED /* UITextView+Square1.swift in Sources */,
 				D9F934EC20C188D50011D406 /* PullToRefreshControl.swift in Sources */,
 				10F696E021F614970063CD2C /* Storyboardable.swift in Sources */,
