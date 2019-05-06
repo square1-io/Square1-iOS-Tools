@@ -118,6 +118,59 @@ public extension UICollectionView {
                  withReuseIdentifier: T.defaultReuseIdentifier)
     }
     
+    /// Dequeues reusable UICollectionReusableView as section header if implements ReusableView protocol.
+    ///
+    /// - Parameters:
+    ///   - _: Type of the supplementary view to dequeue.
+    ///   - indexPath: `indexPath` for dequeuing.
+    /// - Returns: Dequeued UICollectionReusableView
+    func dequeueSectionHeader<T: UICollectionReusableView>(_: T.Type,
+                                                           for indexPath: IndexPath) -> T where T: ReusableView {
+        return dequeueSupplementaryView(T.self,
+                                        of: UICollectionView.elementKindSectionHeader,
+                                        for: indexPath)
+    }
+    
+    /// Dequeues reusable UICollectionReusableView as section header if implements ReusableView and NibLoadableView protocols.
+    ///
+    /// - Parameters:
+    ///   - _: Type of the supplementary view to dequeue.
+    ///   - indexPath: `indexPath` for dequeuing.
+    /// - Returns: Dequeued UICollectionReusableView
+    func dequeueSectionHeader<T: UICollectionReusableView>(_: T.Type,
+                                                           for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
+        return dequeueSupplementaryView(T.self,
+                                        of: UICollectionView.elementKindSectionHeader,
+                                        for: indexPath)
+    }
+    
+    /// Dequeues reusable UICollectionReusableView as footer header if implements ReusableView protocol.
+    ///
+    /// - Parameters:
+    ///   - _: Type of the supplementary view to dequeue.
+    ///   - indexPath: `indexPath` for dequeuing.
+    /// - Returns: Dequeued UICollectionReusableView
+    func dequeueSectionFooter<T: UICollectionReusableView>(_: T.Type,
+                                                           for indexPath: IndexPath) -> T where T: ReusableView {
+        return dequeueSupplementaryView(T.self,
+                                        of: UICollectionView.elementKindSectionFooter,
+                                        for: indexPath)
+    }
+    
+    
+    /// Dequeues reusable UICollectionReusableView as section footer if implements ReusableView protocol and NibLoadableView protocols.
+    ///
+    /// - Parameters:
+    ///   - _: Type of the supplementary view to dequeue.
+    ///   - indexPath: `indexPath` for dequeuing.
+    /// - Returns: Dequeued UICollectionReusableView
+    func dequeueSectionFooter<T: UICollectionReusableView>(_: T.Type,
+                                                           for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
+        return dequeueSupplementaryView(T.self,
+                                        of: UICollectionView.elementKindSectionFooter,
+                                        for: indexPath)
+    }
+    
     /// Dequeues reusable UICollectionReusableView if implements ReusableView and NibLoadableView protocols.
     ///
     /// - Parameters:
