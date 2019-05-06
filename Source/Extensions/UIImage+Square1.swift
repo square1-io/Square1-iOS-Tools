@@ -24,17 +24,17 @@ import UIKit
 public extension UIImage {
   
   /// Current UIImage bytes size.
-  public var bytes: Int? {
+  var bytes: Int? {
     return self.jpegData(compressionQuality: 1)?.count
   }
   
   /// Is image in portraint mode?
-  public var isPortrait: Bool {
+  var isPortrait: Bool {
     return imageOrientation == .left || imageOrientation == .right
   }
   
   /// Is image in landscape mode?
-  public var isLandscape: Bool {
+  var isLandscape: Bool {
     return imageOrientation == .up || imageOrientation == .down
   }
   
@@ -58,7 +58,7 @@ public extension UIImage {
   /// Hack to fix image orientation when taking new photos.
   ///
   /// - Returns: Fixed new photo.
-  public func fixOrientation() -> UIImage {
+  func fixOrientation() -> UIImage {
     guard imageOrientation != .up else { return self }
     
     var transform: CGAffineTransform = CGAffineTransform.identity
@@ -115,7 +115,7 @@ public extension UIImage {
   ///
   /// - Parameter color: color for tint
   /// - Returns: new tinted image or same image of something goes wrong
-  public func tintWith(color: UIColor) -> UIImage {
+  func tintWith(color: UIColor) -> UIImage {
     
     UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
     guard let context = UIGraphicsGetCurrentContext() else {

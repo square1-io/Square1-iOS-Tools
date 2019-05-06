@@ -24,7 +24,7 @@ import UIKit
 public extension UITableViewCell {
   
   /// Helper to get and change cell's selection color.
-  public var selectionColor : UIColor? {
+  var selectionColor : UIColor? {
     get {
       return selectedBackgroundView?.backgroundColor
     }

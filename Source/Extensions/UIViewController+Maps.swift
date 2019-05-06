@@ -100,11 +100,11 @@ public extension UIViewController {
   ///   - actionSheetTitle: optional title for the action sheet.
   ///   - message: optional message for the action sheet.
   ///   - cancel: text for the cancel action. By default it will be "Cancel".
-  public func openOnAvailableMapApps(location: CLLocationCoordinate2D,
-                                     markerTitle: String,
-                                     actionSheetTitle: String? = nil,
-                                     message: String? = nil,
-                                     cancel: String = "Cancel") {
+  func openOnAvailableMapApps(location: CLLocationCoordinate2D,
+                              markerTitle: String,
+                              actionSheetTitle: String? = nil,
+                              message: String? = nil,
+                              cancel: String = "Cancel") {
     let actionSheet = UIAlertController(title: actionSheetTitle, message: message, preferredStyle: .actionSheet)
 
     if MapsApp.googleMaps.canOpenApp {
@@ -140,7 +140,9 @@ public extension UIViewController {
   ///   - location: `CLLocationCoordinate2D` to open.
   ///   - mapsApp: `MapsApp` to use.
   ///   - markerTitle: title for the marker displayed on the maps app.
-  public func open(location: CLLocationCoordinate2D, in mapsApp: MapsApp, markerTitle: String) {
+  func open(location: CLLocationCoordinate2D,
+            in mapsApp: MapsApp,
+            markerTitle: String) {
     mapsApp.open(location: location, markerTitle: markerTitle)
   }
 }

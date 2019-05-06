@@ -9,14 +9,14 @@
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/String+Square1.swift",
-      "line": 117,
+      "line": 118,
       "symbol": "String.replace(pattern:with:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/UIView+Square1.swift",
-      "line": 116,
+      "line": 120,
       "symbol": "UIView.updateShadow()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -228,6 +228,13 @@
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Views/TextView/PlaceholderTextView.swift",
       "line": 45,
       "symbol": "PlaceholderTextView.init(frame:textContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 50,
+      "symbol": "PlaceholderTextView.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

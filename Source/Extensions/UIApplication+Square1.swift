@@ -22,30 +22,61 @@ import UIKit
 
 /// Helpers for UIApplication.
 public extension UIApplication {
-  
-  /// Simple variable to change Status Bar color.
-  public var statusBarColor: UIColor? {
-    get {
-      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return nil }
-      return statusBarView.backgroundColor
+    
+    /// Simple variable to change Status Bar color.
+    var statusBarColor: UIColor? {
+        get {
+            guard let statusBarView = value(forKey: "statusBar") as? UIView else { return nil }
+            return statusBarView.backgroundColor
+        }
+        
+        set {
+            guard let statusBarView = value(forKey: "statusBar") as? UIView else { return }
+            statusBarView.backgroundColor = newValue
+        }
     }
     
-    set {
-      guard let statusBarView = value(forKey: "statusBar") as? UIView else { return }
-      statusBarView.backgroundColor = newValue
+    /// Opens passed URL object.
+    ///
+    /// - Parameter url: URL to be opened on the App.
+    func open(url: URL) {
+        guard canOpenURL(url) else { return }
+        if #available(iOS 10.0, *) {
+            open(url, options: [:], completionHandler: nil)
+        } else {
+            openURL(url)
+        }
     }
-  }
-  
-  /// Opens passed URL object.
-  ///
-  /// - Parameter url: URL to be opened on the App.
-  public func open(url: URL) {
-    guard canOpenURL(url) else { return }
-    if #available(iOS 10.0, *) {
-      open(url, options: [:], completionHandler: nil)
-    } else {
-      openURL(url)
+    
+    /// Returns `true` if app is running in a Split or Slide Over window.
+    var isSplitOrSlideOver: Bool {
+        guard let w = self.delegate?.window, let window = w else {
+            return false
+        }
+        
+        return window.frame.equalTo(window.screen.bounds)
     }
-  }
-  
+    
+    /// Makes a phone call to `phone` if possible.
+    ///
+    /// - Parameter phone: phone number.
+    func call(phone: String) {
+        if let url = urlForCall(phone: phone), canOpenURL(url) {
+            open(url: url)
+        } else {
+            if #available(iOS 10.0, *) {
+                Log("Can't call to phone \(phone)", type: .default)
+            } else {
+                print("Can't call to phone \(phone)")
+            }
+        }
+    }
+    
+    /// Helper function to create a phone call URL
+    ///
+    /// - Parameter phone: phone number.
+    /// - Returns: phone call URL.
+    private func urlForCall(phone: String) -> URL? {
+        return URL(string: "tel://\(phone)")
+    }
 }

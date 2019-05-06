@@ -24,12 +24,12 @@ import UIKit
 public extension UITableView {
     
     /// Last section of current UITableView.
-    public var lastSection: Int {
+    var lastSection: Int {
         return numberOfSections > 0 ? numberOfSections - 1 : 0;
     }
     
     /// Total number of rows adding all sections.
-    public var numberOfRows : Int {
+    var numberOfRows : Int {
         var rowCount = 0
         
         for section in 0..<numberOfSections {
@@ -40,7 +40,7 @@ public extension UITableView {
     }
     
     /// IndexPath for last row in table (including all sections).
-    public var indexPathForLastRow : IndexPath {
+    var indexPathForLastRow : IndexPath {
         return indexPathForLastRow(inSection: lastSection)
     }
     
@@ -48,7 +48,7 @@ public extension UITableView {
     ///
     /// - Parameter section: Section to get the last row to.
     /// - Returns: IndexPath of last row or row 0 if section is empty.
-    public func indexPathForLastRow(inSection section: Int) -> IndexPath {
+    func indexPathForLastRow(inSection section: Int) -> IndexPath {
         guard numberOfRows(inSection: section) != 0 else {
             return IndexPath(row: 0, section: section)
         }
@@ -59,14 +59,14 @@ public extension UITableView {
     /// Registers UITableViewCell class of provided type if implements ReusableView protocol.
     ///
     /// - Parameter _: Type of the UITableViewCell to register.
-    public func register<T: UITableViewCell>(_: T.Type) where T: ReusableView {
+    func register<T: UITableViewCell>(_: T.Type) where T: ReusableView {
         register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
     
     /// Registers UITableViewCell class of provided type if implements ReusableView and NibLoadableView protocols.
     ///
     /// - Parameter _: Type of the UITableViewCell to register.
-    public func register<T: UITableViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+    func register<T: UITableViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
@@ -76,7 +76,7 @@ public extension UITableView {
     ///
     /// - Parameter indexPath: indexPath of dequeing UITableViewCell.
     /// - Returns: Dequeued UITableViewCell
-    public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView {
+    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier,
                                              for: indexPath) as? T else {
                                                 fatalError("Couldn't dequeue UITableViewCell with identifier: \(T.defaultReuseIdentifier)")
@@ -88,7 +88,7 @@ public extension UITableView {
     ///
     /// - Parameter indexPath: indexPath of dequeing UITableViewCell.
     /// - Returns: Dequeued UITableViewCell
-    public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
+    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
         guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier,
                                              for: indexPath) as? T else {
                                                 fatalError("Couldn't dequeue UITableViewCell with identifier: \(T.defaultReuseIdentifier)")
@@ -99,14 +99,14 @@ public extension UITableView {
     /// Registers UITableViewHeaderFooterView view class of provided type if implements ReusableView protocol.
     ///
     /// - Parameter _: Type of the UITableViewHeaderFooterView to register.
-    public func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView {
+    func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView {
         register(T.self, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
     }
     
     /// Registers UITableViewHeaderFooterView view class of provided type if implements ReusableView and NibLoadableView protocols.
     ///
     /// - Parameter _: Type of the UITableViewHeaderFooterView to register.
-    public func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+    func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
@@ -116,7 +116,7 @@ public extension UITableView {
     ///
     /// - Parameter indexPath: IndexPath of dequeing UITableViewHeaderFooterView.
     /// - Returns: Dequeued UITableViewHeaderFooterView.
-    public func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
+    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
         guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.defaultReuseIdentifier) as? T else {
                                                 fatalError("Couldn't dequeue UITableViewHeaderFooterView with identidier: \(T.defaultReuseIdentifier)")
         }
@@ -131,7 +131,7 @@ public extension UITableView {
     ///   - bundle: Bundle where Nib file is. By default is the Main Bundle.
     ///   - reuseIdentifier: Name for the reuse identifier.
     @available(iOS, deprecated, message: "Please use the register method based on ReusableView and/or NibLoadableView protocols")
-    public func registerCell(withNibName nibName: String,
+    func registerCell(withNibName nibName: String,
                              bundle: Bundle? = Bundle.main,
                              reuseIdentifier: String? = nil) {
         let reuseId: String = reuseIdentifier ?? nibName
@@ -140,12 +140,12 @@ public extension UITableView {
     }
     
     /// Removes footer view from table.
-    public func removeFooterView() {
+    func removeFooterView() {
         tableFooterView = UIView(frame: CGRect.zero)
     }
     
     /// Removes header view from table.
-    public func removeHeaderView() {
+    func removeHeaderView() {
         tableHeaderView = UIView(frame: CGRect.zero)
     }
     
@@ -153,7 +153,7 @@ public extension UITableView {
     /// Reload table with completion closure after reload.
     ///
     /// - Parameter completion: Closure to be executed after reload.
-    public func reloadData(completion: (() -> ())?) {
+    func reloadData(completion: (() -> ())?) {
         UIView.animate(withDuration: 0, animations: {
             self.reloadData()
         }) { finished in
@@ -164,7 +164,7 @@ public extension UITableView {
     }
     
     /// Fits table header height to content.
-    public func layoutTableViewHeaderView() {
+    func layoutTableViewHeaderView() {
         guard let headerView = tableHeaderView else { return }
         layoutIfNeeded()
         headerView.translatesAutoresizingMaskIntoConstraints = false
@@ -186,6 +186,5 @@ public extension UITableView {
         headerView.removeConstraints(tempWidthConstraints)
         headerView.translatesAutoresizingMaskIntoConstraints = true
     }
-    
-    
+
 }

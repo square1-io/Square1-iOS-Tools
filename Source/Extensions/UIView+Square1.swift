@@ -24,7 +24,7 @@ import UIKit
 public extension UIView {
   
   /// UIViewController for current UIView or nil if not attacjed to any.
-  public var viewController: UIViewController? {
+  var viewController: UIViewController? {
     var parentResponder: UIResponder? = self
     while parentResponder != nil {
       parentResponder = parentResponder!.next
@@ -40,7 +40,8 @@ public extension UIView {
   /// - Parameter:
   ///   - target: Target for the selector, if none, will look for cointaining View Controller.
   ///   - selector: Selector to be executed on gesture.
-  public func addSingleTapGesture(target: Any? = nil, selector: Selector) {
+  func addSingleTapGesture(target: Any? = nil,
+                           selector: Selector) {
     addTapGesture(target: target, executing: selector, tapsRequired: 1)
   }
   
@@ -49,7 +50,8 @@ public extension UIView {
   /// - Parameter:.
   ///   - target: Target for the selector, if none, will look for cointaining View Controller.
   ///   - selector: Selector to be executed on gesture.
-  public func addDoubleTapGesture(target: Any? = nil, selector: Selector) {
+  func addDoubleTapGesture(target: Any? = nil,
+                           selector: Selector) {
     addTapGesture(target: target, executing: selector, tapsRequired: 2)
   }
   
@@ -59,7 +61,9 @@ public extension UIView {
   ///   - target: Target for the selector, if none, will look for cointaining View Controller.
   ///   - selector: Selector to be executed on gesture.
   ///   - tapsRequired: number of taps required for selector to be triggered.
-  public func addTapGesture(target: Any? = nil, executing selector: Selector, tapsRequired: Int) {
+  func addTapGesture(target: Any? = nil,
+                     executing selector: Selector,
+                     tapsRequired: Int) {
     let tap = UITapGestureRecognizer(target: target != nil ? target : viewController,
                                      action: selector)
     tap.numberOfTapsRequired = tapsRequired
@@ -161,7 +165,7 @@ public extension UIView {
 public extension UIView.AnimationCurve {
   
   /// AnimationCurve to AnimationOptions.
-  public func toAnimationOption() -> UIView.AnimationOptions? {
+  func toAnimationOption() -> UIView.AnimationOptions? {
     switch self {
     case .easeInOut: return UIView.AnimationOptions.curveEaseInOut
     case .easeIn: return UIView.AnimationOptions.curveEaseIn

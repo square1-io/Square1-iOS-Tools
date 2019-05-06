@@ -24,7 +24,7 @@ import UIKit
 public extension UITextView {
   
   /// Max number of lines in UITextView.
-  public var maxLines: Int {
+  var maxLines: Int {
     get {
       return textContainer.maximumNumberOfLines
     }
@@ -35,7 +35,7 @@ public extension UITextView {
   }
 
   /// Number of lines in current UITextView.
-  public var numberOfLines: Int {
+  var numberOfLines: Int {
     guard let font = font else { return 0 }
     return Int(round((contentSize.height - textContainerInset.top - textContainerInset.bottom) / font.lineHeight));
   }

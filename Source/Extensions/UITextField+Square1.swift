@@ -24,7 +24,7 @@ import UIKit
 public extension UITextField {
   
   /// Trimmed text inside current text field.
-  public var trimmedText: String {
+  var trimmedText: String {
     guard let text = text else { return "" }
     return text.trimmed
   }
@@ -34,7 +34,7 @@ public extension UITextField {
   /// - Parameters:
   ///   - color: placeholder color.
   ///   - font: placeholder font.
-  public func placeholder(color: UIColor, font: UIFont) {
+  func placeholder(color: UIColor, font: UIFont) {
     let attributes = [
       NSAttributedString.Key.foregroundColor: color,
       NSAttributedString.Key.font: font]

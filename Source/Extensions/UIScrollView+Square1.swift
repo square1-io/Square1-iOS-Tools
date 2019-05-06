@@ -26,14 +26,14 @@ public extension UIScrollView {
   /// Scrolls to the top of the table.
   ///
   /// - Parameter animated: Animate scrolling of not.
-  public func scrollToTop(animated: Bool) {
+  func scrollToTop(animated: Bool) {
     setContentOffset(CGPoint.zero, animated: animated)
   }
   
   /// Scrolls to the bottom of the table.
   ///
   /// - Parameter animated: Animate scrolling of not.
-  public func scrollToBottom(animated: Bool) {
+  func scrollToBottom(animated: Bool) {
     let Yoffset = contentSize.height + contentInset.bottom - bounds.size.height
     
     if Yoffset > 0 {
@@ -49,7 +49,9 @@ public extension UIScrollView {
   ///   - threshold: point where selector should be triggered
   ///   - target: target who will execute the selector
   ///   - selector: selector to execute
-  public func executeWhenReachingEnd(threshold: CGFloat, target: UIViewController, selector: Selector) {
+  func executeWhenReachingEnd(threshold: CGFloat,
+                              target: UIViewController,
+                              selector: Selector) {
     let y = contentOffset.y + bounds.size.height - contentInset.bottom
     let h = contentSize.height
     let actionThreshold = threshold < 0 ? threshold : -threshold

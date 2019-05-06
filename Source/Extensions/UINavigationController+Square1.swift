@@ -24,7 +24,7 @@ import UIKit
 public extension UINavigationController {
     
   /// Removes the 1pt shadow image below navigation bar.
-  public func removeNavigationBarSeparator() {
+  func removeNavigationBarSeparator() {
     guard let color = navigationBar.barTintColor else { return }
     let image = UIImage(color: color)
 

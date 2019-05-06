@@ -29,7 +29,8 @@ public extension UINib {
   ///   - name: name of the nib to check
   ///   - bundle: bundle to look for the nib
   /// - Returns: `true` if nib exists, otherwise `false`
-  public class func existsNib(named name: String, in bundle: Bundle) -> Bool {
+  class func existsNib(named name: String,
+                       in bundle: Bundle) -> Bool {
     if bundle.path(forResource: name, ofType: "nib") != nil {
       return true
     }

@@ -217,9 +217,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the cell to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -244,9 +263,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the cell to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -271,7 +309,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
                       </div>
@@ -321,7 +359,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">dequeueReusableCell</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
                       </div>
@@ -354,9 +392,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0aB4CellCRbzAC08ReusableB0RzlF"></a>
+                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0a8ReusableB0CRbzAC0hB0RzlF"></a>
                     <a name="//apple_ref/swift/Method/registerSectionHeader(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0aB4CellCRbzAC08ReusableB0RzlF">registerSectionHeader(_:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0a8ReusableB0CRbzAC0hB0RzlF">registerSectionHeader(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -371,9 +409,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSectionHeader</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSectionHeader</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -381,9 +438,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF"></a>
+                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0a8ReusableB0CRbzAC011NibLoadableB0RzAC0hB0RzlF"></a>
                     <a name="//apple_ref/swift/Method/registerSectionHeader(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF">registerSectionHeader(_:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionHeaderyyxmSo0a8ReusableB0CRbzAC011NibLoadableB0RzAC0hB0RzlF">registerSectionHeader(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -398,9 +455,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSectionHeader</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSectionHeader</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -408,9 +484,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0aB4CellCRbzAC08ReusableB0RzlF"></a>
+                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0a8ReusableB0CRbzAC0hB0RzlF"></a>
                     <a name="//apple_ref/swift/Method/registerSectionFooter(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0aB4CellCRbzAC08ReusableB0RzlF">registerSectionFooter(_:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0a8ReusableB0CRbzAC0hB0RzlF">registerSectionFooter(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -425,9 +501,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSectionFooter</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSectionFooter</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -435,9 +530,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF"></a>
+                    <a name="/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0a8ReusableB0CRbzAC011NibLoadableB0RzAC0hB0RzlF"></a>
                     <a name="//apple_ref/swift/Method/registerSectionFooter(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0aB4CellCRbzAC011NibLoadableB0RzAC08ReusableB0RzlF">registerSectionFooter(_:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC12Square1ToolsE21registerSectionFooteryyxmSo0a8ReusableB0CRbzAC011NibLoadableB0RzAC0hB0RzlF">registerSectionFooter(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -452,9 +547,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSectionFooter</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSectionFooter</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -479,10 +593,29 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-                                                                   <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                                                            <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -511,10 +644,29 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-                                                                   <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">registerSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                                                            <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span><span class="p">,</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NibLoadableView.html">NibLoadableView</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of the supplementary view to register.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -539,9 +691,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-                                                                  <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                                                  <span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">dequeueSupplementaryView</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UICollectionReusableView</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                                                           <span class="n">of</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                                           <span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableView.html">ReusableView</a></span></code></pre>
 
                         </div>
                       </div>
@@ -616,9 +768,9 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "Please use the register method based on ReusableView and/or NibLoadableView protocols")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                         <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
-                         <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">registerCell</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                  <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
+                  <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -689,9 +841,9 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "Please use the registerSectionHeader method based on ReusableView and/or NibLoadableView protocols")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerHeader</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
-                           <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">registerHeader</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
+                    <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -762,9 +914,9 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "Please use the registerSectionFooter method based on ReusableView and/or NibLoadableView protocols")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerFooter</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
-                           <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">registerFooter</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
+                    <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -835,10 +987,10 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated, message: "Please use the registerSupplementaryView method based on ReusableView and/or NibLoadableView protocols")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerSupplementaryView</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                      <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
-                                      <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                      <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">registerSupplementaryView</span><span class="p">(</span><span class="n">withNibName</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
+                               <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -936,7 +1088,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-05-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
