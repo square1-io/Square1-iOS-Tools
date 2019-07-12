@@ -21,6 +21,7 @@
 import UIKit
 import SafariServices
 
+public typealias ActionBlock = ((UIAlertAction?) -> ())
 
 /// Helpers for UIViewController
 extension UIViewController {
@@ -38,8 +39,8 @@ extension UIViewController {
                  title: String?,
                  okTitle: String? = nil,
                  cancelTitle: String? = nil,
-                 confirmHandler: ((UIAlertAction?) -> ())? = nil,
-                 cancelHandler: ((UIAlertAction?) -> ())? = nil) {
+                 confirmHandler: ActionBlock? = nil,
+                 cancelHandler: ActionBlock? = nil) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
     let okAction = UIAlertAction(title: okTitle ?? "OK".localized,
@@ -47,10 +48,11 @@ extension UIViewController {
                                  handler: confirmHandler)
     alert.addAction(okAction)
     
-    if let cancelHandler = cancelHandler {
-      let cancelAction = UIAlertAction(title: cancelTitle ?? "Cancel".localized, style: .cancel, handler: cancelHandler)
-      alert.addAction(cancelAction)
-    }
+    let cancel: ActionBlock = cancelHandler ?? { _ in }
+    let cancelAction = UIAlertAction(title: cancelTitle ?? "Cancel".localized,
+                                     style: .cancel,
+                                     handler: cancel)
+    alert.addAction(cancelAction)
     
     present(alert, animated: true, completion: nil)
   }
