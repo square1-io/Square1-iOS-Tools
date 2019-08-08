@@ -35,12 +35,12 @@ public func Log (message: String,
                  _ file: String = #file,
                  _ function: String = #function,
                  _ line: Int = #line) {
-  #if DEBUG
+    #if DEBUG
     let fileURL = URL(string: file)?.lastPathComponent ?? "Unknown file"
     let queue = Thread.isMainThread ? "UI" : "BG"
     
     print("(\(queue)) \(fileURL) \(function) [\(line)]: " + message)
-  #endif
+    #endif
 }
 
 #if DEBUG
@@ -66,9 +66,9 @@ public func Log(_ message: String,
                 _ logAccess: LogAccess = .public,
                 _ function: StaticString = #function,
                 _ line: Int = #line) {
-  
-  let customMessage = "\(type.descriptionLog) \(function) [\(line)]: \(message)"
-  os_log(logAccess.toStaticString(), log: log, type: type, customMessage)
+    
+    let customMessage = "\(type.descriptionLog) \(function) [\(line)]: \(message)"
+    os_log(logAccess.toStaticString(), log: log, type: type, customMessage)
 }
 
 #else
@@ -91,39 +91,39 @@ public func Log(_ message: String,
                 log: OSLog = OSLog.default,
                 type: OSLogType = OSLogType.default,
                 _ logAccess: LogAccess = .public) {
-  os_log(logAccess.toStaticString(), log: log, type: type, message)
+    os_log(logAccess.toStaticString(), log: log, type: type, message)
 }
 #endif
 
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 extension OSLogType {
-  
-  fileprivate var descriptionLog: String {
-    switch self {
-    case OSLogType.info:
-      return "ℹ️ℹ️ℹ️(info)"
-    case OSLogType.debug:
-      return "🔹🔹🔹(debug)"
-    case OSLogType.error:
-      return "‼️‼️‼️(error)"
-    case OSLogType.fault:
-      return "💣💣💣(fault)"
-    default:
-      return "⬜️⬜️⬜️(default)"
+    
+    fileprivate var descriptionLog: String {
+        switch self {
+        case OSLogType.info:
+            return "ℹ️ℹ️ℹ️(info)"
+        case OSLogType.debug:
+            return "🔹🔹🔹(debug)"
+        case OSLogType.error:
+            return "‼️‼️‼️(error)"
+        case OSLogType.fault:
+            return "💣💣💣(fault)"
+        default:
+            return "⬜️⬜️⬜️(default)"
+        }
     }
-  }
 }
 
 /// Levels of visibility for logs.
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 public enum LogAccess {
-  case `public`
-  case `private`
-  
-  fileprivate func toStaticString() -> StaticString {
-    switch self {
-    case .public: return "%{PUBLIC}@"
-    case .private: return "%{PRIVATE}@"
+    case `public`
+    case `private`
+    
+    fileprivate func toStaticString() -> StaticString {
+        switch self {
+        case .public: return "%{PUBLIC}@"
+        case .private: return "%{PRIVATE}@"
+        }
     }
-  }
 }

@@ -22,62 +22,62 @@ import Foundation
 
 // Extension for helper functions dealing with `UITabBarController`
 extension UITabBarController {
-  
-  /// Helper method to check if tabBar has been hidden using `setTabBar`.
-  private var isTabBarHidden: Bool {
-    return !tabBar.frame.intersects(view.frame)
-  }
-  
-  /// Hides or shows the TabBar animating or not.
-  ///
-  /// - Parameters:
-  ///   - hidden: `true` to hide or `false` to show.
-  ///   - animated: `true` for animate transition, otherwise `false`. By default is `true`.
-  ///   - completion: comletion block to execute after transition finish.
-  public func setTabBar(hidden: Bool,
-                        animated: Bool = true,
-                        completion: ((Bool) -> ())? = nil) {
-    guard isTabBarHidden != hidden else { return }
-
-    let height = tabBar.frame.size.height
-    let offsetY = hidden ? height : -height
-    let endFrame = tabBar.frame.offsetBy(dx: 0, dy: offsetY)
-    let vc: UIViewController? = viewControllers?[selectedIndex]
     
-    var newInsets: UIEdgeInsets? = vc?.view.layoutMargins
-    
-    if #available(iOS 11.0, *) {
-      newInsets = vc?.additionalSafeAreaInsets
+    /// Helper method to check if tabBar has been hidden using `setTabBar`.
+    private var isTabBarHidden: Bool {
+        return !tabBar.frame.intersects(view.frame)
     }
     
-    newInsets?.bottom -= offsetY
-    
-    if hidden, let insets = newInsets {
-      set(childViewController: vc, insets: insets)
+    /// Hides or shows the TabBar animating or not.
+    ///
+    /// - Parameters:
+    ///   - hidden: `true` to hide or `false` to show.
+    ///   - animated: `true` for animate transition, otherwise `false`. By default is `true`.
+    ///   - completion: comletion block to execute after transition finish.
+    public func setTabBar(hidden: Bool,
+                          animated: Bool = true,
+                          completion: ((Bool) -> ())? = nil) {
+        guard isTabBarHidden != hidden else { return }
+        
+        let height = tabBar.frame.size.height
+        let offsetY = hidden ? height : -height
+        let endFrame = tabBar.frame.offsetBy(dx: 0, dy: offsetY)
+        let vc: UIViewController? = viewControllers?[selectedIndex]
+        
+        var newInsets: UIEdgeInsets? = vc?.view.layoutMargins
+        
+        if #available(iOS 11.0, *) {
+            newInsets = vc?.additionalSafeAreaInsets
+        }
+        
+        newInsets?.bottom -= offsetY
+        
+        if hidden, let insets = newInsets {
+            set(childViewController: vc, insets: insets)
+        }
+        
+        guard animated else {
+            tabBar.frame = endFrame
+            return
+        }
+        
+        weak var tabBarRef = self.tabBar
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            tabBarRef?.frame = endFrame
+        }, completion: { [weak self] finished in
+            if !hidden, finished, let insets = newInsets {
+                self?.set(childViewController: vc, insets: insets)
+            }
+        })
     }
-  
-    guard animated else {
-      tabBar.frame = endFrame
-      return
-    }
     
-    weak var tabBarRef = self.tabBar
-    
-    UIView.animate(withDuration: 0.3, animations: {
-      tabBarRef?.frame = endFrame
-    }, completion: { [weak self] finished in
-      if !hidden, finished, let insets = newInsets {
-        self?.set(childViewController: vc, insets: insets)
-      }
-    })
-  }
-
-  private func set(childViewController cvc: UIViewController?, insets: UIEdgeInsets) {
-    if #available(iOS 11.0, *) {
-      cvc?.additionalSafeAreaInsets = insets
-    } else {
-      cvc?.view.layoutMargins = insets
+    private func set(childViewController cvc: UIViewController?, insets: UIEdgeInsets) {
+        if #available(iOS 11.0, *) {
+            cvc?.additionalSafeAreaInsets = insets
+        } else {
+            cvc?.view.layoutMargins = insets
+        }
+        cvc?.view.setNeedsLayout()
     }
-    cvc?.view.setNeedsLayout()
-  }
 }

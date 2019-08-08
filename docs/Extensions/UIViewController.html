@@ -180,6 +180,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Square1Tools11ActionBlocka">ActionBlock</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -188,7 +196,7 @@
             <h1>UIViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UIViewController</span> <span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIAppearanceContainer</span><span class="p">,</span> <span class="kt">UITraitEnvironment</span><span class="p">,</span> <span class="kt">UIContentContainer</span><span class="p">,</span> <span class="kt">UIFocusEnvironment</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIViewController</span></code></pre>
 
                 </div>
               </div>
@@ -375,6 +383,104 @@ Otherwise, will try to open location with Google Maps first and the Apple Maps.<
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So16UIViewControllerC12Square1ToolsE16showConfirmAlert7message5title7okTitle06cancelK014confirmHandlerySSSg_A3JySo13UIAlertActionCSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/showConfirmAlert(message:title:okTitle:cancelTitle:confirmHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC12Square1ToolsE16showConfirmAlert7message5title7okTitle06cancelK014confirmHandlerySSSg_A3JySo13UIAlertActionCSgcSgtF">showConfirmAlert(message:title:okTitle:cancelTitle:confirmHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Display user confirmation UIAlertController.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showConfirmAlert</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                             <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                             <span class="nv">okTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                             <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                             <span class="nv">confirmHandler</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:12Square1Tools11ActionBlocka">ActionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Message for alert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Title for alert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>okTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>OK button title for alert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Cancel button title for alert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>confirmHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Confirm action closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:So16UIViewControllerC12Square1ToolsE9showAlert7message5title7okTitle06cancelJ014confirmHandler0kM0ySSSg_A3KySo13UIAlertActionCSgcSgAOtF"></a>
                     <a name="//apple_ref/swift/Method/showAlert(message:title:okTitle:cancelTitle:confirmHandler:cancelHandler:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:So16UIViewControllerC12Square1ToolsE9showAlert7message5title7okTitle06cancelJ014confirmHandler0kM0ySSSg_A3KySo13UIAlertActionCSgcSgAOtF">showAlert(message:title:okTitle:cancelTitle:confirmHandler:cancelHandler:)</a>
@@ -393,11 +499,11 @@ Otherwise, will try to open location with Google Maps first and the Apple Maps.<
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showAlert</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-               <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-               <span class="nv">okTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-               <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-               <span class="nv">confirmHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIAlertAction</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-               <span class="nv">cancelHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">UIAlertAction</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                      <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                      <span class="nv">okTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                      <span class="nv">cancelTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                      <span class="nv">confirmHandler</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:12Square1Tools11ActionBlocka">ActionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                      <span class="nv">cancelHandler</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:12Square1Tools11ActionBlocka">ActionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,8 +1331,8 @@ Otherwise, will try to open location with Google Maps first and the Apple Maps.<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-05-06)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/square1-io/Square1-iOS-Tools" target="_blank" rel="external">Square1</a>. All rights reserved. (Last updated: 2019-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

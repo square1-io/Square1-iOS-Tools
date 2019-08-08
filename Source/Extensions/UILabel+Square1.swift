@@ -23,44 +23,44 @@ import UIKit
 
 /// Helpers for UILabel.
 public extension UILabel {
-  
-  /// Set a color for substring of text.
-  ///
-  /// - Parameter
-  ///   - color: `UIColor` of string.
-  ///   - range: The content `String`.
-  func setColor(color: UIColor, range string: String) {
-    guard let text = text else {
-      return
+    
+    /// Set a color for substring of text.
+    ///
+    /// - Parameter
+    ///   - color: `UIColor` of string.
+    ///   - range: The content `String`.
+    func setColor(color: UIColor, range string: String) {
+        guard let text = text else {
+            return
+        }
+        
+        let newAttributedString = attributedText?.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString(string:text)
+        let range = (text as NSString).range(of: string)
+        newAttributedString.addAttribute(.foregroundColor, value: color, range: range)
+        attributedText = newAttributedString
     }
     
-    let newAttributedString = attributedText?.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString(string:text)
-    let range = (text as NSString).range(of: string)
-    newAttributedString.addAttribute(.foregroundColor, value: color, range: range)
-    attributedText = newAttributedString
-  }
-  
-  /// Set text with line height. It keeps the attributedText properties.
-  ///
-  /// - Parameter
-  ///   - text: label text.
-  ///   - lineHeight: line height.
-  func setText(text: String, lineHeight: CGFloat) {
-    if text.count == 0 { return }
-    
-    self.text = text
-    
-    guard let paragraphAtt = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle else {
-      return
+    /// Set text with line height. It keeps the attributedText properties.
+    ///
+    /// - Parameter
+    ///   - text: label text.
+    ///   - lineHeight: line height.
+    func setText(text: String, lineHeight: CGFloat) {
+        if text.count == 0 { return }
+        
+        self.text = text
+        
+        guard let paragraphAtt = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle else {
+            return
+        }
+        
+        guard let attributedString = attributedText?.mutableCopy() as? NSMutableAttributedString,
+            let paragraphStyle = paragraphAtt.mutableCopy() as? NSMutableParagraphStyle else {
+                return
+        }
+        
+        paragraphStyle.lineSpacing = lineHeight
+        attributedString.addAttribute(.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        attributedText = attributedString
     }
-    
-    guard let attributedString = attributedText?.mutableCopy() as? NSMutableAttributedString,
-      let paragraphStyle = paragraphAtt.mutableCopy() as? NSMutableParagraphStyle else {
-        return
-    }
-    
-    paragraphStyle.lineSpacing = lineHeight
-    attributedString.addAttribute(.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-    attributedText = attributedString
-  }
 }

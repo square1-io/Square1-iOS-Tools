@@ -52,7 +52,7 @@ public extension UITableView {
         guard numberOfRows(inSection: section) != 0 else {
             return IndexPath(row: 0, section: section)
         }
-
+        
         return IndexPath(row: numberOfRows(inSection: section) - 1, section: section)
     }
     
@@ -118,7 +118,7 @@ public extension UITableView {
     /// - Returns: Dequeued UITableViewHeaderFooterView.
     func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
         guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.defaultReuseIdentifier) as? T else {
-                                                fatalError("Couldn't dequeue UITableViewHeaderFooterView with identidier: \(T.defaultReuseIdentifier)")
+            fatalError("Couldn't dequeue UITableViewHeaderFooterView with identidier: \(T.defaultReuseIdentifier)")
         }
         return cell
     }
@@ -132,8 +132,8 @@ public extension UITableView {
     ///   - reuseIdentifier: Name for the reuse identifier.
     @available(iOS, deprecated, message: "Please use the register method based on ReusableView and/or NibLoadableView protocols")
     func registerCell(withNibName nibName: String,
-                             bundle: Bundle? = Bundle.main,
-                             reuseIdentifier: String? = nil) {
+                      bundle: Bundle? = Bundle.main,
+                      reuseIdentifier: String? = nil) {
         let reuseId: String = reuseIdentifier ?? nibName
         let nib = UINib(nibName: nibName, bundle: bundle)
         register(nib, forCellReuseIdentifier: reuseId)
@@ -186,5 +186,5 @@ public extension UITableView {
         headerView.removeConstraints(tempWidthConstraints)
         headerView.translatesAutoresizingMaskIntoConstraints = true
     }
-
+    
 }

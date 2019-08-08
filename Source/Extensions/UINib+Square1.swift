@@ -22,18 +22,18 @@ import UIKit
 
 /// Helpers fro UINib
 public extension UINib {
-  
-  /// Checks if a nib file exists in a specific bundle.
-  ///
-  /// - Parameters:
-  ///   - name: name of the nib to check
-  ///   - bundle: bundle to look for the nib
-  /// - Returns: `true` if nib exists, otherwise `false`
-  class func existsNib(named name: String,
-                       in bundle: Bundle) -> Bool {
-    if bundle.path(forResource: name, ofType: "nib") != nil {
-      return true
+    
+    /// Checks if a nib file exists in a specific bundle.
+    ///
+    /// - Parameters:
+    ///   - name: name of the nib to check
+    ///   - bundle: bundle to look for the nib
+    /// - Returns: `true` if nib exists, otherwise `false`
+    class func existsNib(named name: String,
+                         in bundle: Bundle) -> Bool {
+        if bundle.path(forResource: name, ofType: "nib") != nil {
+            return true
+        }
+        return false
     }
-    return false
-  }
 }

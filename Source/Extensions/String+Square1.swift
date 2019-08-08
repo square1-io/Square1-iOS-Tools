@@ -161,28 +161,28 @@ public extension String {
     
     /// MD5 hash of the current string.
     var md5: String {
-        guard let data = self.data(using: .utf8, allowLossyConversion: true) else { return self }
         
-        let hash = data.withUnsafeBytes({ (bytes: UnsafePointer<Data>) -> [UInt8] in
+        let data = Data(self.utf8)
+        let hash = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
             var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-            CC_MD5(bytes, CC_LONG(data.count), &hash)
+            CC_MD5(bytes.baseAddress, CC_LONG(data.count), &hash)
             return hash
-        })
-        
+        }
+
         return hash.map { String(format: "%02x", $0) }.joined()
     }
     
     
     /// SHA1 hash of the current string
     var sha1: String {
-        guard let data = self.data(using: .utf8, allowLossyConversion: true) else { return self }
         
-        let hash = data.withUnsafeBytes({ (bytes: UnsafePointer<Data>) -> [UInt8] in
+        let data = Data(self.utf8)
+        let hash = data.withUnsafeBytes({ (bytes: UnsafeRawBufferPointer) -> [UInt8] in
             var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
-            CC_SHA1(bytes, CC_LONG(data.count), &hash)
+            CC_SHA1(bytes.baseAddress, CC_LONG(data.count), &hash)
             return hash
         })
-        
+
         return hash.map { String(format: "%02x", $0) }.joined()
     }
     

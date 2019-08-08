@@ -23,12 +23,12 @@ import UIKit
 /// Helpers for UINavigationController.
 public extension UINavigationController {
     
-  /// Removes the 1pt shadow image below navigation bar.
-  func removeNavigationBarSeparator() {
-    guard let color = navigationBar.barTintColor else { return }
-    let image = UIImage(color: color)
-
-    navigationBar.shadowImage = image
-  }
-
+    /// Removes the 1pt shadow image below navigation bar.
+    func removeNavigationBarSeparator() {
+        guard let color = navigationBar.barTintColor else { return }
+        let image = UIImage(color: color)
+        
+        navigationBar.shadowImage = image
+    }
+    
 }

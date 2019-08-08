@@ -22,17 +22,17 @@ import UIKit
 
 /// Helpers for UITableViewCell.
 public extension UITableViewCell {
-  
-  /// Helper to get and change cell's selection color.
-  var selectionColor : UIColor? {
-    get {
-      return selectedBackgroundView?.backgroundColor
-    }
     
-    set {
-      let bgView = UIView()
-      bgView.backgroundColor = newValue
-      selectedBackgroundView = bgView
+    /// Helper to get and change cell's selection color.
+    var selectionColor : UIColor? {
+        get {
+            return selectedBackgroundView?.backgroundColor
+        }
+        
+        set {
+            let bgView = UIView()
+            bgView.backgroundColor = newValue
+            selectedBackgroundView = bgView
+        }
     }
-  }
 }

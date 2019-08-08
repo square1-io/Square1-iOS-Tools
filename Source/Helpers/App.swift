@@ -22,28 +22,28 @@ import Foundation
 
 /// Helper class to retrieve info from app's main bundle .plist file.
 public class App {
-  
-  /// Current version of the app, retrieved from the main bundle .plist file.
-  public static var version: String? {
-    return infoValue(forKey: "CFBundleShortVersionString")
-  }
-  
-  /// Current build number of the app, retrieved from the main bundle .plist file.
-  public static var buildNumber: String? {
-    return infoValue(forKey: "CFBundleVersion")
-  }
-  
-  /// App name, retrieved from, retrieved from the main bundle .plist file.
-  public static var name: String? {
-    return infoValue(forKey: "CFBundleName")
-  }
-  
-  /// Gets value from main bundle .plist file.
-  ///
-  /// - Parameter key: key name for desired value.
-  /// - Returns: the desired value or nil if it doesn't exist.
-  private static func infoValue(forKey key:String) -> String? {
-    return Bundle.main.infoDictionary?[key] as? String
-  }
-  
+    
+    /// Current version of the app, retrieved from the main bundle .plist file.
+    public static var version: String? {
+        return infoValue(forKey: "CFBundleShortVersionString")
+    }
+    
+    /// Current build number of the app, retrieved from the main bundle .plist file.
+    public static var buildNumber: String? {
+        return infoValue(forKey: "CFBundleVersion")
+    }
+    
+    /// App name, retrieved from, retrieved from the main bundle .plist file.
+    public static var name: String? {
+        return infoValue(forKey: "CFBundleName")
+    }
+    
+    /// Gets value from main bundle .plist file.
+    ///
+    /// - Parameter key: key name for desired value.
+    /// - Returns: the desired value or nil if it doesn't exist.
+    private static func infoValue(forKey key:String) -> String? {
+        return Bundle.main.infoDictionary?[key] as? String
+    }
+    
 }

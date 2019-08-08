@@ -23,163 +23,163 @@ import Foundation
 /// Helper class to manage saving and reading of codable objects on disk.
 /// Inspired by Saoud Rizwan, https://gist.github.com/saoudrizwan/b7ab1febde724c6f30d8a555ea779140
 public class Storage {
-  
-  private init() {}
-  
-  /// Enum matching available directories for saving/reading.
-  public enum Directory {
-    case documents
-    case cache
     
-    /// The url for the directory.
-    fileprivate var url: URL {
-      var searchPathDirectory: FileManager.SearchPathDirectory
-      
-      switch self {
-      case .documents:
-        searchPathDirectory = .documentDirectory
-      case .cache:
-        searchPathDirectory = .cachesDirectory
-      }
-      
-      if let url = FileManager.default.urls(for: searchPathDirectory,
-                                            in: .userDomainMask).first {
-        return url
-      } else {
-        fatalError("Error getting URL for directory \(searchPathDirectory)")
-      }
-    }
+    private init() {}
     
-    /// Clears all files on the directory.
-    public func clear() {
-      do {
-        let contents = try FileManager.default.contentsOfDirectory(at: self.url,
-                                                                   includingPropertiesForKeys: nil,
-                                                                   options: [])
-        for fileUrl in contents {
-          try FileManager.default.removeItem(at: fileUrl)
+    /// Enum matching available directories for saving/reading.
+    public enum Directory {
+        case documents
+        case cache
+        
+        /// The url for the directory.
+        fileprivate var url: URL {
+            var searchPathDirectory: FileManager.SearchPathDirectory
+            
+            switch self {
+            case .documents:
+                searchPathDirectory = .documentDirectory
+            case .cache:
+                searchPathDirectory = .cachesDirectory
+            }
+            
+            if let url = FileManager.default.urls(for: searchPathDirectory,
+                                                  in: .userDomainMask).first {
+                return url
+            } else {
+                fatalError("Error getting URL for directory \(searchPathDirectory)")
+            }
         }
-      } catch {
-        Log(message: "Error cleaning directory \(self)")
-        return
-      }
-    }
-  }
-  
-  
-  /// Saves an `Encodable` object into `directory` with name `fileName`.
-  ///
-  /// - Parameters:
-  ///   - object: `Encodable` object to save.
-  ///   - directory: `Directory` that will be use to save the object.
-  ///   - fileName: name of the file who will save the object.
-  public static func save<T: Encodable>(_ object: T,
-                                        to directory: Directory,
-                                        as fileName: String) {
-    do {
-      let data = try JSONEncoder().encode(object)
-      save(data, to: directory, as: fileName)
-    } catch {
-      fatalError("Error saving \(object): \(error.localizedDescription)")
-    }
-  }
-  
-  
-  /// Saves a `Data` object into `directory` with name `fileName`.
-  ///
-  /// - Parameters:
-  ///   - data: `Data` object to save.
-  ///   - directory: `Directory` that will be use to save the object.
-  ///   - fileName: name of the file who will save the object.
-  public static func save(_ data: Data,
-                          to directory: Directory,
-                          as fileName: String) {
-    
-    guard let escapedName = fileName.escaped() else {
-      return
+        
+        /// Clears all files on the directory.
+        public func clear() {
+            do {
+                let contents = try FileManager.default.contentsOfDirectory(at: self.url,
+                                                                           includingPropertiesForKeys: nil,
+                                                                           options: [])
+                for fileUrl in contents {
+                    try FileManager.default.removeItem(at: fileUrl)
+                }
+            } catch {
+                Log(message: "Error cleaning directory \(self)")
+                return
+            }
+        }
     }
     
-    let url = directory.url.appendingPathComponent(escapedName,
-                                                   isDirectory: false)
-    FileManager.default.createFile(atPath: url.path,
-                                   contents: data,
-                                   attributes: nil)
-  }
-  
-  /// Reads a `Decodable` with name `fileName` object from `directory`.
-  ///
-  /// - Parameters:
-  ///   - fileName: name of the file who stores the object.
-  ///   - directory: `Directory` who helds the file.
-  ///   - type: type of object we're reading.
-  /// - Returns: desired `Decodable` object.
-  public static func read<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
     
-    if let data = read(fileName, from: directory) {
-
-      do {
-        let object = try JSONDecoder().decode(type, from: data)
-        return object
-      } catch {
-        Log(message: "Error reading file \(fileName): \(error.localizedDescription)")
-        return nil
-      }
-      
-    } else {
-      return nil
-    }
-  }
-  
-  
-  /// Reads a `Data` with name `fileName` object from `directory`.
-  ///
-  /// - Parameters:
-  ///   - fileName: name of the file who stores the object.
-  ///   - directory: `Directory` who helds the file.
-  /// - Returns: desired `Data` object.
-  public static func read(_ fileName: String,
-                          from directory: Directory) -> Data? {
-    
-    guard let escapedName = fileName.escaped() else {
-      return nil
+    /// Saves an `Encodable` object into `directory` with name `fileName`.
+    ///
+    /// - Parameters:
+    ///   - object: `Encodable` object to save.
+    ///   - directory: `Directory` that will be use to save the object.
+    ///   - fileName: name of the file who will save the object.
+    public static func save<T: Encodable>(_ object: T,
+                                          to directory: Directory,
+                                          as fileName: String) {
+        do {
+            let data = try JSONEncoder().encode(object)
+            save(data, to: directory, as: fileName)
+        } catch {
+            fatalError("Error saving \(object): \(error.localizedDescription)")
+        }
     }
     
-    let url = directory.url.appendingPathComponent(escapedName,
-                                                   isDirectory: false)
     
-    if !FileManager.default.fileExists(atPath: url.path) {
-      return nil
+    /// Saves a `Data` object into `directory` with name `fileName`.
+    ///
+    /// - Parameters:
+    ///   - data: `Data` object to save.
+    ///   - directory: `Directory` that will be use to save the object.
+    ///   - fileName: name of the file who will save the object.
+    public static func save(_ data: Data,
+                            to directory: Directory,
+                            as fileName: String) {
+        
+        guard let escapedName = fileName.escaped() else {
+            return
+        }
+        
+        let url = directory.url.appendingPathComponent(escapedName,
+                                                       isDirectory: false)
+        FileManager.default.createFile(atPath: url.path,
+                                       contents: data,
+                                       attributes: nil)
     }
     
-    return FileManager.default.contents(atPath: url.path)
-  }
-  
-  
-  /// Deletes a file from `directory`
-  ///
-  /// - Parameters:
-  ///   - fileName: name of file to delete.
-  ///   - directory: directory who helds the file.
-  public static func delete(_ fileName: String, from directory: Directory) {
-    let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
-    if FileManager.default.fileExists(atPath: url.path) {
-      do {
-        try FileManager.default.removeItem(at: url)
-      } catch {
-        Log(message: "Error deleting file \(fileName) from \(directory): \(error.localizedDescription)")
-      }
+    /// Reads a `Decodable` with name `fileName` object from `directory`.
+    ///
+    /// - Parameters:
+    ///   - fileName: name of the file who stores the object.
+    ///   - directory: `Directory` who helds the file.
+    ///   - type: type of object we're reading.
+    /// - Returns: desired `Decodable` object.
+    public static func read<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
+        
+        if let data = read(fileName, from: directory) {
+            
+            do {
+                let object = try JSONDecoder().decode(type, from: data)
+                return object
+            } catch {
+                Log(message: "Error reading file \(fileName): \(error.localizedDescription)")
+                return nil
+            }
+            
+        } else {
+            return nil
+        }
     }
-  }
-  
-  
-  /// Checks if specified file exists in `directory`
-  ///
-  /// - Parameters:
-  ///   - fileName: name of file to check.
-  ///   - directory: directory who should held the file.
-  /// - Returns: `true` if file exists, otherwise `false`
-  public static func fileExists(_ fileName: String, in directory: Directory) -> Bool {
-    let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
-    return FileManager.default.fileExists(atPath: url.path)
-  }
+    
+    
+    /// Reads a `Data` with name `fileName` object from `directory`.
+    ///
+    /// - Parameters:
+    ///   - fileName: name of the file who stores the object.
+    ///   - directory: `Directory` who helds the file.
+    /// - Returns: desired `Data` object.
+    public static func read(_ fileName: String,
+                            from directory: Directory) -> Data? {
+        
+        guard let escapedName = fileName.escaped() else {
+            return nil
+        }
+        
+        let url = directory.url.appendingPathComponent(escapedName,
+                                                       isDirectory: false)
+        
+        if !FileManager.default.fileExists(atPath: url.path) {
+            return nil
+        }
+        
+        return FileManager.default.contents(atPath: url.path)
+    }
+    
+    
+    /// Deletes a file from `directory`
+    ///
+    /// - Parameters:
+    ///   - fileName: name of file to delete.
+    ///   - directory: directory who helds the file.
+    public static func delete(_ fileName: String, from directory: Directory) {
+        let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
+        if FileManager.default.fileExists(atPath: url.path) {
+            do {
+                try FileManager.default.removeItem(at: url)
+            } catch {
+                Log(message: "Error deleting file \(fileName) from \(directory): \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    /// Checks if specified file exists in `directory`
+    ///
+    /// - Parameters:
+    ///   - fileName: name of file to check.
+    ///   - directory: directory who should held the file.
+    /// - Returns: `true` if file exists, otherwise `false`
+    public static func fileExists(_ fileName: String, in directory: Directory) -> Bool {
+        let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
+        return FileManager.default.fileExists(atPath: url.path)
+    }
 }

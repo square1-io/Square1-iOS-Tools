@@ -58,7 +58,7 @@ public extension UICollectionView {
     func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T: ReusableView, T: NibLoadableView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier,
                                              for: indexPath) as? T else {
-            fatalError("Couldn't dequeue cell with identidier: \(T.defaultReuseIdentifier)")
+                                                fatalError("Couldn't dequeue cell with identidier: \(T.defaultReuseIdentifier)")
         }
         return cell
     }
@@ -184,7 +184,7 @@ public extension UICollectionView {
         guard let supplementaryView = dequeueReusableSupplementaryView(ofKind: kind,
                                                                        withReuseIdentifier: T.defaultReuseIdentifier,
                                                                        for: indexPath) as? T else {
-           fatalError("Couldn't dequeue UICollectionReusableView with identifier: \(T.defaultReuseIdentifier)")
+                                                                        fatalError("Couldn't dequeue UICollectionReusableView with identifier: \(T.defaultReuseIdentifier)")
         }
         
         return supplementaryView

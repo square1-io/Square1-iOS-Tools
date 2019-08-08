@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/Date+Square1.swift",
-      "line": 153,
+      "line": null,
       "symbol": "DateStatics",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -37,21 +37,14 @@
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/UIViewController+Square1.swift",
-      "line": 24,
-      "symbol": "ActionBlock",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/UIViewController+Square1.swift",
-      "line": 230,
+      "line": 205,
       "symbol": "UIViewController.KeyboardAnimation.duration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Extensions/UIViewController+Square1.swift",
-      "line": 231,
+      "line": 206,
       "symbol": "UIViewController.KeyboardAnimation.curve",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -170,16 +163,16 @@
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/Storyboardable.swift",
-      "line": 23,
+      "line": null,
       "symbol": "Storyboardable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Protocols/Storyboardable.swift",
-      "line": 25,
+      "line": 23,
       "symbol": "Storyboardable",
-      "symbol_kind": "source.lang.swift.decl.extension",
+      "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
@@ -235,6 +228,13 @@
       "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Views/TextView/PlaceholderTextView.swift",
       "line": 45,
       "symbol": "PlaceholderTextView.init(frame:textContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rober/Development/Internal/square1-ios-tools/Source/Views/TextView/PlaceholderTextView.swift",
+      "line": 50,
+      "symbol": "PlaceholderTextView.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

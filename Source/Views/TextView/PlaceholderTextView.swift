@@ -22,72 +22,72 @@ import UIKit
 
 @IBDesignable
 open class PlaceholderTextView: UITextView {
-
-  /// Label to configure the placeholder text.
-  public let placeholderLabel = UILabel()
-  
-  @IBInspectable public var textColorPlaceholder: UIColor = .gray {
-    didSet {
-      placeholderLabel.textColor = textColorPlaceholder
-    }
-  }
-  @IBInspectable public var textPlaceholder: String = "" {
-    didSet {
-      placeholderLabel.text = textPlaceholder
-    }
-  }
-  
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    configureView()
-  }
-  
-  override public init(frame: CGRect, textContainer: NSTextContainer?) {
-    super.init(frame: frame, textContainer: textContainer)
-    configureView()
-  }
-  
-  deinit {
-    removeNotifications()
-  }
-  
-  override open func layoutSubviews() {
-    super.layoutSubviews()
     
-    let placeholderX: CGFloat = textContainer.lineFragmentPadding + textContainerInset.left
-    let placeholderY: CGFloat = textContainerInset.top
-    let placeholderWidth = frame.width - placeholderX - textContainerInset.right
-    let placeholderHeight = frame.height - placeholderY - textContainerInset.bottom
+    /// Label to configure the placeholder text.
+    public let placeholderLabel = UILabel()
     
-    var size = placeholderLabel.sizeThatFits(CGSize(width: placeholderWidth, height: placeholderHeight))
-    size.height = min(size.height, placeholderHeight)
-    size.width = min(size.width, placeholderWidth)
-    placeholderLabel.frame = CGRect(x: placeholderX, y: placeholderY, width: size.width, height: size.height)
-  }
-  
-  // MARK: Private.
-  
-  private func configureView() {
-    placeholderLabel.numberOfLines = 0
-    placeholderLabel.font = font
-    addSubview(placeholderLabel)
-    
-    addNotifications()
-  }
-  
-  // MARK: Notifications.
-  
-  private func addNotifications() {
-    NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: nil)
-  }
-  
-  private func removeNotifications() {
-    NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
-  }
-  
-  @objc private func textDidChange(notification: Notification) {
-    if let object = notification.object as? UITextView, self == object {
-      placeholderLabel.isHidden = text.count > 0
+    @IBInspectable public var textColorPlaceholder: UIColor = .gray {
+        didSet {
+            placeholderLabel.textColor = textColorPlaceholder
+        }
     }
-  }
+    @IBInspectable public var textPlaceholder: String = "" {
+        didSet {
+            placeholderLabel.text = textPlaceholder
+        }
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configureView()
+    }
+    
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        configureView()
+    }
+    
+    deinit {
+        removeNotifications()
+    }
+    
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let placeholderX: CGFloat = textContainer.lineFragmentPadding + textContainerInset.left
+        let placeholderY: CGFloat = textContainerInset.top
+        let placeholderWidth = frame.width - placeholderX - textContainerInset.right
+        let placeholderHeight = frame.height - placeholderY - textContainerInset.bottom
+        
+        var size = placeholderLabel.sizeThatFits(CGSize(width: placeholderWidth, height: placeholderHeight))
+        size.height = min(size.height, placeholderHeight)
+        size.width = min(size.width, placeholderWidth)
+        placeholderLabel.frame = CGRect(x: placeholderX, y: placeholderY, width: size.width, height: size.height)
+    }
+    
+    // MARK: Private.
+    
+    private func configureView() {
+        placeholderLabel.numberOfLines = 0
+        placeholderLabel.font = font
+        addSubview(placeholderLabel)
+        
+        addNotifications()
+    }
+    
+    // MARK: Notifications.
+    
+    private func addNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: nil)
+    }
+    
+    private func removeNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
+    }
+    
+    @objc private func textDidChange(notification: Notification) {
+        if let object = notification.object as? UITextView, self == object {
+            placeholderLabel.isHidden = text.count > 0
+        }
+    }
 }

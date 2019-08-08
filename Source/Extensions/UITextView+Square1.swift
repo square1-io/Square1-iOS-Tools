@@ -22,22 +22,22 @@ import UIKit
 
 /// Helpers for UITextView.
 public extension UITextView {
-  
-  /// Max number of lines in UITextView.
-  var maxLines: Int {
-    get {
-      return textContainer.maximumNumberOfLines
+    
+    /// Max number of lines in UITextView.
+    var maxLines: Int {
+        get {
+            return textContainer.maximumNumberOfLines
+        }
+        
+        set {
+            textContainer.maximumNumberOfLines = newValue
+        }
     }
     
-    set {
-      textContainer.maximumNumberOfLines = newValue
+    /// Number of lines in current UITextView.
+    var numberOfLines: Int {
+        guard let font = font else { return 0 }
+        return Int(round((contentSize.height - textContainerInset.top - textContainerInset.bottom) / font.lineHeight));
     }
-  }
-
-  /// Number of lines in current UITextView.
-  var numberOfLines: Int {
-    guard let font = font else { return 0 }
-    return Int(round((contentSize.height - textContainerInset.top - textContainerInset.bottom) / font.lineHeight));
-  }
-
+    
 }

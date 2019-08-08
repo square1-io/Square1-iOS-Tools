@@ -22,21 +22,21 @@ import UIKit
 
 /// A Segue subclass prepared for root UIViewController replacement.
 public class ReplaceRootControllerSegue: UIStoryboardSegue {
-  
-  
-  /// Performs a quick fadeout animation before root UIViewController replacement.
-  public override func perform() {
     
-    let duration = 0.3
-    guard let window = UIApplication.shared.keyWindow else { return }
-
-    window.insertSubview(destination.view, belowSubview: source.view)
-
-    UIView.animate(withDuration: duration, animations: {
-      self.source.view.alpha = 0.0
-    }) { _ in
-      self.source.dismiss(animated: false, completion: nil)
-      window.rootViewController = self.destination
+    
+    /// Performs a quick fadeout animation before root UIViewController replacement.
+    public override func perform() {
+        
+        let duration = 0.3
+        guard let window = UIApplication.shared.keyWindow else { return }
+        
+        window.insertSubview(destination.view, belowSubview: source.view)
+        
+        UIView.animate(withDuration: duration, animations: {
+            self.source.view.alpha = 0.0
+        }) { _ in
+            self.source.dismiss(animated: false, completion: nil)
+            window.rootViewController = self.destination
+        }
     }
-  }
 }

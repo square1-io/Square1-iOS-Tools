@@ -22,45 +22,45 @@ import UIKit
 
 /// Helpers for UIScrollView.
 public extension UIScrollView {
-  
-  /// Scrolls to the top of the table.
-  ///
-  /// - Parameter animated: Animate scrolling of not.
-  func scrollToTop(animated: Bool) {
-    setContentOffset(CGPoint.zero, animated: animated)
-  }
-  
-  /// Scrolls to the bottom of the table.
-  ///
-  /// - Parameter animated: Animate scrolling of not.
-  func scrollToBottom(animated: Bool) {
-    let Yoffset = contentSize.height + contentInset.bottom - bounds.size.height
     
-    if Yoffset > 0 {
-      let bottomOffset = CGPoint(x: 0, y: Yoffset)
-      setContentOffset(bottomOffset, animated: animated)
+    /// Scrolls to the top of the table.
+    ///
+    /// - Parameter animated: Animate scrolling of not.
+    func scrollToTop(animated: Bool) {
+        setContentOffset(CGPoint.zero, animated: animated)
     }
-  }
-  
-  
-  /// Executes a provided `selector` from `target` once reached `threshold` from the end of the content view.
-  ///
-  /// - Parameters:
-  ///   - threshold: point where selector should be triggered
-  ///   - target: target who will execute the selector
-  ///   - selector: selector to execute
-  func executeWhenReachingEnd(threshold: CGFloat,
-                              target: UIViewController,
-                              selector: Selector) {
-    let y = contentOffset.y + bounds.size.height - contentInset.bottom
-    let h = contentSize.height
-    let actionThreshold = threshold < 0 ? threshold : -threshold
     
-    if y > h + actionThreshold {
-      if target.responds(to: selector) {
-        target.perform(selector)
-      }
+    /// Scrolls to the bottom of the table.
+    ///
+    /// - Parameter animated: Animate scrolling of not.
+    func scrollToBottom(animated: Bool) {
+        let Yoffset = contentSize.height + contentInset.bottom - bounds.size.height
+        
+        if Yoffset > 0 {
+            let bottomOffset = CGPoint(x: 0, y: Yoffset)
+            setContentOffset(bottomOffset, animated: animated)
+        }
     }
-  }
-  
+    
+    
+    /// Executes a provided `selector` from `target` once reached `threshold` from the end of the content view.
+    ///
+    /// - Parameters:
+    ///   - threshold: point where selector should be triggered
+    ///   - target: target who will execute the selector
+    ///   - selector: selector to execute
+    func executeWhenReachingEnd(threshold: CGFloat,
+                                target: UIViewController,
+                                selector: Selector) {
+        let y = contentOffset.y + bounds.size.height - contentInset.bottom
+        let h = contentSize.height
+        let actionThreshold = threshold < 0 ? threshold : -threshold
+        
+        if y > h + actionThreshold {
+            if target.responds(to: selector) {
+                target.perform(selector)
+            }
+        }
+    }
+    
 }

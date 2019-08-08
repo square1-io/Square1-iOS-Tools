@@ -22,42 +22,42 @@
 /// Queue data structure (FIFO).
 /// Inspired by https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue
 public struct Queue<T> {
-  
-  /// Array storing queue elements.
-  private var elements: [T] = []
-  
-  /// Is queue is empty or not?
-  public var isEmpty: Bool {
-    return elements.isEmpty
-  }
-  
-  /// Number of elements in the queue.
-  public var count: Int {
-    return elements.count
-  }
-  
-  
-  /// Enqueues a new element at the end of the queue.
-  ///
-  /// - Parameter element: the element to enter the queue
-  public mutating func enqueue(_ element: T) {
-    elements.append(element)
-  }
-  
-  
-  /// Dequeues the first element at the beginning of the queue.
-  ///
-  /// - Returns: first element of the queue or nil if is empty
-  public mutating func dequeue() -> T? {
-    guard !isEmpty else { return nil }
-    return elements.removeFirst()
-  }
-  
-  
-  /// Gets first element of the queue without dequeuing it.
-  ///
-  /// - Returns: first element of the queue or nil if is empty
-  public func front() -> T? {
-    return elements.first
-  }
+    
+    /// Array storing queue elements.
+    private var elements: [T] = []
+    
+    /// Is queue is empty or not?
+    public var isEmpty: Bool {
+        return elements.isEmpty
+    }
+    
+    /// Number of elements in the queue.
+    public var count: Int {
+        return elements.count
+    }
+    
+    
+    /// Enqueues a new element at the end of the queue.
+    ///
+    /// - Parameter element: the element to enter the queue
+    public mutating func enqueue(_ element: T) {
+        elements.append(element)
+    }
+    
+    
+    /// Dequeues the first element at the beginning of the queue.
+    ///
+    /// - Returns: first element of the queue or nil if is empty
+    public mutating func dequeue() -> T? {
+        guard !isEmpty else { return nil }
+        return elements.removeFirst()
+    }
+    
+    
+    /// Gets first element of the queue without dequeuing it.
+    ///
+    /// - Returns: first element of the queue or nil if is empty
+    public func front() -> T? {
+        return elements.first
+    }
 }

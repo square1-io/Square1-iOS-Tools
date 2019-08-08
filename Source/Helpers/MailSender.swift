@@ -28,74 +28,74 @@ fileprivate typealias MailAttachment = [String: Any]
 
 /// Helper class to use MFMailComposeViewController.
 public class MailSender {
-  
-  /// Message for the email.
-  public var message: String = ""
-  
-  /// Subject for the email.
-  public var subject: String = ""
-  
-  /// Email address for destination.
-  public var to: [String] = []
-  
-  /// CC email address, if needed.
-  public var cc: [String]?
-  
-  /// BSS email address, if needed.
-  public var bcc: [String]?
-  
-  /// Array of attachments for the email, if needed.
-  private var attachments: [MailAttachment]?
-  
-  /// Flag indicating that email has HTML format.
-  public var isHTML: Bool = false
-  
-  private let kDataKey = "data"
-  private let kMimeTypeKey = "mimeType"
-  private let kFileNameKey = "fileName"
-  
-  public weak var delegate: MFMailComposeViewControllerDelegate?
-  
-  public init() {}
-  
-  
-  /// Displays an MFMailComposeViewController over passed UIViewController.
-  ///
-  /// - Parameter viewController: UIViewController who will display the MFMailComposeViewController.
-  public func showMailComposer(from viewController: UIViewController) {
-    if MFMailComposeViewController.canSendMail() {
-      let mailComposer = MFMailComposeViewController()
-      mailComposer.setSubject(subject)
-      mailComposer.setMessageBody(message, isHTML: isHTML)
-      mailComposer.setToRecipients(to)
-      mailComposer.setCcRecipients(cc)
-      mailComposer.setBccRecipients(bcc)
-      mailComposer.mailComposeDelegate = delegate
-      
-      if let attachments = attachments {
-        for attachment in attachments {
-          mailComposer.addAttachmentData(attachment[kDataKey] as! Data,
-                                         mimeType: attachment[kMimeTypeKey] as! String,
-                                         fileName: attachment[kFileNameKey] as! String)
+    
+    /// Message for the email.
+    public var message: String = ""
+    
+    /// Subject for the email.
+    public var subject: String = ""
+    
+    /// Email address for destination.
+    public var to: [String] = []
+    
+    /// CC email address, if needed.
+    public var cc: [String]?
+    
+    /// BSS email address, if needed.
+    public var bcc: [String]?
+    
+    /// Array of attachments for the email, if needed.
+    private var attachments: [MailAttachment]?
+    
+    /// Flag indicating that email has HTML format.
+    public var isHTML: Bool = false
+    
+    private let kDataKey = "data"
+    private let kMimeTypeKey = "mimeType"
+    private let kFileNameKey = "fileName"
+    
+    public weak var delegate: MFMailComposeViewControllerDelegate?
+    
+    public init() {}
+    
+    
+    /// Displays an MFMailComposeViewController over passed UIViewController.
+    ///
+    /// - Parameter viewController: UIViewController who will display the MFMailComposeViewController.
+    public func showMailComposer(from viewController: UIViewController) {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.setSubject(subject)
+            mailComposer.setMessageBody(message, isHTML: isHTML)
+            mailComposer.setToRecipients(to)
+            mailComposer.setCcRecipients(cc)
+            mailComposer.setBccRecipients(bcc)
+            mailComposer.mailComposeDelegate = delegate
+            
+            if let attachments = attachments {
+                for attachment in attachments {
+                    mailComposer.addAttachmentData(attachment[kDataKey] as! Data,
+                                                   mimeType: attachment[kMimeTypeKey] as! String,
+                                                   fileName: attachment[kFileNameKey] as! String)
+                }
+            }
+            
+            viewController.present(mailComposer, animated: true, completion: nil)
         }
-      }
-      
-      viewController.present(mailComposer, animated: true, completion: nil)
     }
-  }
-  
-  
-  /// Adds a new attachment to the compsed email.
-  ///
-  /// - Parameters:
-  ///   - data: Data representation of the attachment.
-  ///   - mimeType: MIMEType for the attachment.
-  ///   - fileName: Name for the attachment.
-  public func addAttachment(withData data: Data, mimeType: String, fileName: String) {
-    let attachment: [String : Any] = [kDataKey: data,
-                                      kMimeTypeKey: mimeType,
-                                      kFileNameKey: fileName]
-    attachments?.append(attachment)
-  }
-  
+    
+    
+    /// Adds a new attachment to the compsed email.
+    ///
+    /// - Parameters:
+    ///   - data: Data representation of the attachment.
+    ///   - mimeType: MIMEType for the attachment.
+    ///   - fileName: Name for the attachment.
+    public func addAttachment(withData data: Data, mimeType: String, fileName: String) {
+        let attachment: [String : Any] = [kDataKey: data,
+                                          kMimeTypeKey: mimeType,
+                                          kFileNameKey: fileName]
+        attachments?.append(attachment)
+    }
+    
 }

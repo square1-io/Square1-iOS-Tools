@@ -22,26 +22,26 @@ import UIKit
 
 /// Helpers for UIFont.
 public extension UIFont {
-  
-  /// Bold copy of current Font or same if bold type is not supported by Font.
-  var bold: UIFont {
-    guard let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold) else { return self }
-    guard let boldFont = boldFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
-    return boldFont
-  }
-  
-  /// Italic copy of current Font or same if italic type is not supported by Font.
-  var italic: UIFont {
-    guard let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic) else { return self }
-    guard let italicFont = italicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
-    return italicFont
-  }
-  
-  /// Bold-Italic copy of current Font or same if bold-italic type is not supported by Font.
-  var boldItalic: UIFont {
-    guard let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitBold, .traitBold]) else { return self }
-    guard let boldItalicFont = boldItalicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
-    return boldItalicFont
-  }
-  
+    
+    /// Bold copy of current Font or same if bold type is not supported by Font.
+    var bold: UIFont {
+        guard let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold) else { return self }
+        guard let boldFont = boldFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+        return boldFont
+    }
+    
+    /// Italic copy of current Font or same if italic type is not supported by Font.
+    var italic: UIFont {
+        guard let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic) else { return self }
+        guard let italicFont = italicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+        return italicFont
+    }
+    
+    /// Bold-Italic copy of current Font or same if bold-italic type is not supported by Font.
+    var boldItalic: UIFont {
+        guard let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitBold, .traitBold]) else { return self }
+        guard let boldItalicFont = boldItalicFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.name] as? UIFont else { return self }
+        return boldItalicFont
+    }
+    
 }
