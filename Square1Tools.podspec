@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Square1Tools"
-  s.version      = "1.7.0"
+  s.version      = "1.8.0"
   s.summary      = "A collection of tools used in our Swift projects"
   s.description  = "A handy collection of helpers, types and hacks used on our Swift projects"
   s.homepage     = "https://github.com/square1-io/Square1-iOS-Tools"
@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/square1-io/Square1-iOS-Tools.git", :tag => s.version }
   s.source_files  = "Source/**/*.swift"
-  s.swift_versions = "5.0"
+  s.swift_versions = "5.3"
 end

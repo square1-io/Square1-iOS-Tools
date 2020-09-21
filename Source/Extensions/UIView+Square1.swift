@@ -85,7 +85,8 @@ public extension UIView {
     }
     
     /// IBInspectable shadowColor.
-    @IBInspectable var shadowColor: UIColor {
+    /// Renamed to `inspectableShadowColor` due to Xcode 12 UILabel.shadowColor property.
+    @IBInspectable var inspectableShadowColor: UIColor {
         get {
             guard let color = layer.shadowColor else {
                 return .black
@@ -118,7 +119,7 @@ public extension UIView {
     }
     
     func updateShadow() {
-        layer.shadowColor = shadowColor.cgColor
+        layer.shadowColor = inspectableShadowColor.cgColor
     }
     
     /// IBInspectable shadowOffsetWidth.
